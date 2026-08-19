@@ -10,7 +10,7 @@ import json
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin
@@ -258,6 +258,101 @@ def parse_rates_csv(csv_text: str) -> dict[str, Any]:
     }
 
 
+def _rate_range_text(lower: float, upper: float) -> str:
+    return f"{lower:.2f}%–{upper:.2f}%"
+
+
+def attach_meeting_outcomes(
+    meetings_data: dict[str, Any], rates_data: dict[str, Any]
+) -> dict[str, Any]:
+    """Attach concise, deterministic outcomes to meetings with official statements.
+
+    Target changes can become effective shortly after the meeting ends. A meeting is
+    therefore described as a hold only after the rate series has advanced beyond the
+    two-day confirmation window; until then it remains explicitly pending.
+    """
+    history = rates_data.get("history", [])
+    data_as_of = date.fromisoformat(rates_data["current"]["as_of"])
+
+    for meeting in meetings_data.get("meetings", []):
+        meeting.pop("outcome", None)
+        documents = meeting.get("documents", {})
+        if not documents.get("statement_html"):
+            continue
+
+        start_date = date.fromisoformat(meeting["start_date"])
+        end_date = date.fromisoformat(meeting["end_date"])
+        if end_date > data_as_of:
+            continue
+
+        if meeting.get("is_notation_vote"):
+            meeting["outcome"] = {
+                "status": "confirmed",
+                "action": "notation_vote",
+                "summary": "书面表决，不属于常规利率决议。",
+                "statement_url": documents["statement_html"],
+            }
+            continue
+
+        before = next(
+            (
+                item
+                for item in reversed(history)
+                if date.fromisoformat(item["effective_date"]) < start_date
+            ),
+            None,
+        )
+        if before is None:
+            continue
+
+        confirmation_end = end_date + timedelta(days=2)
+        changes = [
+            item
+            for item in history
+            if start_date <= date.fromisoformat(item["effective_date"]) <= confirmation_end
+        ]
+
+        if changes:
+            result = changes[-1]
+            delta_bps = result["delta_bps"]
+            action = "hike" if delta_bps > 0 else "cut" if delta_bps < 0 else "change"
+            action_text = "加息" if action == "hike" else "降息" if action == "cut" else "调整"
+            summary = (
+                f"{action_text} {abs(delta_bps):g} 个基点，目标区间调整至 "
+                f"{_rate_range_text(result['lower'], result['upper'])}"
+            )
+            effective_date = result["effective_date"]
+        elif data_as_of <= confirmation_end:
+            meeting["outcome"] = {
+                "status": "pending_confirmation",
+                "action": "pending",
+                "summary": "政策声明已发布，目标利率结果等待官方序列确认。",
+                "statement_url": documents["statement_html"],
+            }
+            continue
+        else:
+            result = before
+            delta_bps = 0
+            action = "hold"
+            summary = f"维持目标区间 {_rate_range_text(result['lower'], result['upper'])} 不变"
+            effective_date = meeting["end_date"]
+
+        summary += "；发布经济预测（SEP）。" if meeting.get("has_sep") else "；未发布 SEP。"
+        meeting["outcome"] = {
+            "status": "confirmed",
+            "action": action,
+            "delta_bps": delta_bps,
+            "lower": result["lower"],
+            "upper": result["upper"],
+            "effective_date": effective_date,
+            "summary": summary,
+            "statement_url": documents["statement_html"],
+            "rate_source": rates_data["source"],
+        }
+
+    return meetings_data
+
+
 def load_json(path: Path) -> dict[str, Any] | None:
     try:
         with path.open(encoding="utf-8") as handle:
@@ -367,6 +462,7 @@ def main() -> int:
 
     meetings = parse_calendar_html(calendar_html)
     rates = parse_rates_csv(rates_csv)
+    attach_meeting_outcomes(meetings, rates)
     event = build_change_event(old_meetings, meetings, old_rates, rates)
 
     data_changed = meetings != old_meetings or rates != old_rates

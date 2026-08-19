@@ -147,6 +147,12 @@ function renderMeetings(meetings) {
     title.className = 'meeting-title';
     const ended = parseDate(meeting.end_date) < now;
     title.innerHTML = `FOMC ${meeting.is_notation_vote ? '书面表决' : '货币政策会议'}<small>${ended ? '会议已结束' : '计划会议 · 日期可能调整'}</small>`;
+    if (meeting.outcome) {
+      const outcome = document.createElement('p');
+      outcome.className = `meeting-outcome ${meeting.outcome.action}`;
+      outcome.textContent = meeting.outcome.summary;
+      title.appendChild(outcome);
+    }
     const docs = document.createElement('div');
     docs.className = 'docs';
     let count = 0;

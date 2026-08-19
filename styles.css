@@ -81,6 +81,10 @@ h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(28px,
 .meeting-date small { display: block; color: var(--muted); font: 11px ui-sans-serif, system-ui; margin-top: 4px; }
 .meeting-title { font-weight: 720; }
 .meeting-title small { display: block; color: var(--muted); font-weight: 400; margin-top: 4px; }
+.meeting-outcome { margin: 9px 0 0; color: var(--ink); font-size: 13px; font-weight: 500; line-height: 1.55; }
+.meeting-outcome.hike { color: #a74726; }
+.meeting-outcome.cut { color: #18705e; }
+.meeting-outcome.pending { color: var(--muted); }
 .docs { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 7px; }
 .doc { color: var(--deep); text-decoration: none; font-size: 11px; font-weight: 700; border: 1px solid #b9c7c4; padding: 7px 10px; border-radius: 999px; }
 .doc:hover { background: var(--deep); color: white; border-color: var(--deep); }

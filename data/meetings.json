@@ -18,6 +18,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210127.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210127.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210127.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2021-01-27",
+        "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -39,6 +50,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20210317.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210317.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210317.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2021-03-17",
+        "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -58,6 +80,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210428.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210428.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210428.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2021-04-28",
+        "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -79,6 +112,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20210616.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210616.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210616.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2021-06-16",
+        "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -98,6 +142,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210728.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210728.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210728.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2021-07-28",
+        "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -119,6 +174,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20210922.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210922.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210922.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2021-09-22",
+        "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -138,6 +204,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20211103.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20211103.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20211103.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2021-11-03",
+        "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -159,6 +236,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20211215.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20211215.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20211215.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2021-12-15",
+        "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -178,6 +266,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220126.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220126.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220126.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 0.0,
+        "upper": 0.25,
+        "effective_date": "2022-01-26",
+        "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -199,6 +298,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtable20220316.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220316.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220316.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 25,
+        "lower": 0.25,
+        "upper": 0.5,
+        "effective_date": "2022-03-17",
+        "summary": "加息 25 个基点，目标区间调整至 0.25%–0.50%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -218,6 +328,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220504.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220504.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220504.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 50,
+        "lower": 0.75,
+        "upper": 1.0,
+        "effective_date": "2022-05-05",
+        "summary": "加息 50 个基点，目标区间调整至 0.75%–1.00%；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -239,6 +360,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20220615.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220615.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220615.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 75,
+        "lower": 1.5,
+        "upper": 1.75,
+        "effective_date": "2022-06-16",
+        "summary": "加息 75 个基点，目标区间调整至 1.50%–1.75%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -258,6 +390,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220727.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220727.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220727.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 75,
+        "lower": 2.25,
+        "upper": 2.5,
+        "effective_date": "2022-07-28",
+        "summary": "加息 75 个基点，目标区间调整至 2.25%–2.50%；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -279,6 +422,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20220921.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220921.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220921.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 75,
+        "lower": 3.0,
+        "upper": 3.25,
+        "effective_date": "2022-09-22",
+        "summary": "加息 75 个基点，目标区间调整至 3.00%–3.25%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -298,6 +452,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20221102.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20221102.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20221102.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 75,
+        "lower": 3.75,
+        "upper": 4.0,
+        "effective_date": "2022-11-03",
+        "summary": "加息 75 个基点，目标区间调整至 3.75%–4.00%；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -319,6 +484,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20221214.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20221214.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20221214.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 50,
+        "lower": 4.25,
+        "upper": 4.5,
+        "effective_date": "2022-12-15",
+        "summary": "加息 50 个基点，目标区间调整至 4.25%–4.50%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -340,6 +516,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230322.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230322.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230322.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 25,
+        "lower": 4.75,
+        "upper": 5.0,
+        "effective_date": "2023-03-23",
+        "summary": "加息 25 个基点，目标区间调整至 4.75%–5.00%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -359,6 +546,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230503.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230503.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230503.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 25,
+        "lower": 5.0,
+        "upper": 5.25,
+        "effective_date": "2023-05-04",
+        "summary": "加息 25 个基点，目标区间调整至 5.00%–5.25%；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -380,6 +578,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230614.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230614.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 5.0,
+        "upper": 5.25,
+        "effective_date": "2023-06-14",
+        "summary": "维持目标区间 5.00%–5.25% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -399,6 +608,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230726.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230726.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230726.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 25,
+        "lower": 5.25,
+        "upper": 5.5,
+        "effective_date": "2023-07-27",
+        "summary": "加息 25 个基点，目标区间调整至 5.25%–5.50%；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -420,6 +640,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230920.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230920.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230920.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 5.25,
+        "upper": 5.5,
+        "effective_date": "2023-09-20",
+        "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -441,6 +672,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20231213.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20231213.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20231213.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 5.25,
+        "upper": 5.5,
+        "effective_date": "2023-12-13",
+        "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -460,6 +702,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20240131.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240131.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240131.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 5.25,
+        "upper": 5.5,
+        "effective_date": "2024-01-31",
+        "summary": "维持目标区间 5.25%–5.50% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -481,6 +734,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20240320.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240320.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240320.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 5.25,
+        "upper": 5.5,
+        "effective_date": "2024-03-20",
+        "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -502,6 +766,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20240612.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240612.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240612.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 5.25,
+        "upper": 5.5,
+        "effective_date": "2024-06-12",
+        "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -521,6 +796,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20240731.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240731.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240731.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 5.25,
+        "upper": 5.5,
+        "effective_date": "2024-07-31",
+        "summary": "维持目标区间 5.25%–5.50% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -542,6 +828,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20240918.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240918.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240918.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "cut",
+        "delta_bps": -50,
+        "lower": 4.75,
+        "upper": 5.0,
+        "effective_date": "2024-09-19",
+        "summary": "降息 50 个基点，目标区间调整至 4.75%–5.00%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -561,6 +858,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20241107.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20241107.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20241107.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "cut",
+        "delta_bps": -25,
+        "lower": 4.5,
+        "upper": 4.75,
+        "effective_date": "2024-11-08",
+        "summary": "降息 25 个基点，目标区间调整至 4.50%–4.75%；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -582,6 +890,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20241218.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20241218.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20241218.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "cut",
+        "delta_bps": -25,
+        "lower": 4.25,
+        "upper": 4.5,
+        "effective_date": "2024-12-19",
+        "summary": "降息 25 个基点，目标区间调整至 4.25%–4.50%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -601,6 +920,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250129.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250129.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250129.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 4.25,
+        "upper": 4.5,
+        "effective_date": "2025-01-29",
+        "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -622,6 +952,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20250319.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250319.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250319.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 4.25,
+        "upper": 4.5,
+        "effective_date": "2025-03-19",
+        "summary": "维持目标区间 4.25%–4.50% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -641,6 +982,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250507.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250507.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250507.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 4.25,
+        "upper": 4.5,
+        "effective_date": "2025-05-07",
+        "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -662,6 +1014,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20250618.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250618.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250618.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 4.25,
+        "upper": 4.5,
+        "effective_date": "2025-06-18",
+        "summary": "维持目标区间 4.25%–4.50% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -681,6 +1044,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250730.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250730.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250730.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 4.25,
+        "upper": 4.5,
+        "effective_date": "2025-07-30",
+        "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -695,6 +1069,12 @@
       "minutes_release_date": null,
       "documents": {
         "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "notation_vote",
+        "summary": "书面表决，不属于常规利率决议。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm"
       }
     },
     {
@@ -716,6 +1096,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20250917.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250917.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250917.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "cut",
+        "delta_bps": -25,
+        "lower": 4.0,
+        "upper": 4.25,
+        "effective_date": "2025-09-18",
+        "summary": "降息 25 个基点，目标区间调整至 4.00%–4.25%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -735,6 +1126,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20251029.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20251029.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20251029.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "cut",
+        "delta_bps": -25,
+        "lower": 3.75,
+        "upper": 4.0,
+        "effective_date": "2025-10-30",
+        "summary": "降息 25 个基点，目标区间调整至 3.75%–4.00%；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -756,6 +1158,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20251210.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20251210.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20251210.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "cut",
+        "delta_bps": -25,
+        "lower": 3.5,
+        "upper": 3.75,
+        "effective_date": "2025-12-11",
+        "summary": "降息 25 个基点，目标区间调整至 3.50%–3.75%；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -774,6 +1187,17 @@
         "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a1.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260128.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260128.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 3.5,
+        "upper": 3.75,
+        "effective_date": "2026-01-28",
+        "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -795,6 +1219,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260318.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260318.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260318.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 3.5,
+        "upper": 3.75,
+        "effective_date": "2026-03-18",
+        "summary": "维持目标区间 3.50%–3.75% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -814,6 +1249,17 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260429.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260429.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260429.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 3.5,
+        "upper": 3.75,
+        "effective_date": "2026-04-29",
+        "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -835,6 +1281,17 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260617.htm",
         "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260617.pdf",
         "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260617.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 3.5,
+        "upper": 3.75,
+        "effective_date": "2026-06-17",
+        "summary": "维持目标区间 3.50%–3.75% 不变；发布经济预测（SEP）。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
@@ -852,6 +1309,17 @@
         "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
         "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a1.htm",
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260729.htm"
+      },
+      "outcome": {
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 3.5,
+        "upper": 3.75,
+        "effective_date": "2026-07-29",
+        "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
       }
     },
     {
