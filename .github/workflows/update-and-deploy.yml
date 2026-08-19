@@ -78,6 +78,8 @@ jobs:
       - name: Configure Pages
         if: steps.dataset.outputs.changed == 'true' || github.event_name != 'schedule'
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload Pages artifact
         if: steps.dataset.outputs.changed == 'true' || github.event_name != 'schedule'

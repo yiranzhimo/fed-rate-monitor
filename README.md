@@ -27,8 +27,7 @@ python3 -m http.server 8000
 ## 部署到 GitHub Pages
 
 1. 在 GitHub 创建仓库，例如 `fed-rate-monitor`，并推送本目录到 `main`。
-2. 进入仓库 **Settings → Pages**。
-3. 在 **Build and deployment → Source** 选择 **GitHub Actions**。
+2. 工作流会尝试自动启用 GitHub Pages；如果仓库策略禁止自动启用，再进入 **Settings → Pages**，在 **Build and deployment → Source** 选择 **GitHub Actions**。
 4. 在 **Actions** 页手动运行一次 `Update FOMC data and deploy`。
 5. 可选：在 **Settings → Actions → General** 确认 Workflow permissions 允许读写；工作流本身已声明 `contents: write`。
 
