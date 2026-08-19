@@ -2528,6 +2528,17 @@
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.5%（2025-01）。",
           "summary": "就业：失业率 4.2%（2025-02）；非农近3个月月均新增 7.7万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.5%（2025-01）。"
         },
+        "vote": {
+          "support_count": 11,
+          "against_count": 1,
+          "against_names": [
+            "Christopher J. Waller"
+          ],
+          "preference": null,
+          "summary": "表决 11–1；异议：Christopher J. Waller。",
+          "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm",
+          "parser_version": 1
+        },
         "sep": {
           "medians": {
             "2025": 3.9,
@@ -2545,17 +2556,6 @@
           },
           "summary": "SEP：2026年末政策利率中位数 3.4%，与上次相同。",
           "display_horizon": "2026"
-        },
-        "vote": {
-          "support_count": 11,
-          "against_count": 1,
-          "against_names": [
-            "Christopher J. Waller"
-          ],
-          "preference": null,
-          "summary": "表决 11–1；异议：Christopher J. Waller。",
-          "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm",
-          "parser_version": 1
         }
       }
     },
@@ -3453,12 +3453,14 @@
       "date_label": "28-29",
       "has_sep": false,
       "is_notation_vote": false,
-      "minutes_release_date": null,
+      "minutes_release_date": "2026-08-19",
       "documents": {
         "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260729a1.pdf",
         "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
         "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a1.htm",
-        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260729.htm"
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260729.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260729.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260729.htm"
       },
       "outcome": {
         "status": "confirmed",
