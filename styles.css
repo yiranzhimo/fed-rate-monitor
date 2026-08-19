@@ -76,6 +76,8 @@ h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(28px,
 .chart .range-band { fill: var(--mint); opacity: .58; }
 .method-note { margin: 16px 0 0; color: var(--muted); font-size: 12px; }
 .source-link { color: var(--deep); text-decoration: none; font-size: 13px; border-bottom: 1px solid var(--deep); }
+.meeting-group-title { margin: 34px 0 10px; color: #497b76; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+.meeting-group-title:first-child { margin-top: 0; }
 .meeting-row { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); }
 .meeting-date { font-family: Georgia, serif; font-size: 21px; }
 .meeting-date small { display: block; color: var(--muted); font: 11px ui-sans-serif, system-ui; margin-top: 4px; }

@@ -130,46 +130,56 @@ function renderMeetings(meetings) {
   const now = new Date();
   const past = meetings.meetings
     .filter((item) => meetingAnnouncementTime(item) <= now)
-    .slice(-5)
+    .slice(-10)
     .reverse();
   const future = meetings.meetings
     .filter((item) => meetingAnnouncementTime(item) > now)
     .slice(0, 8);
-  const items = [...future, ...past];
   host.innerHTML = '';
-  for (const meeting of items) {
-    const row = document.createElement('article');
-    row.className = 'meeting-row';
-    const date = document.createElement('div');
-    date.className = 'meeting-date';
-    date.innerHTML = `${meeting.start_date.slice(0, 7).replace('-', '.')} <small>${meeting.date_label} 日${meeting.has_sep ? ' · 发布 SEP' : ''}</small>`;
-    const title = document.createElement('div');
-    title.className = 'meeting-title';
-    const ended = parseDate(meeting.end_date) < now;
-    title.innerHTML = `FOMC ${meeting.is_notation_vote ? '书面表决' : '货币政策会议'}<small>${ended ? '会议已结束' : '计划会议 · 日期可能调整'}</small>`;
-    if (meeting.outcome) {
-      const outcome = document.createElement('p');
-      outcome.className = `meeting-outcome ${meeting.outcome.action}`;
-      outcome.textContent = meeting.outcome.summary;
-      title.appendChild(outcome);
+  const groups = [
+    { title: '最近已结束会议', items: past },
+    { title: '未来会议', items: future },
+  ];
+  for (const group of groups) {
+    if (!group.items.length) continue;
+    const heading = document.createElement('h3');
+    heading.className = 'meeting-group-title';
+    heading.textContent = group.title;
+    host.appendChild(heading);
+    for (const meeting of group.items) {
+      const row = document.createElement('article');
+      row.className = 'meeting-row';
+      const date = document.createElement('div');
+      date.className = 'meeting-date';
+      date.innerHTML = `${meeting.start_date.slice(0, 7).replace('-', '.')} <small>${meeting.date_label} 日${meeting.has_sep ? ' · 发布 SEP' : ''}</small>`;
+      const title = document.createElement('div');
+      title.className = 'meeting-title';
+      const ended = parseDate(meeting.end_date) < now;
+      title.innerHTML = `FOMC ${meeting.is_notation_vote ? '书面表决' : '货币政策会议'}<small>${ended ? '会议已结束' : '计划会议 · 日期可能调整'}</small>`;
+      if (meeting.outcome) {
+        const outcome = document.createElement('p');
+        outcome.className = `meeting-outcome ${meeting.outcome.action}`;
+        outcome.textContent = meeting.outcome.summary;
+        title.appendChild(outcome);
+      }
+      const docs = document.createElement('div');
+      docs.className = 'docs';
+      let count = 0;
+      for (const [key, label] of Object.entries(documentLabels)) {
+        if (!meeting.documents[key]) continue;
+        const link = document.createElement('a');
+        link.className = 'doc';
+        link.href = meeting.documents[key];
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+        link.textContent = `${label} ↗`;
+        docs.appendChild(link);
+        count += 1;
+      }
+      if (!count) docs.innerHTML = '<span class="pending">等待官方文件</span>';
+      row.append(date, title, docs);
+      host.appendChild(row);
     }
-    const docs = document.createElement('div');
-    docs.className = 'docs';
-    let count = 0;
-    for (const [key, label] of Object.entries(documentLabels)) {
-      if (!meeting.documents[key]) continue;
-      const link = document.createElement('a');
-      link.className = 'doc';
-      link.href = meeting.documents[key];
-      link.target = '_blank';
-      link.rel = 'noreferrer';
-      link.textContent = `${label} ↗`;
-      docs.appendChild(link);
-      count += 1;
-    }
-    if (!count) docs.innerHTML = '<span class="pending">等待官方文件</span>';
-    row.append(date, title, docs);
-    host.appendChild(row);
   }
 }
 
