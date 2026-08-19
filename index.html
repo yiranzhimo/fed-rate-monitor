@@ -54,10 +54,10 @@
           <p class="eyebrow dark">TARGET RANGE MIDPOINT</p>
           <h2>目标利率变化路径</h2>
         </div>
-        <div class="legend"><i></i>区间中点（推导）</div>
+        <div class="legend"><i></i>单一目标 / 区间中点</div>
       </div>
-      <div id="rate-chart" class="chart" role="img" aria-label="联邦基金目标区间中点历史图"></div>
-      <p class="method-note">说明：曲线使用目标区间上下限的中点。加息或降息基点数也是由中点变化推导，原始上下限始终保留。</p>
+      <div id="rate-chart" class="chart" role="img" aria-label="联邦基金目标利率历史变化图"></div>
+      <p class="method-note">说明：2008-12-16 前为 FOMC 单一目标利率，此后曲线使用目标区间中点，绿色带表示上下限。加息或降息基点数由相同口径的相邻记录推导。</p>
     </section>
 
     <section class="panel meetings-panel">
@@ -79,7 +79,8 @@
       <div class="source-list">
         <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noreferrer"><span>01</span>Federal Reserve FOMC Calendar<b>↗</b></a>
         <a href="https://fred.stlouisfed.org/series/DFEDTARU" target="_blank" rel="noreferrer"><span>02</span>FRED Target Range Series<b>↗</b></a>
-        <a href="https://www.newyorkfed.org/markets/reference-rates/effr" target="_blank" rel="noreferrer"><span>03</span>New York Fed EFFR<b>↗</b></a>
+        <a href="https://fred.stlouisfed.org/series/DFEDTAR" target="_blank" rel="noreferrer"><span>03</span>FRED Historical Target Rate<b>↗</b></a>
+        <a href="https://www.newyorkfed.org/markets/reference-rates/effr" target="_blank" rel="noreferrer"><span>04</span>New York Fed EFFR<b>↗</b></a>
       </div>
     </section>
   </main>

@@ -26,7 +26,7 @@ RUNTIME_DIR = ROOT / "runtime"
 CALENDAR_URL = "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
 RATES_CSV_URL = (
     "https://fred.stlouisfed.org/graph/fredgraph.csv?"
-    "id=DFEDTARU,DFEDTARL,DFF"
+    "id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
 )
 USER_AGENT = "fed-rate-monitor/1.0 (+https://github.com/)"
 
@@ -184,27 +184,30 @@ def parse_rates_csv(csv_text: str) -> dict[str, Any]:
     if not rows:
         raise ValueError("FRED rates CSV is empty")
 
-    target_rows: list[tuple[str, float, float]] = []
+    policy_rows: list[tuple[str, float, float, str]] = []
     effr_rows: list[tuple[str, float]] = []
     for row in rows:
         date = (row.get("observation_date") or "").strip()
         upper = _number(row.get("DFEDTARU"))
         lower = _number(row.get("DFEDTARL"))
+        single_target = _number(row.get("DFEDTAR"))
         effr = _number(row.get("DFF"))
         if date and upper is not None and lower is not None:
-            target_rows.append((date, upper, lower))
+            policy_rows.append((date, upper, lower, "target_range"))
+        elif date and single_target is not None:
+            policy_rows.append((date, single_target, single_target, "single_target"))
         if date and effr is not None:
             effr_rows.append((date, effr))
 
-    if not target_rows:
-        raise ValueError("No target-range observations found in FRED CSV")
+    if not policy_rows:
+        raise ValueError("No policy-target observations found in FRED CSV")
     if not effr_rows:
         raise ValueError("No effective-rate observations found in FRED CSV")
 
     history: list[dict[str, Any]] = []
-    previous: tuple[float, float] | None = None
-    for date, upper, lower in target_rows:
-        current = (upper, lower)
+    previous: tuple[float, float, str] | None = None
+    for date, upper, lower, regime in policy_rows:
+        current = (upper, lower, regime)
         if current == previous:
             continue
         midpoint = round((upper + lower) / 2, 4)
@@ -214,25 +217,30 @@ def parse_rates_csv(csv_text: str) -> dict[str, Any]:
         else:
             previous_midpoint = (previous[0] + previous[1]) / 2
             delta_bps = _clean_bps((midpoint - previous_midpoint) * 100)
-            decision = "hike" if delta_bps > 0 else "cut" if delta_bps < 0 else "range_change"
+            if previous[2] != regime:
+                decision = "regime_change"
+            else:
+                decision = "hike" if delta_bps > 0 else "cut" if delta_bps < 0 else "range_change"
         history.append(
             {
                 "effective_date": date,
                 "upper": upper,
                 "lower": lower,
                 "midpoint": midpoint,
+                "regime": regime,
                 "delta_bps": delta_bps,
                 "decision": decision,
             }
         )
         previous = current
 
-    latest_date, latest_upper, latest_lower = target_rows[-1]
+    latest_date, latest_upper, latest_lower, latest_regime = policy_rows[-1]
     effr_date, effr = effr_rows[-1]
     latest_change = next((item for item in reversed(history) if item["decision"] != "initial"), None)
     return {
         "source": RATES_CSV_URL,
         "series": {
+            "single_target": "DFEDTAR",
             "upper": "DFEDTARU",
             "lower": "DFEDTARL",
             "effective_rate": "DFF",
@@ -242,6 +250,7 @@ def parse_rates_csv(csv_text: str) -> dict[str, Any]:
             "upper": latest_upper,
             "lower": latest_lower,
             "midpoint": round((latest_upper + latest_lower) / 2, 4),
+            "regime": latest_regime,
         },
         "effective_rate": {"as_of": effr_date, "value": effr},
         "latest_change": latest_change,
@@ -373,8 +382,9 @@ def main() -> int:
                 "calendar_source": CALENDAR_URL,
                 "rates_source": RATES_CSV_URL,
                 "methodology": (
-                    "Rate decisions are inferred from changes in the midpoint of the "
-                    "official target range; original upper and lower bounds are retained."
+                    "Before 2008-12-16 the path uses the official single target rate. "
+                    "From that date onward it uses the midpoint of the official target "
+                    "range while retaining the original upper and lower bounds."
                 ),
             },
         )

@@ -1,6 +1,7 @@
 {
-  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFF",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
   "series": {
+    "single_target": "DFEDTAR",
     "upper": "DFEDTARU",
     "lower": "DFEDTARL",
     "effective_rate": "DFF"
@@ -9,7 +10,8 @@
     "as_of": "2026-08-18",
     "upper": 3.75,
     "lower": 3.5,
-    "midpoint": 3.625
+    "midpoint": 3.625,
+    "regime": "target_range"
   },
   "effective_rate": {
     "as_of": "2026-08-17",
@@ -20,23 +22,1403 @@
     "upper": 3.75,
     "lower": 3.5,
     "midpoint": 3.625,
+    "regime": "target_range",
     "delta_bps": -25,
     "decision": "cut"
   },
   "history": [
     {
+      "effective_date": "1982-09-27",
+      "upper": 10.25,
+      "lower": 10.25,
+      "midpoint": 10.25,
+      "regime": "single_target",
+      "delta_bps": 0,
+      "decision": "initial"
+    },
+    {
+      "effective_date": "1982-10-01",
+      "upper": 10.0,
+      "lower": 10.0,
+      "midpoint": 10.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1982-10-07",
+      "upper": 9.5,
+      "lower": 9.5,
+      "midpoint": 9.5,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1982-11-19",
+      "upper": 9.0,
+      "lower": 9.0,
+      "midpoint": 9.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1982-12-14",
+      "upper": 8.5,
+      "lower": 8.5,
+      "midpoint": 8.5,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1983-03-31",
+      "upper": 8.625,
+      "lower": 8.625,
+      "midpoint": 8.625,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1983-05-25",
+      "upper": 8.75,
+      "lower": 8.75,
+      "midpoint": 8.75,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1983-06-24",
+      "upper": 9.0,
+      "lower": 9.0,
+      "midpoint": 9.0,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1983-07-14",
+      "upper": 9.25,
+      "lower": 9.25,
+      "midpoint": 9.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1983-07-20",
+      "upper": 9.4375,
+      "lower": 9.4375,
+      "midpoint": 9.4375,
+      "regime": "single_target",
+      "delta_bps": 18.75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1983-08-11",
+      "upper": 9.5625,
+      "lower": 9.5625,
+      "midpoint": 9.5625,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1983-08-17",
+      "upper": 9.5,
+      "lower": 9.5,
+      "midpoint": 9.5,
+      "regime": "single_target",
+      "delta_bps": -6.25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1983-09-15",
+      "upper": 9.375,
+      "lower": 9.375,
+      "midpoint": 9.375,
+      "regime": "single_target",
+      "delta_bps": -12.5,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-03-29",
+      "upper": 10.5,
+      "lower": 10.5,
+      "midpoint": 10.5,
+      "regime": "single_target",
+      "delta_bps": 112.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1984-07-05",
+      "upper": 11.0,
+      "lower": 11.0,
+      "midpoint": 11.0,
+      "regime": "single_target",
+      "delta_bps": 50,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1984-07-19",
+      "upper": 11.25,
+      "lower": 11.25,
+      "midpoint": 11.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1984-08-09",
+      "upper": 11.5,
+      "lower": 11.5,
+      "midpoint": 11.5,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1984-09-20",
+      "upper": 11.25,
+      "lower": 11.25,
+      "midpoint": 11.25,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-09-27",
+      "upper": 11.0,
+      "lower": 11.0,
+      "midpoint": 11.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-10-11",
+      "upper": 10.5,
+      "lower": 10.5,
+      "midpoint": 10.5,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-10-18",
+      "upper": 10.0,
+      "lower": 10.0,
+      "midpoint": 10.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-11-08",
+      "upper": 9.5,
+      "lower": 9.5,
+      "midpoint": 9.5,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-11-23",
+      "upper": 9.0,
+      "lower": 9.0,
+      "midpoint": 9.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-12-06",
+      "upper": 8.75,
+      "lower": 8.75,
+      "midpoint": 8.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-12-19",
+      "upper": 8.5,
+      "lower": 8.5,
+      "midpoint": 8.5,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1984-12-24",
+      "upper": 8.125,
+      "lower": 8.125,
+      "midpoint": 8.125,
+      "regime": "single_target",
+      "delta_bps": -37.5,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1985-01-24",
+      "upper": 8.25,
+      "lower": 8.25,
+      "midpoint": 8.25,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1985-02-14",
+      "upper": 8.375,
+      "lower": 8.375,
+      "midpoint": 8.375,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1985-03-28",
+      "upper": 8.5,
+      "lower": 8.5,
+      "midpoint": 8.5,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1985-04-25",
+      "upper": 8.25,
+      "lower": 8.25,
+      "midpoint": 8.25,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1985-05-20",
+      "upper": 7.75,
+      "lower": 7.75,
+      "midpoint": 7.75,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1985-07-11",
+      "upper": 7.6875,
+      "lower": 7.6875,
+      "midpoint": 7.6875,
+      "regime": "single_target",
+      "delta_bps": -6.25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1985-07-25",
+      "upper": 7.75,
+      "lower": 7.75,
+      "midpoint": 7.75,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1985-08-21",
+      "upper": 7.8125,
+      "lower": 7.8125,
+      "midpoint": 7.8125,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1985-09-06",
+      "upper": 8.0,
+      "lower": 8.0,
+      "midpoint": 8.0,
+      "regime": "single_target",
+      "delta_bps": 18.75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1985-12-18",
+      "upper": 7.75,
+      "lower": 7.75,
+      "midpoint": 7.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1986-03-07",
+      "upper": 7.25,
+      "lower": 7.25,
+      "midpoint": 7.25,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1986-04-02",
+      "upper": 7.3125,
+      "lower": 7.3125,
+      "midpoint": 7.3125,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1986-04-21",
+      "upper": 6.75,
+      "lower": 6.75,
+      "midpoint": 6.75,
+      "regime": "single_target",
+      "delta_bps": -56.25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1986-05-22",
+      "upper": 6.8125,
+      "lower": 6.8125,
+      "midpoint": 6.8125,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1986-06-05",
+      "upper": 6.875,
+      "lower": 6.875,
+      "midpoint": 6.875,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1986-07-11",
+      "upper": 6.375,
+      "lower": 6.375,
+      "midpoint": 6.375,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1986-08-21",
+      "upper": 5.875,
+      "lower": 5.875,
+      "midpoint": 5.875,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1987-01-05",
+      "upper": 6.0,
+      "lower": 6.0,
+      "midpoint": 6.0,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1987-04-30",
+      "upper": 6.5,
+      "lower": 6.5,
+      "midpoint": 6.5,
+      "regime": "single_target",
+      "delta_bps": 50,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1987-05-22",
+      "upper": 6.75,
+      "lower": 6.75,
+      "midpoint": 6.75,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1987-07-02",
+      "upper": 6.625,
+      "lower": 6.625,
+      "midpoint": 6.625,
+      "regime": "single_target",
+      "delta_bps": -12.5,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1987-08-27",
+      "upper": 6.75,
+      "lower": 6.75,
+      "midpoint": 6.75,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1987-09-03",
+      "upper": 6.875,
+      "lower": 6.875,
+      "midpoint": 6.875,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1987-09-04",
+      "upper": 7.25,
+      "lower": 7.25,
+      "midpoint": 7.25,
+      "regime": "single_target",
+      "delta_bps": 37.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1987-09-24",
+      "upper": 7.3125,
+      "lower": 7.3125,
+      "midpoint": 7.3125,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1987-11-04",
+      "upper": 6.8125,
+      "lower": 6.8125,
+      "midpoint": 6.8125,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1988-01-28",
+      "upper": 6.625,
+      "lower": 6.625,
+      "midpoint": 6.625,
+      "regime": "single_target",
+      "delta_bps": -18.75,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1988-02-11",
+      "upper": 6.5,
+      "lower": 6.5,
+      "midpoint": 6.5,
+      "regime": "single_target",
+      "delta_bps": -12.5,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1988-03-30",
+      "upper": 6.75,
+      "lower": 6.75,
+      "midpoint": 6.75,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-05-09",
+      "upper": 7.0,
+      "lower": 7.0,
+      "midpoint": 7.0,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-05-25",
+      "upper": 7.25,
+      "lower": 7.25,
+      "midpoint": 7.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-06-22",
+      "upper": 7.4375,
+      "lower": 7.4375,
+      "midpoint": 7.4375,
+      "regime": "single_target",
+      "delta_bps": 18.75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-07-01",
+      "upper": 7.5,
+      "lower": 7.5,
+      "midpoint": 7.5,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-07-19",
+      "upper": 7.6875,
+      "lower": 7.6875,
+      "midpoint": 7.6875,
+      "regime": "single_target",
+      "delta_bps": 18.75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-08-08",
+      "upper": 7.75,
+      "lower": 7.75,
+      "midpoint": 7.75,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-08-09",
+      "upper": 8.125,
+      "lower": 8.125,
+      "midpoint": 8.125,
+      "regime": "single_target",
+      "delta_bps": 37.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-11-17",
+      "upper": 8.3125,
+      "lower": 8.3125,
+      "midpoint": 8.3125,
+      "regime": "single_target",
+      "delta_bps": 18.75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-11-22",
+      "upper": 8.375,
+      "lower": 8.375,
+      "midpoint": 8.375,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1988-12-15",
+      "upper": 8.6875,
+      "lower": 8.6875,
+      "midpoint": 8.6875,
+      "regime": "single_target",
+      "delta_bps": 31.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1989-01-05",
+      "upper": 9.0,
+      "lower": 9.0,
+      "midpoint": 9.0,
+      "regime": "single_target",
+      "delta_bps": 31.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1989-02-09",
+      "upper": 9.125,
+      "lower": 9.125,
+      "midpoint": 9.125,
+      "regime": "single_target",
+      "delta_bps": 12.5,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1989-02-14",
+      "upper": 9.3125,
+      "lower": 9.3125,
+      "midpoint": 9.3125,
+      "regime": "single_target",
+      "delta_bps": 18.75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1989-02-24",
+      "upper": 9.75,
+      "lower": 9.75,
+      "midpoint": 9.75,
+      "regime": "single_target",
+      "delta_bps": 43.75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1989-05-17",
+      "upper": 9.8125,
+      "lower": 9.8125,
+      "midpoint": 9.8125,
+      "regime": "single_target",
+      "delta_bps": 6.25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1989-06-06",
+      "upper": 9.5625,
+      "lower": 9.5625,
+      "midpoint": 9.5625,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1989-07-07",
+      "upper": 9.3125,
+      "lower": 9.3125,
+      "midpoint": 9.3125,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1989-07-27",
+      "upper": 9.0625,
+      "lower": 9.0625,
+      "midpoint": 9.0625,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1989-10-19",
+      "upper": 8.75,
+      "lower": 8.75,
+      "midpoint": 8.75,
+      "regime": "single_target",
+      "delta_bps": -31.25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1989-11-06",
+      "upper": 8.5,
+      "lower": 8.5,
+      "midpoint": 8.5,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1989-12-20",
+      "upper": 8.25,
+      "lower": 8.25,
+      "midpoint": 8.25,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1990-07-13",
+      "upper": 8.0,
+      "lower": 8.0,
+      "midpoint": 8.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1990-10-29",
+      "upper": 7.75,
+      "lower": 7.75,
+      "midpoint": 7.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1990-11-14",
+      "upper": 7.5,
+      "lower": 7.5,
+      "midpoint": 7.5,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1990-12-07",
+      "upper": 7.25,
+      "lower": 7.25,
+      "midpoint": 7.25,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1990-12-19",
+      "upper": 7.0,
+      "lower": 7.0,
+      "midpoint": 7.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-01-09",
+      "upper": 6.75,
+      "lower": 6.75,
+      "midpoint": 6.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-02-01",
+      "upper": 6.25,
+      "lower": 6.25,
+      "midpoint": 6.25,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-03-08",
+      "upper": 6.0,
+      "lower": 6.0,
+      "midpoint": 6.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-04-30",
+      "upper": 5.75,
+      "lower": 5.75,
+      "midpoint": 5.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-08-06",
+      "upper": 5.5,
+      "lower": 5.5,
+      "midpoint": 5.5,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-09-13",
+      "upper": 5.25,
+      "lower": 5.25,
+      "midpoint": 5.25,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-10-31",
+      "upper": 5.0,
+      "lower": 5.0,
+      "midpoint": 5.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-11-06",
+      "upper": 4.75,
+      "lower": 4.75,
+      "midpoint": 4.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-12-06",
+      "upper": 4.5,
+      "lower": 4.5,
+      "midpoint": 4.5,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1991-12-20",
+      "upper": 4.0,
+      "lower": 4.0,
+      "midpoint": 4.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1992-04-09",
+      "upper": 3.75,
+      "lower": 3.75,
+      "midpoint": 3.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1992-07-02",
+      "upper": 3.25,
+      "lower": 3.25,
+      "midpoint": 3.25,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1992-09-04",
+      "upper": 3.0,
+      "lower": 3.0,
+      "midpoint": 3.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1994-02-04",
+      "upper": 3.25,
+      "lower": 3.25,
+      "midpoint": 3.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1994-03-22",
+      "upper": 3.5,
+      "lower": 3.5,
+      "midpoint": 3.5,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1994-04-18",
+      "upper": 3.75,
+      "lower": 3.75,
+      "midpoint": 3.75,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1994-05-17",
+      "upper": 4.25,
+      "lower": 4.25,
+      "midpoint": 4.25,
+      "regime": "single_target",
+      "delta_bps": 50,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1994-08-16",
+      "upper": 4.75,
+      "lower": 4.75,
+      "midpoint": 4.75,
+      "regime": "single_target",
+      "delta_bps": 50,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1994-11-15",
+      "upper": 5.5,
+      "lower": 5.5,
+      "midpoint": 5.5,
+      "regime": "single_target",
+      "delta_bps": 75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1995-02-01",
+      "upper": 6.0,
+      "lower": 6.0,
+      "midpoint": 6.0,
+      "regime": "single_target",
+      "delta_bps": 50,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1995-07-06",
+      "upper": 5.75,
+      "lower": 5.75,
+      "midpoint": 5.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1995-12-19",
+      "upper": 5.5,
+      "lower": 5.5,
+      "midpoint": 5.5,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1996-01-31",
+      "upper": 5.25,
+      "lower": 5.25,
+      "midpoint": 5.25,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1997-03-25",
+      "upper": 5.5,
+      "lower": 5.5,
+      "midpoint": 5.5,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1998-09-29",
+      "upper": 5.25,
+      "lower": 5.25,
+      "midpoint": 5.25,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1998-10-15",
+      "upper": 5.0,
+      "lower": 5.0,
+      "midpoint": 5.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1998-11-17",
+      "upper": 4.75,
+      "lower": 4.75,
+      "midpoint": 4.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "1999-06-30",
+      "upper": 5.0,
+      "lower": 5.0,
+      "midpoint": 5.0,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1999-08-24",
+      "upper": 5.25,
+      "lower": 5.25,
+      "midpoint": 5.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "1999-11-16",
+      "upper": 5.5,
+      "lower": 5.5,
+      "midpoint": 5.5,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2000-02-02",
+      "upper": 5.75,
+      "lower": 5.75,
+      "midpoint": 5.75,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2000-03-21",
+      "upper": 6.0,
+      "lower": 6.0,
+      "midpoint": 6.0,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2000-05-16",
+      "upper": 6.5,
+      "lower": 6.5,
+      "midpoint": 6.5,
+      "regime": "single_target",
+      "delta_bps": 50,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2001-01-03",
+      "upper": 6.0,
+      "lower": 6.0,
+      "midpoint": 6.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-01-31",
+      "upper": 5.5,
+      "lower": 5.5,
+      "midpoint": 5.5,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-03-20",
+      "upper": 5.0,
+      "lower": 5.0,
+      "midpoint": 5.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-04-18",
+      "upper": 4.5,
+      "lower": 4.5,
+      "midpoint": 4.5,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-05-15",
+      "upper": 4.0,
+      "lower": 4.0,
+      "midpoint": 4.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-06-27",
+      "upper": 3.75,
+      "lower": 3.75,
+      "midpoint": 3.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-08-21",
+      "upper": 3.5,
+      "lower": 3.5,
+      "midpoint": 3.5,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-09-17",
+      "upper": 3.0,
+      "lower": 3.0,
+      "midpoint": 3.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-10-02",
+      "upper": 2.5,
+      "lower": 2.5,
+      "midpoint": 2.5,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-11-06",
+      "upper": 2.0,
+      "lower": 2.0,
+      "midpoint": 2.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2001-12-11",
+      "upper": 1.75,
+      "lower": 1.75,
+      "midpoint": 1.75,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2002-11-06",
+      "upper": 1.25,
+      "lower": 1.25,
+      "midpoint": 1.25,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2003-06-25",
+      "upper": 1.0,
+      "lower": 1.0,
+      "midpoint": 1.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2004-06-30",
+      "upper": 1.25,
+      "lower": 1.25,
+      "midpoint": 1.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2004-08-10",
+      "upper": 1.5,
+      "lower": 1.5,
+      "midpoint": 1.5,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2004-09-21",
+      "upper": 1.75,
+      "lower": 1.75,
+      "midpoint": 1.75,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2004-11-10",
+      "upper": 2.0,
+      "lower": 2.0,
+      "midpoint": 2.0,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2004-12-14",
+      "upper": 2.25,
+      "lower": 2.25,
+      "midpoint": 2.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2005-02-02",
+      "upper": 2.5,
+      "lower": 2.5,
+      "midpoint": 2.5,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2005-03-22",
+      "upper": 2.75,
+      "lower": 2.75,
+      "midpoint": 2.75,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2005-05-03",
+      "upper": 3.0,
+      "lower": 3.0,
+      "midpoint": 3.0,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2005-06-30",
+      "upper": 3.25,
+      "lower": 3.25,
+      "midpoint": 3.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2005-08-09",
+      "upper": 3.5,
+      "lower": 3.5,
+      "midpoint": 3.5,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2005-09-20",
+      "upper": 3.75,
+      "lower": 3.75,
+      "midpoint": 3.75,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2005-11-01",
+      "upper": 4.0,
+      "lower": 4.0,
+      "midpoint": 4.0,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2005-12-13",
+      "upper": 4.25,
+      "lower": 4.25,
+      "midpoint": 4.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2006-01-31",
+      "upper": 4.5,
+      "lower": 4.5,
+      "midpoint": 4.5,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2006-03-28",
+      "upper": 4.75,
+      "lower": 4.75,
+      "midpoint": 4.75,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2006-05-10",
+      "upper": 5.0,
+      "lower": 5.0,
+      "midpoint": 5.0,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2006-06-29",
+      "upper": 5.25,
+      "lower": 5.25,
+      "midpoint": 5.25,
+      "regime": "single_target",
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2007-09-18",
+      "upper": 4.75,
+      "lower": 4.75,
+      "midpoint": 4.75,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2007-10-31",
+      "upper": 4.5,
+      "lower": 4.5,
+      "midpoint": 4.5,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2007-12-11",
+      "upper": 4.25,
+      "lower": 4.25,
+      "midpoint": 4.25,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2008-01-22",
+      "upper": 3.5,
+      "lower": 3.5,
+      "midpoint": 3.5,
+      "regime": "single_target",
+      "delta_bps": -75,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2008-01-30",
+      "upper": 3.0,
+      "lower": 3.0,
+      "midpoint": 3.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2008-03-18",
+      "upper": 2.25,
+      "lower": 2.25,
+      "midpoint": 2.25,
+      "regime": "single_target",
+      "delta_bps": -75,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2008-04-30",
+      "upper": 2.0,
+      "lower": 2.0,
+      "midpoint": 2.0,
+      "regime": "single_target",
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2008-10-08",
+      "upper": 1.5,
+      "lower": 1.5,
+      "midpoint": 1.5,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2008-10-29",
+      "upper": 1.0,
+      "lower": 1.0,
+      "midpoint": 1.0,
+      "regime": "single_target",
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
       "effective_date": "2008-12-16",
       "upper": 0.25,
       "lower": 0.0,
       "midpoint": 0.125,
-      "delta_bps": 0,
-      "decision": "initial"
+      "regime": "target_range",
+      "delta_bps": -87.5,
+      "decision": "regime_change"
     },
     {
       "effective_date": "2015-12-16",
       "upper": 0.5,
       "lower": 0.25,
       "midpoint": 0.375,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -45,6 +1427,7 @@
       "upper": 0.75,
       "lower": 0.5,
       "midpoint": 0.625,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -53,6 +1436,7 @@
       "upper": 1.0,
       "lower": 0.75,
       "midpoint": 0.875,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -61,6 +1445,7 @@
       "upper": 1.25,
       "lower": 1.0,
       "midpoint": 1.125,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -69,6 +1454,7 @@
       "upper": 1.5,
       "lower": 1.25,
       "midpoint": 1.375,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -77,6 +1463,7 @@
       "upper": 1.75,
       "lower": 1.5,
       "midpoint": 1.625,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -85,6 +1472,7 @@
       "upper": 2.0,
       "lower": 1.75,
       "midpoint": 1.875,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -93,6 +1481,7 @@
       "upper": 2.25,
       "lower": 2.0,
       "midpoint": 2.125,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -101,6 +1490,7 @@
       "upper": 2.5,
       "lower": 2.25,
       "midpoint": 2.375,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -109,6 +1499,7 @@
       "upper": 2.25,
       "lower": 2.0,
       "midpoint": 2.125,
+      "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
     },
@@ -117,6 +1508,7 @@
       "upper": 2.0,
       "lower": 1.75,
       "midpoint": 1.875,
+      "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
     },
@@ -125,6 +1517,7 @@
       "upper": 1.75,
       "lower": 1.5,
       "midpoint": 1.625,
+      "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
     },
@@ -133,6 +1526,7 @@
       "upper": 1.25,
       "lower": 1.0,
       "midpoint": 1.125,
+      "regime": "target_range",
       "delta_bps": -50,
       "decision": "cut"
     },
@@ -141,6 +1535,7 @@
       "upper": 0.25,
       "lower": 0.0,
       "midpoint": 0.125,
+      "regime": "target_range",
       "delta_bps": -100,
       "decision": "cut"
     },
@@ -149,6 +1544,7 @@
       "upper": 0.5,
       "lower": 0.25,
       "midpoint": 0.375,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -157,6 +1553,7 @@
       "upper": 1.0,
       "lower": 0.75,
       "midpoint": 0.875,
+      "regime": "target_range",
       "delta_bps": 50,
       "decision": "hike"
     },
@@ -165,6 +1562,7 @@
       "upper": 1.75,
       "lower": 1.5,
       "midpoint": 1.625,
+      "regime": "target_range",
       "delta_bps": 75,
       "decision": "hike"
     },
@@ -173,6 +1571,7 @@
       "upper": 2.5,
       "lower": 2.25,
       "midpoint": 2.375,
+      "regime": "target_range",
       "delta_bps": 75,
       "decision": "hike"
     },
@@ -181,6 +1580,7 @@
       "upper": 3.25,
       "lower": 3.0,
       "midpoint": 3.125,
+      "regime": "target_range",
       "delta_bps": 75,
       "decision": "hike"
     },
@@ -189,6 +1589,7 @@
       "upper": 4.0,
       "lower": 3.75,
       "midpoint": 3.875,
+      "regime": "target_range",
       "delta_bps": 75,
       "decision": "hike"
     },
@@ -197,6 +1598,7 @@
       "upper": 4.5,
       "lower": 4.25,
       "midpoint": 4.375,
+      "regime": "target_range",
       "delta_bps": 50,
       "decision": "hike"
     },
@@ -205,6 +1607,7 @@
       "upper": 4.75,
       "lower": 4.5,
       "midpoint": 4.625,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -213,6 +1616,7 @@
       "upper": 5.0,
       "lower": 4.75,
       "midpoint": 4.875,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -221,6 +1625,7 @@
       "upper": 5.25,
       "lower": 5.0,
       "midpoint": 5.125,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -229,6 +1634,7 @@
       "upper": 5.5,
       "lower": 5.25,
       "midpoint": 5.375,
+      "regime": "target_range",
       "delta_bps": 25,
       "decision": "hike"
     },
@@ -237,6 +1643,7 @@
       "upper": 5.0,
       "lower": 4.75,
       "midpoint": 4.875,
+      "regime": "target_range",
       "delta_bps": -50,
       "decision": "cut"
     },
@@ -245,6 +1652,7 @@
       "upper": 4.75,
       "lower": 4.5,
       "midpoint": 4.625,
+      "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
     },
@@ -253,6 +1661,7 @@
       "upper": 4.5,
       "lower": 4.25,
       "midpoint": 4.375,
+      "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
     },
@@ -261,6 +1670,7 @@
       "upper": 4.25,
       "lower": 4.0,
       "midpoint": 4.125,
+      "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
     },
@@ -269,6 +1679,7 @@
       "upper": 4.0,
       "lower": 3.75,
       "midpoint": 3.875,
+      "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
     },
@@ -277,6 +1688,7 @@
       "upper": 3.75,
       "lower": 3.5,
       "midpoint": 3.625,
+      "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
     }

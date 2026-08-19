@@ -21,10 +21,21 @@ def test_parse_calendar_extracts_dates_and_documents():
 
 def test_parse_rates_compresses_history_and_classifies_moves():
     result = parse_rates_csv((FIXTURES / "rates.csv").read_text())
-    assert result["current"] == {"as_of": "2025-05-08", "upper": 4.5, "lower": 4.25, "midpoint": 4.375}
-    assert len(result["history"]) == 3
-    assert result["history"][1]["decision"] == "cut"
-    assert result["history"][1]["delta_bps"] == -25
+    assert result["current"] == {
+        "as_of": "2025-05-08",
+        "upper": 4.5,
+        "lower": 4.25,
+        "midpoint": 4.375,
+        "regime": "target_range",
+    }
+    assert len(result["history"]) == 6
+    assert result["history"][0]["regime"] == "single_target"
+    assert result["history"][0]["effective_date"] == "1982-09-27"
+    assert result["history"][2]["decision"] == "regime_change"
+    assert result["history"][2]["midpoint"] == 0.125
+    cut = next(item for item in result["history"] if item["effective_date"] == "2025-03-20")
+    assert cut["decision"] == "cut"
+    assert cut["delta_bps"] == -25
     assert result["latest_change"]["decision"] == "hike"
 
 

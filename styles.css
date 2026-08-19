@@ -73,6 +73,7 @@ h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(28px,
 .chart .axis-label { fill: #71807e; font-size: 11px; }
 .chart .rate-line { fill: none; stroke: var(--orange); stroke-width: 3; stroke-linejoin: round; }
 .chart .rate-area { fill: url(#rateGradient); opacity: .9; }
+.chart .range-band { fill: var(--mint); opacity: .58; }
 .method-note { margin: 16px 0 0; color: var(--muted); font-size: 12px; }
 .source-link { color: var(--deep); text-decoration: none; font-size: 13px; border-bottom: 1px solid var(--deep); }
 .meeting-row { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 24px; padding: 22px 0; border-top: 1px solid var(--line); }

@@ -4,7 +4,8 @@
 
 ## 数据范围
 
-- 联邦基金目标区间上下限：FRED `DFEDTARU`、`DFEDTARL`
+- 2008-12-16 前的单一目标利率：FRED `DFEDTAR`
+- 2008-12-16 起的目标区间上下限：FRED `DFEDTARU`、`DFEDTARL`
 - 实际有效联邦基金利率：FRED `DFF`（原始来源为纽约联储）
 - FOMC 会议日期与官方文件：Federal Reserve FOMC Calendar
 - 加息、降息及基点数是目标区间中点变化的**推导结果**，并非额外的官方序列
@@ -93,4 +94,5 @@ python scripts/send_notification.py --dry-run
 - [Federal Reserve FOMC Calendar](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)
 - [FRED DFEDTARU](https://fred.stlouisfed.org/series/DFEDTARU)
 - [FRED DFEDTARL](https://fred.stlouisfed.org/series/DFEDTARL)
+- [FRED DFEDTAR](https://fred.stlouisfed.org/series/DFEDTAR)
 - [New York Fed EFFR](https://www.newyorkfed.org/markets/reference-rates/effr)

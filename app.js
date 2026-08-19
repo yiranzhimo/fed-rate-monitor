@@ -75,6 +75,22 @@ function renderChart(history) {
   const finalX = x(dates[dates.length - 1]).toFixed(1);
   const area = `${path} L ${finalX} ${height - margin.bottom} L ${x(dates[0]).toFixed(1)} ${height - margin.bottom} Z`;
 
+  const rangeHistory = history.filter((item) => item.regime === 'target_range');
+  let rangeBand = '';
+  if (rangeHistory.length) {
+    const rangeDates = rangeHistory.map((item) => parseDate(item.effective_date).getTime());
+    let bandPath = `M ${x(rangeDates[0]).toFixed(1)} ${y(Number(rangeHistory[0].upper)).toFixed(1)}`;
+    for (let index = 1; index < rangeHistory.length; index += 1) {
+      bandPath += ` H ${x(rangeDates[index]).toFixed(1)} V ${y(Number(rangeHistory[index].upper)).toFixed(1)}`;
+    }
+    const last = rangeHistory.length - 1;
+    bandPath += ` V ${y(Number(rangeHistory[last].lower)).toFixed(1)}`;
+    for (let index = last - 1; index >= 0; index -= 1) {
+      bandPath += ` V ${y(Number(rangeHistory[index].lower)).toFixed(1)} H ${x(rangeDates[index]).toFixed(1)}`;
+    }
+    rangeBand = `${bandPath} Z`;
+  }
+
   const grid = [];
   for (let value = 0; value <= maxValue; value += 1) {
     const position = y(value).toFixed(1);
@@ -95,6 +111,7 @@ function renderChart(history) {
       <defs><linearGradient id="rateGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d96c3b" stop-opacity=".22"/><stop offset="1" stop-color="#d96c3b" stop-opacity="0"/></linearGradient></defs>
       ${grid.join('')}
       <path class="rate-area" d="${area}"/>
+      ${rangeBand ? `<path class="range-band" d="${rangeBand}"/>` : ''}
       <path class="rate-line" d="${path}"/>
       ${years.join('')}
     </svg>`;
