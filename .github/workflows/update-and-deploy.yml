@@ -43,7 +43,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Test
-        run: pytest -q
+        run: python -m pytest -q
 
       - name: Refresh official data
         run: python scripts/update_data.py

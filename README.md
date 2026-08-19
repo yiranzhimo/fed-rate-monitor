@@ -17,7 +17,7 @@
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-pytest -q
+python -m pytest -q
 python scripts/update_data.py
 python3 -m http.server 8000
 ```
