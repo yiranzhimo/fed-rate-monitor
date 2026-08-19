@@ -47,7 +47,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 6.7%（2020-12）；PCE 1.2%、核心 PCE 1.5%（同比，2020-11）。"
+          "summary": "会议前宏观数据：失业率 6.7%（2020-12）；PCE 通胀 1.2%、核心 PCE 通胀 1.5%（同比，2020-11）。"
         }
       }
     },
@@ -99,7 +99,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 6.2%（2021-02）；PCE 1.6%、核心 PCE 1.7%（同比，2021-01）。"
+          "summary": "会议前宏观数据：失业率 6.2%（2021-02）；PCE 通胀 1.6%、核心 PCE 通胀 1.7%（同比，2021-01）。"
         }
       }
     },
@@ -149,7 +149,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 6.1%（2021-03）；PCE 1.8%、核心 PCE 1.7%（同比，2021-02）。"
+          "summary": "会议前宏观数据：失业率 6.1%（2021-03）；PCE 通胀 1.8%、核心 PCE 通胀 1.7%（同比，2021-02）。"
         }
       }
     },
@@ -201,7 +201,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 5.8%（2021-05）；PCE 3.6%、核心 PCE 3.1%（同比，2021-04）。"
+          "summary": "会议前宏观数据：失业率 5.8%（2021-05）；PCE 通胀 3.6%、核心 PCE 通胀 3.1%（同比，2021-04）。"
         }
       }
     },
@@ -251,7 +251,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 5.9%（2021-06）；PCE 4.1%、核心 PCE 3.5%（同比，2021-05）。"
+          "summary": "会议前宏观数据：失业率 5.9%（2021-06）；PCE 通胀 4.1%、核心 PCE 通胀 3.5%（同比，2021-05）。"
         }
       }
     },
@@ -303,7 +303,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 5.1%（2021-08）；PCE 4.5%、核心 PCE 3.9%（同比，2021-07）。"
+          "summary": "会议前宏观数据：失业率 5.1%（2021-08）；PCE 通胀 4.5%、核心 PCE 通胀 3.9%（同比，2021-07）。"
         }
       }
     },
@@ -353,7 +353,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.7%（2021-09）；PCE 4.7%、核心 PCE 4.0%（同比，2021-09）。"
+          "summary": "会议前宏观数据：失业率 4.7%（2021-09）；PCE 通胀 4.7%、核心 PCE 通胀 4.0%（同比，2021-09）。"
         }
       }
     },
@@ -405,7 +405,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.1%（2021-11）；PCE 5.3%、核心 PCE 4.4%（同比，2021-10）。"
+          "summary": "会议前宏观数据：失业率 4.1%（2021-11）；PCE 通胀 5.3%、核心 PCE 通胀 4.4%（同比，2021-10）。"
         }
       }
     },
@@ -455,7 +455,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.9%（2021-12）；PCE 5.9%、核心 PCE 4.9%（同比，2021-11）。"
+          "summary": "会议前宏观数据：失业率 3.9%（2021-12）；PCE 通胀 5.9%、核心 PCE 通胀 4.9%（同比，2021-11）。"
         }
       }
     },
@@ -507,7 +507,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.9%（2022-02）；PCE 6.3%、核心 PCE 5.4%（同比，2022-01）。"
+          "summary": "会议前宏观数据：失业率 3.9%（2022-02）；PCE 通胀 6.3%、核心 PCE 通胀 5.4%（同比，2022-01）。"
         }
       }
     },
@@ -557,7 +557,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.7%（2022-03）；PCE 6.9%、核心 PCE 5.6%（同比，2022-03）。"
+          "summary": "会议前宏观数据：失业率 3.7%（2022-03）；PCE 通胀 6.9%、核心 PCE 通胀 5.6%（同比，2022-03）。"
         }
       }
     },
@@ -609,7 +609,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.6%（2022-05）；PCE 6.7%、核心 PCE 5.3%（同比，2022-04）。"
+          "summary": "会议前宏观数据：失业率 3.6%（2022-05）；PCE 通胀 6.7%、核心 PCE 通胀 5.3%（同比，2022-04）。"
         }
       }
     },
@@ -659,7 +659,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.6%（2022-06）；PCE 6.8%、核心 PCE 5.2%（同比，2022-05）。"
+          "summary": "会议前宏观数据：失业率 3.6%（2022-06）；PCE 通胀 6.8%、核心 PCE 通胀 5.2%（同比，2022-05）。"
         }
       }
     },
@@ -711,7 +711,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.6%（2022-08）；PCE 6.8%、核心 PCE 5.1%（同比，2022-07）。"
+          "summary": "会议前宏观数据：失业率 3.6%（2022-08）；PCE 通胀 6.8%、核心 PCE 通胀 5.1%（同比，2022-07）。"
         }
       }
     },
@@ -761,7 +761,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.5%（2022-09）；PCE 6.7%、核心 PCE 5.6%（同比，2022-09）。"
+          "summary": "会议前宏观数据：失业率 3.5%（2022-09）；PCE 通胀 6.7%、核心 PCE 通胀 5.6%（同比，2022-09）。"
         }
       }
     },
@@ -813,7 +813,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.6%（2022-11）；PCE 6.5%、核心 PCE 5.5%（同比，2022-10）。"
+          "summary": "会议前宏观数据：失业率 3.6%（2022-11）；PCE 通胀 6.5%、核心 PCE 通胀 5.5%（同比，2022-10）。"
         }
       }
     },
@@ -865,7 +865,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.6%（2023-02）；PCE 5.5%、核心 PCE 4.9%（同比，2023-01）。"
+          "summary": "会议前宏观数据：失业率 3.6%（2023-02）；PCE 通胀 5.5%、核心 PCE 通胀 4.9%（同比，2023-01）。"
         }
       }
     },
@@ -915,7 +915,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.5%（2023-03）；PCE 4.4%、核心 PCE 4.8%（同比，2023-03）。"
+          "summary": "会议前宏观数据：失业率 3.5%（2023-03）；PCE 通胀 4.4%、核心 PCE 通胀 4.8%（同比，2023-03）。"
         }
       }
     },
@@ -967,7 +967,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.6%（2023-05）；PCE 4.5%、核心 PCE 4.8%（同比，2023-04）。"
+          "summary": "会议前宏观数据：失业率 3.6%（2023-05）；PCE 通胀 4.5%、核心 PCE 通胀 4.8%（同比，2023-04）。"
         }
       }
     },
@@ -1017,7 +1017,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.6%（2023-06）；PCE 4.0%、核心 PCE 4.7%（同比，2023-05）。"
+          "summary": "会议前宏观数据：失业率 3.6%（2023-06）；PCE 通胀 4.0%、核心 PCE 通胀 4.7%（同比，2023-05）。"
         }
       }
     },
@@ -1069,7 +1069,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.7%（2023-08）；PCE 3.4%、核心 PCE 4.3%（同比，2023-07）。"
+          "summary": "会议前宏观数据：失业率 3.7%（2023-08）；PCE 通胀 3.4%、核心 PCE 通胀 4.3%（同比，2023-07）。"
         }
       }
     },
@@ -1121,7 +1121,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.7%（2023-11）；PCE 3.0%、核心 PCE 3.5%（同比，2023-10）。"
+          "summary": "会议前宏观数据：失业率 3.7%（2023-11）；PCE 通胀 3.0%、核心 PCE 通胀 3.5%（同比，2023-10）。"
         }
       }
     },
@@ -1171,7 +1171,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.8%（2023-12）；PCE 2.8%、核心 PCE 3.3%（同比，2023-11）。"
+          "summary": "会议前宏观数据：失业率 3.8%（2023-12）；PCE 通胀 2.8%、核心 PCE 通胀 3.3%（同比，2023-11）。"
         }
       }
     },
@@ -1223,7 +1223,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.9%（2024-02）；PCE 2.7%、核心 PCE 3.2%（同比，2024-01）。"
+          "summary": "会议前宏观数据：失业率 3.9%（2024-02）；PCE 通胀 2.7%、核心 PCE 通胀 3.2%（同比，2024-01）。"
         }
       }
     },
@@ -1275,7 +1275,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 3.9%（2024-05）；PCE 2.8%、核心 PCE 3.0%（同比，2024-04）。"
+          "summary": "会议前宏观数据：失业率 3.9%（2024-05）；PCE 通胀 2.8%、核心 PCE 通胀 3.0%（同比，2024-04）。"
         }
       }
     },
@@ -1325,7 +1325,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.1%（2024-06）；PCE 2.7%、核心 PCE 2.8%（同比，2024-05）。"
+          "summary": "会议前宏观数据：失业率 4.1%（2024-06）；PCE 通胀 2.7%、核心 PCE 通胀 2.8%（同比，2024-05）。"
         }
       }
     },
@@ -1377,7 +1377,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.2%（2024-08）；PCE 2.6%、核心 PCE 2.8%（同比，2024-07）。"
+          "summary": "会议前宏观数据：失业率 4.2%（2024-08）；PCE 通胀 2.6%、核心 PCE 通胀 2.8%（同比，2024-07）。"
         }
       }
     },
@@ -1427,7 +1427,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.1%（2024-10）；PCE 2.3%、核心 PCE 2.8%（同比，2024-09）。"
+          "summary": "会议前宏观数据：失业率 4.1%（2024-10）；PCE 通胀 2.3%、核心 PCE 通胀 2.8%（同比，2024-09）。"
         }
       }
     },
@@ -1479,7 +1479,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.2%（2024-11）；PCE 2.5%、核心 PCE 3.0%（同比，2024-10）。"
+          "summary": "会议前宏观数据：失业率 4.2%（2024-11）；PCE 通胀 2.5%、核心 PCE 通胀 3.0%（同比，2024-10）。"
         }
       }
     },
@@ -1529,7 +1529,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.1%（2024-12）；PCE 2.6%、核心 PCE 3.0%（同比，2024-11）。"
+          "summary": "会议前宏观数据：失业率 4.1%（2024-12）；PCE 通胀 2.6%、核心 PCE 通胀 3.0%（同比，2024-11）。"
         }
       }
     },
@@ -1581,7 +1581,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.2%（2025-02）；PCE 2.6%、核心 PCE 2.8%（同比，2025-01）。"
+          "summary": "会议前宏观数据：失业率 4.2%（2025-02）；PCE 通胀 2.6%、核心 PCE 通胀 2.8%（同比，2025-01）。"
         }
       }
     },
@@ -1631,7 +1631,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.2%（2025-04）；PCE 2.4%、核心 PCE 2.7%（同比，2025-03）。"
+          "summary": "会议前宏观数据：失业率 4.2%（2025-04）；PCE 通胀 2.4%、核心 PCE 通胀 2.7%（同比，2025-03）。"
         }
       }
     },
@@ -1683,7 +1683,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.3%（2025-05）；PCE 2.3%、核心 PCE 2.6%（同比，2025-04）。"
+          "summary": "会议前宏观数据：失业率 4.3%（2025-05）；PCE 通胀 2.3%、核心 PCE 通胀 2.6%（同比，2025-04）。"
         }
       }
     },
@@ -1733,7 +1733,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.1%（2025-06）；PCE 2.5%、核心 PCE 2.8%（同比，2025-05）。"
+          "summary": "会议前宏观数据：失业率 4.1%（2025-06）；PCE 通胀 2.5%、核心 PCE 通胀 2.8%（同比，2025-05）。"
         }
       }
     },
@@ -1773,7 +1773,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.3%（2025-07）；PCE 2.6%、核心 PCE 2.8%（同比，2025-06）。"
+          "summary": "会议前宏观数据：失业率 4.3%（2025-07）；PCE 通胀 2.6%、核心 PCE 通胀 2.8%（同比，2025-06）。"
         }
       }
     },
@@ -1825,7 +1825,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.3%（2025-08）；PCE 2.6%、核心 PCE 2.9%（同比，2025-07）。"
+          "summary": "会议前宏观数据：失业率 4.3%（2025-08）；PCE 通胀 2.6%、核心 PCE 通胀 2.9%（同比，2025-07）。"
         }
       }
     },
@@ -1875,7 +1875,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.4%（2025-09）；PCE 2.7%、核心 PCE 2.9%（同比，2025-08）。"
+          "summary": "会议前宏观数据：失业率 4.4%（2025-09）；PCE 通胀 2.7%、核心 PCE 通胀 2.9%（同比，2025-08）。"
         }
       }
     },
@@ -1927,7 +1927,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.5%（2025-11）；PCE 2.7%、核心 PCE 2.8%（同比，2025-10）。"
+          "summary": "会议前宏观数据：失业率 4.5%（2025-11）；PCE 通胀 2.7%、核心 PCE 通胀 2.8%（同比，2025-10）。"
         }
       }
     },
@@ -1976,7 +1976,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.4%（2025-12）；PCE 2.8%、核心 PCE 2.8%（同比，2025-11）。"
+          "summary": "会议前宏观数据：失业率 4.4%（2025-12）；PCE 通胀 2.8%、核心 PCE 通胀 2.8%（同比，2025-11）。"
         }
       }
     },
@@ -2028,7 +2028,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.4%（2026-02）；PCE 2.9%、核心 PCE 3.1%（同比，2026-01）。"
+          "summary": "会议前宏观数据：失业率 4.4%（2026-02）；PCE 通胀 2.9%、核心 PCE 通胀 3.1%（同比，2026-01）。"
         }
       }
     },
@@ -2078,7 +2078,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.3%（2026-03）；PCE 2.9%、核心 PCE 3.0%（同比，2026-02）。"
+          "summary": "会议前宏观数据：失业率 4.3%（2026-03）；PCE 通胀 2.9%、核心 PCE 通胀 3.0%（同比，2026-02）。"
         }
       }
     },
@@ -2130,7 +2130,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.3%（2026-05）；PCE 3.8%、核心 PCE 3.3%（同比，2026-04）。"
+          "summary": "会议前宏观数据：失业率 4.3%（2026-05）；PCE 通胀 3.8%、核心 PCE 通胀 3.3%（同比，2026-04）。"
         }
       }
     },
@@ -2178,7 +2178,7 @@
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
-          "summary": "会议前宏观数据：失业率 4.2%（2026-06）；PCE 4.1%、核心 PCE 3.4%（同比，2026-05）。"
+          "summary": "会议前宏观数据：失业率 4.2%（2026-06）；PCE 通胀 4.1%、核心 PCE 通胀 3.4%（同比，2026-05）。"
         }
       }
     },

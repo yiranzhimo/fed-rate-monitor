@@ -379,8 +379,8 @@ def attach_macro_snapshots(
         }
         snapshot["summary"] = (
             f"会议前宏观数据：失业率 {snapshot['unemployment']['value']:.1f}%"
-            f"（{snapshot['unemployment']['period']}）；PCE {pce['value']:.1f}%、"
-            f"核心 PCE {core_pce['value']:.1f}%（同比，{pce['period']}）。"
+            f"（{snapshot['unemployment']['period']}）；PCE 通胀 {pce['value']:.1f}%、"
+            f"核心 PCE 通胀 {core_pce['value']:.1f}%（同比，{pce['period']}）。"
         )
         outcome["macro_snapshot"] = snapshot
 

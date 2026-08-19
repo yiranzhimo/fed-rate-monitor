@@ -143,6 +143,7 @@ def test_macro_snapshot_uses_pre_meeting_periods_and_yoy_values():
     assert snapshot["pce_yoy"]["value"] == 2.5
     assert snapshot["core_pce_yoy"]["value"] == 3.5
     assert "会议前宏观数据：失业率 4.1%" in snapshot["summary"]
+    assert "PCE 通胀 2.5%、核心 PCE 通胀 3.5%" in snapshot["summary"]
 
 
 def test_macro_snapshot_uses_first_friday_employment_release_boundary():
