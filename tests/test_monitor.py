@@ -2,9 +2,11 @@ from copy import deepcopy
 from pathlib import Path
 
 from scripts.update_data import (
+    attach_macro_snapshots,
     attach_meeting_outcomes,
     build_change_event,
     parse_calendar_html,
+    parse_macro_csv,
     parse_rates_csv,
 )
 
@@ -101,3 +103,67 @@ def test_meeting_outcomes_distinguish_cut_hike_and_hold():
     assert "发布经济预测" in cut["summary"]
     assert hike["action"] == "hike"
     assert hike["delta_bps"] == 25
+
+
+def test_macro_snapshot_uses_pre_meeting_periods_and_yoy_values():
+    macro_csv = """observation_date,UNRATE,PCEPI,PCEPILFE
+2024-01-01,3.7,100.0,100.0
+2024-02-01,3.8,100.2,100.3
+2024-03-01,3.9,100.4,100.6
+2024-04-01,3.9,100.6,100.9
+2024-05-01,4.0,100.8,101.2
+2024-06-01,4.1,101.0,101.5
+2024-07-01,4.2,101.2,101.8
+2024-08-01,4.2,101.4,102.1
+2024-09-01,4.1,101.6,102.4
+2024-10-01,4.1,101.8,102.7
+2024-11-01,4.2,102.0,103.0
+2024-12-01,4.1,102.2,103.3
+2025-01-01,4.0,102.5,103.5
+2025-02-01,4.1,102.7,103.8
+2025-03-01,4.2,102.9,104.1
+"""
+    macro = parse_macro_csv(macro_csv)
+    meetings = {
+        "meetings": [
+            {
+                "end_date": "2025-03-19",
+                "outcome": {"summary": "维持目标区间不变。"},
+            }
+        ]
+    }
+    attach_macro_snapshots(meetings, macro)
+    snapshot = meetings["meetings"][0]["outcome"]["macro_snapshot"]
+    assert snapshot["unemployment"] == {
+        "period": "2025-02",
+        "value": 4.1,
+        "series": "UNRATE",
+    }
+    assert snapshot["pce_yoy"]["period"] == "2025-01"
+    assert snapshot["pce_yoy"]["value"] == 2.5
+    assert snapshot["core_pce_yoy"]["value"] == 3.5
+    assert "会议前宏观数据：失业率 4.1%" in snapshot["summary"]
+
+
+def test_macro_snapshot_uses_first_friday_employment_release_boundary():
+    macro_csv = """observation_date,UNRATE,PCEPI,PCEPILFE
+2023-08-01,3.7,99.9,99.9
+2023-09-01,3.8,100.0,100.0
+2023-10-01,3.9,100.1,100.1
+2024-08-01,4.0,102.3,102.5
+2024-09-01,4.1,102.5,102.7
+2024-10-01,4.2,102.8,103.0
+"""
+    macro = parse_macro_csv(macro_csv)
+    meetings = {
+        "meetings": [
+            {"end_date": "2024-10-31", "outcome": {"summary": "test"}},
+            {"end_date": "2024-11-01", "outcome": {"summary": "test"}},
+        ]
+    }
+    attach_macro_snapshots(meetings, macro)
+    periods = [
+        item["outcome"]["macro_snapshot"]["unemployment"]["period"]
+        for item in meetings["meetings"]
+    ]
+    assert periods == ["2024-09", "2024-10"]

@@ -161,6 +161,13 @@ function renderMeetings(meetings) {
         outcome.className = `meeting-outcome ${meeting.outcome.action}`;
         outcome.textContent = meeting.outcome.summary;
         title.appendChild(outcome);
+        if (meeting.outcome.macro_snapshot) {
+          const macro = document.createElement('p');
+          macro.className = 'meeting-macro';
+          macro.textContent = meeting.outcome.macro_snapshot.summary;
+          macro.title = '月份按保守发布滞后选取；历史数值采用 FRED 当前版本，可能包含会后修订。';
+          title.appendChild(macro);
+        }
       }
       const docs = document.createElement('div');
       docs.className = 'docs';

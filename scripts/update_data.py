@@ -28,6 +28,10 @@ RATES_CSV_URL = (
     "https://fred.stlouisfed.org/graph/fredgraph.csv?"
     "id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
 )
+MACRO_CSV_URL = (
+    "https://fred.stlouisfed.org/graph/fredgraph.csv?"
+    "id=UNRATE,PCEPI,PCEPILFE"
+)
 USER_AGENT = "fed-rate-monitor/1.0 (+https://github.com/)"
 
 MONTHS = {
@@ -258,6 +262,131 @@ def parse_rates_csv(csv_text: str) -> dict[str, Any]:
     }
 
 
+def parse_macro_csv(csv_text: str) -> dict[str, Any]:
+    """Parse official employment and PCE price-index series from FRED."""
+    reader = csv.DictReader(io.StringIO(csv_text.lstrip("\ufeff")))
+    expected = {"UNRATE", "PCEPI", "PCEPILFE"}
+    if not reader.fieldnames or not expected.issubset(reader.fieldnames):
+        raise ValueError("FRED macro CSV is missing required series")
+
+    observations: dict[str, list[dict[str, Any]]] = {series: [] for series in expected}
+    for row in reader:
+        observation_date = (row.get("observation_date") or "").strip()
+        if not observation_date:
+            continue
+        for series in expected:
+            value = _number(row.get(series))
+            if value is not None:
+                observations[series].append({"date": observation_date, "value": value})
+
+    if any(not observations[series] for series in expected):
+        raise ValueError("FRED macro CSV contains an empty required series")
+
+    return {
+        "source": MACRO_CSV_URL,
+        "series": {
+            "unemployment_rate": "UNRATE",
+            "pce_price_index": "PCEPI",
+            "core_pce_price_index": "PCEPILFE",
+        },
+        "observations": observations,
+    }
+
+
+def _month_offset(value: date, months: int) -> date:
+    month_index = value.year * 12 + value.month - 1 + months
+    return date(month_index // 12, month_index % 12 + 1, 1)
+
+
+def _latest_observation(
+    observations: list[dict[str, Any]], cutoff: date
+) -> dict[str, Any] | None:
+    return next(
+        (
+            item
+            for item in reversed(observations)
+            if date.fromisoformat(item["date"]) <= cutoff
+        ),
+        None,
+    )
+
+
+def _year_over_year(
+    observations: list[dict[str, Any]], cutoff: date
+) -> dict[str, Any] | None:
+    current = _latest_observation(observations, cutoff)
+    if current is None:
+        return None
+    previous_date = _month_offset(date.fromisoformat(current["date"]), -12).isoformat()
+    previous = next((item for item in observations if item["date"] == previous_date), None)
+    if previous is None or previous["value"] == 0:
+        return None
+    return {
+        "period": current["date"][:7],
+        "value": round((current["value"] / previous["value"] - 1) * 100, 1),
+    }
+
+
+def _unemployment_cutoff(meeting_end: date) -> date:
+    """Estimate the latest released reference month conservatively.
+
+    The Employment Situation is normally published on the first Friday after its
+    reference month. This rule avoids selecting the current meeting month while
+    correctly handling early-month FOMC meetings on either side of that Friday.
+    """
+    first_day = meeting_end.replace(day=1)
+    first_friday_day = 1 + (4 - first_day.weekday()) % 7
+    lag = -1 if meeting_end.day >= first_friday_day else -2
+    return _month_offset(meeting_end, lag)
+
+
+def attach_macro_snapshots(
+    meetings_data: dict[str, Any], macro_data: dict[str, Any]
+) -> dict[str, Any]:
+    """Add a conservative meeting-time employment and inflation snapshot.
+
+    FRED's keyless CSV provides current revised observations, not ALFRED vintages.
+    To avoid selecting a month that had not yet been released, unemployment uses
+    the prior month once the next month's first Friday has passed, while PCE uses
+    two months back. Periods and the revision limitation are stored explicitly.
+    """
+    observations = macro_data["observations"]
+    for meeting in meetings_data.get("meetings", []):
+        outcome = meeting.get("outcome")
+        if not outcome:
+            continue
+
+        end_date = date.fromisoformat(meeting["end_date"])
+        unemployment_cutoff = _unemployment_cutoff(end_date)
+        pce_cutoff = _month_offset(end_date, -2)
+
+        unemployment = _latest_observation(observations["UNRATE"], unemployment_cutoff)
+        pce = _year_over_year(observations["PCEPI"], pce_cutoff)
+        core_pce = _year_over_year(observations["PCEPILFE"], pce_cutoff)
+        if unemployment is None or pce is None or core_pce is None:
+            continue
+
+        snapshot = {
+            "unemployment": {
+                "period": unemployment["date"][:7],
+                "value": round(unemployment["value"], 1),
+                "series": "UNRATE",
+            },
+            "pce_yoy": {**pce, "series": "PCEPI"},
+            "core_pce_yoy": {**core_pce, "series": "PCEPILFE"},
+            "method": "conservative_release_lag_current_vintage",
+            "source": macro_data["source"],
+        }
+        snapshot["summary"] = (
+            f"会议前宏观数据：失业率 {snapshot['unemployment']['value']:.1f}%"
+            f"（{snapshot['unemployment']['period']}）；PCE {pce['value']:.1f}%、"
+            f"核心 PCE {core_pce['value']:.1f}%（同比，{pce['period']}）。"
+        )
+        outcome["macro_snapshot"] = snapshot
+
+    return meetings_data
+
+
 def _rate_range_text(lower: float, upper: float) -> str:
     return f"{lower:.2f}%–{upper:.2f}%"
 
@@ -444,6 +573,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--calendar-file", type=Path, help="Use a local calendar HTML fixture")
     parser.add_argument("--rates-file", type=Path, help="Use a local rates CSV fixture")
+    parser.add_argument("--macro-file", type=Path, help="Use a local macro CSV fixture")
     args = parser.parse_args()
 
     old_meetings = load_json(DATA_DIR / "meetings.json")
@@ -459,10 +589,17 @@ def main() -> int:
         if args.rates_file
         else fetch_text(RATES_CSV_URL)
     )
+    macro_csv = (
+        args.macro_file.read_text(encoding="utf-8")
+        if args.macro_file
+        else fetch_text(MACRO_CSV_URL)
+    )
 
     meetings = parse_calendar_html(calendar_html)
     rates = parse_rates_csv(rates_csv)
+    macro = parse_macro_csv(macro_csv)
     attach_meeting_outcomes(meetings, rates)
+    attach_macro_snapshots(meetings, macro)
     event = build_change_event(old_meetings, meetings, old_rates, rates)
 
     data_changed = meetings != old_meetings or rates != old_rates
@@ -477,10 +614,13 @@ def main() -> int:
                 "updated_at": utc_now(),
                 "calendar_source": CALENDAR_URL,
                 "rates_source": RATES_CSV_URL,
+                "macro_source": MACRO_CSV_URL,
                 "methodology": (
                     "Before 2008-12-16 the path uses the official single target rate. "
                     "From that date onward it uses the midpoint of the official target "
-                    "range while retaining the original upper and lower bounds."
+                    "range while retaining the original upper and lower bounds. Meeting "
+                    "macro snapshots use conservative publication lags and current revised "
+                    "FRED values; they are not ALFRED point-in-time vintages."
                 ),
             },
         )

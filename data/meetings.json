@@ -28,7 +28,27 @@
         "effective_date": "2021-01-27",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2020-12",
+            "value": 6.7,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2020-11",
+            "value": 1.2,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2020-11",
+            "value": 1.5,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 6.7%（2020-12）；PCE 1.2%、核心 PCE 1.5%（同比，2020-11）。"
+        }
       }
     },
     {
@@ -60,7 +80,27 @@
         "effective_date": "2021-03-17",
         "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2021-02",
+            "value": 6.2,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2021-01",
+            "value": 1.6,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2021-01",
+            "value": 1.7,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 6.2%（2021-02）；PCE 1.6%、核心 PCE 1.7%（同比，2021-01）。"
+        }
       }
     },
     {
@@ -90,7 +130,27 @@
         "effective_date": "2021-04-28",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2021-03",
+            "value": 6.1,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2021-02",
+            "value": 1.8,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2021-02",
+            "value": 1.7,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 6.1%（2021-03）；PCE 1.8%、核心 PCE 1.7%（同比，2021-02）。"
+        }
       }
     },
     {
@@ -122,7 +182,27 @@
         "effective_date": "2021-06-16",
         "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2021-05",
+            "value": 5.8,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2021-04",
+            "value": 3.6,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2021-04",
+            "value": 3.1,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 5.8%（2021-05）；PCE 3.6%、核心 PCE 3.1%（同比，2021-04）。"
+        }
       }
     },
     {
@@ -152,7 +232,27 @@
         "effective_date": "2021-07-28",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2021-06",
+            "value": 5.9,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2021-05",
+            "value": 4.1,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2021-05",
+            "value": 3.5,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 5.9%（2021-06）；PCE 4.1%、核心 PCE 3.5%（同比，2021-05）。"
+        }
       }
     },
     {
@@ -184,7 +284,27 @@
         "effective_date": "2021-09-22",
         "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2021-08",
+            "value": 5.1,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2021-07",
+            "value": 4.5,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2021-07",
+            "value": 3.9,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 5.1%（2021-08）；PCE 4.5%、核心 PCE 3.9%（同比，2021-07）。"
+        }
       }
     },
     {
@@ -214,7 +334,27 @@
         "effective_date": "2021-11-03",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2021-09",
+            "value": 4.7,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2021-09",
+            "value": 4.7,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2021-09",
+            "value": 4.0,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.7%（2021-09）；PCE 4.7%、核心 PCE 4.0%（同比，2021-09）。"
+        }
       }
     },
     {
@@ -246,7 +386,27 @@
         "effective_date": "2021-12-15",
         "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2021-11",
+            "value": 4.1,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2021-10",
+            "value": 5.3,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2021-10",
+            "value": 4.4,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.1%（2021-11）；PCE 5.3%、核心 PCE 4.4%（同比，2021-10）。"
+        }
       }
     },
     {
@@ -276,7 +436,27 @@
         "effective_date": "2022-01-26",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2021-12",
+            "value": 3.9,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2021-11",
+            "value": 5.9,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2021-11",
+            "value": 4.9,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.9%（2021-12）；PCE 5.9%、核心 PCE 4.9%（同比，2021-11）。"
+        }
       }
     },
     {
@@ -308,7 +488,27 @@
         "effective_date": "2022-03-17",
         "summary": "加息 25 个基点，目标区间调整至 0.25%–0.50%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2022-02",
+            "value": 3.9,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2022-01",
+            "value": 6.3,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2022-01",
+            "value": 5.4,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.9%（2022-02）；PCE 6.3%、核心 PCE 5.4%（同比，2022-01）。"
+        }
       }
     },
     {
@@ -338,7 +538,27 @@
         "effective_date": "2022-05-05",
         "summary": "加息 50 个基点，目标区间调整至 0.75%–1.00%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2022-03",
+            "value": 3.7,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2022-03",
+            "value": 6.9,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2022-03",
+            "value": 5.6,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.7%（2022-03）；PCE 6.9%、核心 PCE 5.6%（同比，2022-03）。"
+        }
       }
     },
     {
@@ -370,7 +590,27 @@
         "effective_date": "2022-06-16",
         "summary": "加息 75 个基点，目标区间调整至 1.50%–1.75%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2022-05",
+            "value": 3.6,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2022-04",
+            "value": 6.7,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2022-04",
+            "value": 5.3,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.6%（2022-05）；PCE 6.7%、核心 PCE 5.3%（同比，2022-04）。"
+        }
       }
     },
     {
@@ -400,7 +640,27 @@
         "effective_date": "2022-07-28",
         "summary": "加息 75 个基点，目标区间调整至 2.25%–2.50%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2022-06",
+            "value": 3.6,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2022-05",
+            "value": 6.8,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2022-05",
+            "value": 5.2,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.6%（2022-06）；PCE 6.8%、核心 PCE 5.2%（同比，2022-05）。"
+        }
       }
     },
     {
@@ -432,7 +692,27 @@
         "effective_date": "2022-09-22",
         "summary": "加息 75 个基点，目标区间调整至 3.00%–3.25%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2022-08",
+            "value": 3.6,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2022-07",
+            "value": 6.8,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2022-07",
+            "value": 5.1,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.6%（2022-08）；PCE 6.8%、核心 PCE 5.1%（同比，2022-07）。"
+        }
       }
     },
     {
@@ -462,7 +742,27 @@
         "effective_date": "2022-11-03",
         "summary": "加息 75 个基点，目标区间调整至 3.75%–4.00%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2022-09",
+            "value": 3.5,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2022-09",
+            "value": 6.7,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2022-09",
+            "value": 5.6,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.5%（2022-09）；PCE 6.7%、核心 PCE 5.6%（同比，2022-09）。"
+        }
       }
     },
     {
@@ -494,7 +794,27 @@
         "effective_date": "2022-12-15",
         "summary": "加息 50 个基点，目标区间调整至 4.25%–4.50%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2022-11",
+            "value": 3.6,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2022-10",
+            "value": 6.5,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2022-10",
+            "value": 5.5,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.6%（2022-11）；PCE 6.5%、核心 PCE 5.5%（同比，2022-10）。"
+        }
       }
     },
     {
@@ -526,7 +846,27 @@
         "effective_date": "2023-03-23",
         "summary": "加息 25 个基点，目标区间调整至 4.75%–5.00%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2023-02",
+            "value": 3.6,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2023-01",
+            "value": 5.5,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2023-01",
+            "value": 4.9,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.6%（2023-02）；PCE 5.5%、核心 PCE 4.9%（同比，2023-01）。"
+        }
       }
     },
     {
@@ -556,7 +896,27 @@
         "effective_date": "2023-05-04",
         "summary": "加息 25 个基点，目标区间调整至 5.00%–5.25%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2023-03",
+            "value": 3.5,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2023-03",
+            "value": 4.4,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2023-03",
+            "value": 4.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.5%（2023-03）；PCE 4.4%、核心 PCE 4.8%（同比，2023-03）。"
+        }
       }
     },
     {
@@ -588,7 +948,27 @@
         "effective_date": "2023-06-14",
         "summary": "维持目标区间 5.00%–5.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2023-05",
+            "value": 3.6,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2023-04",
+            "value": 4.5,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2023-04",
+            "value": 4.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.6%（2023-05）；PCE 4.5%、核心 PCE 4.8%（同比，2023-04）。"
+        }
       }
     },
     {
@@ -618,7 +998,27 @@
         "effective_date": "2023-07-27",
         "summary": "加息 25 个基点，目标区间调整至 5.25%–5.50%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2023-06",
+            "value": 3.6,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2023-05",
+            "value": 4.0,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2023-05",
+            "value": 4.7,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.6%（2023-06）；PCE 4.0%、核心 PCE 4.7%（同比，2023-05）。"
+        }
       }
     },
     {
@@ -650,7 +1050,27 @@
         "effective_date": "2023-09-20",
         "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2023-08",
+            "value": 3.7,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2023-07",
+            "value": 3.4,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2023-07",
+            "value": 4.3,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.7%（2023-08）；PCE 3.4%、核心 PCE 4.3%（同比，2023-07）。"
+        }
       }
     },
     {
@@ -682,7 +1102,27 @@
         "effective_date": "2023-12-13",
         "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2023-11",
+            "value": 3.7,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2023-10",
+            "value": 3.0,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2023-10",
+            "value": 3.5,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.7%（2023-11）；PCE 3.0%、核心 PCE 3.5%（同比，2023-10）。"
+        }
       }
     },
     {
@@ -712,7 +1152,27 @@
         "effective_date": "2024-01-31",
         "summary": "维持目标区间 5.25%–5.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2023-12",
+            "value": 3.8,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2023-11",
+            "value": 2.8,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2023-11",
+            "value": 3.3,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.8%（2023-12）；PCE 2.8%、核心 PCE 3.3%（同比，2023-11）。"
+        }
       }
     },
     {
@@ -744,7 +1204,27 @@
         "effective_date": "2024-03-20",
         "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2024-02",
+            "value": 3.9,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2024-01",
+            "value": 2.7,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2024-01",
+            "value": 3.2,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.9%（2024-02）；PCE 2.7%、核心 PCE 3.2%（同比，2024-01）。"
+        }
       }
     },
     {
@@ -776,7 +1256,27 @@
         "effective_date": "2024-06-12",
         "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2024-05",
+            "value": 3.9,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2024-04",
+            "value": 2.8,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2024-04",
+            "value": 3.0,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 3.9%（2024-05）；PCE 2.8%、核心 PCE 3.0%（同比，2024-04）。"
+        }
       }
     },
     {
@@ -806,7 +1306,27 @@
         "effective_date": "2024-07-31",
         "summary": "维持目标区间 5.25%–5.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2024-06",
+            "value": 4.1,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2024-05",
+            "value": 2.7,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2024-05",
+            "value": 2.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.1%（2024-06）；PCE 2.7%、核心 PCE 2.8%（同比，2024-05）。"
+        }
       }
     },
     {
@@ -838,7 +1358,27 @@
         "effective_date": "2024-09-19",
         "summary": "降息 50 个基点，目标区间调整至 4.75%–5.00%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2024-08",
+            "value": 4.2,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2024-07",
+            "value": 2.6,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2024-07",
+            "value": 2.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.2%（2024-08）；PCE 2.6%、核心 PCE 2.8%（同比，2024-07）。"
+        }
       }
     },
     {
@@ -868,7 +1408,27 @@
         "effective_date": "2024-11-08",
         "summary": "降息 25 个基点，目标区间调整至 4.50%–4.75%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2024-10",
+            "value": 4.1,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2024-09",
+            "value": 2.3,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2024-09",
+            "value": 2.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.1%（2024-10）；PCE 2.3%、核心 PCE 2.8%（同比，2024-09）。"
+        }
       }
     },
     {
@@ -900,7 +1460,27 @@
         "effective_date": "2024-12-19",
         "summary": "降息 25 个基点，目标区间调整至 4.25%–4.50%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2024-11",
+            "value": 4.2,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2024-10",
+            "value": 2.5,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2024-10",
+            "value": 3.0,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.2%（2024-11）；PCE 2.5%、核心 PCE 3.0%（同比，2024-10）。"
+        }
       }
     },
     {
@@ -930,7 +1510,27 @@
         "effective_date": "2025-01-29",
         "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2024-12",
+            "value": 4.1,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2024-11",
+            "value": 2.6,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2024-11",
+            "value": 3.0,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.1%（2024-12）；PCE 2.6%、核心 PCE 3.0%（同比，2024-11）。"
+        }
       }
     },
     {
@@ -962,7 +1562,27 @@
         "effective_date": "2025-03-19",
         "summary": "维持目标区间 4.25%–4.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-02",
+            "value": 4.2,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-01",
+            "value": 2.6,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-01",
+            "value": 2.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.2%（2025-02）；PCE 2.6%、核心 PCE 2.8%（同比，2025-01）。"
+        }
       }
     },
     {
@@ -992,7 +1612,27 @@
         "effective_date": "2025-05-07",
         "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-04",
+            "value": 4.2,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-03",
+            "value": 2.4,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-03",
+            "value": 2.7,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.2%（2025-04）；PCE 2.4%、核心 PCE 2.7%（同比，2025-03）。"
+        }
       }
     },
     {
@@ -1024,7 +1664,27 @@
         "effective_date": "2025-06-18",
         "summary": "维持目标区间 4.25%–4.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-05",
+            "value": 4.3,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-04",
+            "value": 2.3,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-04",
+            "value": 2.6,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.3%（2025-05）；PCE 2.3%、核心 PCE 2.6%（同比，2025-04）。"
+        }
       }
     },
     {
@@ -1054,7 +1714,27 @@
         "effective_date": "2025-07-30",
         "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-06",
+            "value": 4.1,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-05",
+            "value": 2.5,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-05",
+            "value": 2.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.1%（2025-06）；PCE 2.5%、核心 PCE 2.8%（同比，2025-05）。"
+        }
       }
     },
     {
@@ -1074,7 +1754,27 @@
         "status": "confirmed",
         "action": "notation_vote",
         "summary": "书面表决，不属于常规利率决议。",
-        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm"
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-07",
+            "value": 4.3,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-06",
+            "value": 2.6,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-06",
+            "value": 2.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.3%（2025-07）；PCE 2.6%、核心 PCE 2.8%（同比，2025-06）。"
+        }
       }
     },
     {
@@ -1106,7 +1806,27 @@
         "effective_date": "2025-09-18",
         "summary": "降息 25 个基点，目标区间调整至 4.00%–4.25%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-08",
+            "value": 4.3,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-07",
+            "value": 2.6,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-07",
+            "value": 2.9,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.3%（2025-08）；PCE 2.6%、核心 PCE 2.9%（同比，2025-07）。"
+        }
       }
     },
     {
@@ -1136,7 +1856,27 @@
         "effective_date": "2025-10-30",
         "summary": "降息 25 个基点，目标区间调整至 3.75%–4.00%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-09",
+            "value": 4.4,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-08",
+            "value": 2.7,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-08",
+            "value": 2.9,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.4%（2025-09）；PCE 2.7%、核心 PCE 2.9%（同比，2025-08）。"
+        }
       }
     },
     {
@@ -1168,7 +1908,27 @@
         "effective_date": "2025-12-11",
         "summary": "降息 25 个基点，目标区间调整至 3.50%–3.75%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-11",
+            "value": 4.5,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-10",
+            "value": 2.7,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-10",
+            "value": 2.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.5%（2025-11）；PCE 2.7%、核心 PCE 2.8%（同比，2025-10）。"
+        }
       }
     },
     {
@@ -1197,7 +1957,27 @@
         "effective_date": "2026-01-28",
         "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2025-12",
+            "value": 4.4,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2025-11",
+            "value": 2.8,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2025-11",
+            "value": 2.8,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.4%（2025-12）；PCE 2.8%、核心 PCE 2.8%（同比，2025-11）。"
+        }
       }
     },
     {
@@ -1229,7 +2009,27 @@
         "effective_date": "2026-03-18",
         "summary": "维持目标区间 3.50%–3.75% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2026-02",
+            "value": 4.4,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2026-01",
+            "value": 2.9,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2026-01",
+            "value": 3.1,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.4%（2026-02）；PCE 2.9%、核心 PCE 3.1%（同比，2026-01）。"
+        }
       }
     },
     {
@@ -1259,7 +2059,27 @@
         "effective_date": "2026-04-29",
         "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2026-03",
+            "value": 4.3,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2026-02",
+            "value": 2.9,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2026-02",
+            "value": 3.0,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.3%（2026-03）；PCE 2.9%、核心 PCE 3.0%（同比，2026-02）。"
+        }
       }
     },
     {
@@ -1291,7 +2111,27 @@
         "effective_date": "2026-06-17",
         "summary": "维持目标区间 3.50%–3.75% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2026-05",
+            "value": 4.3,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2026-04",
+            "value": 3.8,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2026-04",
+            "value": 3.3,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.3%（2026-05）；PCE 3.8%、核心 PCE 3.3%（同比，2026-04）。"
+        }
       }
     },
     {
@@ -1319,7 +2159,27 @@
         "effective_date": "2026-07-29",
         "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
+        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2026-06",
+            "value": 4.2,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2026-05",
+            "value": 4.1,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2026-05",
+            "value": 3.4,
+            "series": "PCEPILFE"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE",
+          "summary": "会议前宏观数据：失业率 4.2%（2026-06）；PCE 4.1%、核心 PCE 3.4%（同比，2026-05）。"
+        }
       }
     },
     {
