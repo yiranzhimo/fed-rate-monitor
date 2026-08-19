@@ -1,0 +1,284 @@
+{
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFF",
+  "series": {
+    "upper": "DFEDTARU",
+    "lower": "DFEDTARL",
+    "effective_rate": "DFF"
+  },
+  "current": {
+    "as_of": "2026-08-18",
+    "upper": 3.75,
+    "lower": 3.5,
+    "midpoint": 3.625
+  },
+  "effective_rate": {
+    "as_of": "2026-08-17",
+    "value": 3.63
+  },
+  "latest_change": {
+    "effective_date": "2025-12-11",
+    "upper": 3.75,
+    "lower": 3.5,
+    "midpoint": 3.625,
+    "delta_bps": -25,
+    "decision": "cut"
+  },
+  "history": [
+    {
+      "effective_date": "2008-12-16",
+      "upper": 0.25,
+      "lower": 0.0,
+      "midpoint": 0.125,
+      "delta_bps": 0,
+      "decision": "initial"
+    },
+    {
+      "effective_date": "2015-12-16",
+      "upper": 0.5,
+      "lower": 0.25,
+      "midpoint": 0.375,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2016-12-14",
+      "upper": 0.75,
+      "lower": 0.5,
+      "midpoint": 0.625,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2017-03-16",
+      "upper": 1.0,
+      "lower": 0.75,
+      "midpoint": 0.875,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2017-06-15",
+      "upper": 1.25,
+      "lower": 1.0,
+      "midpoint": 1.125,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2017-12-14",
+      "upper": 1.5,
+      "lower": 1.25,
+      "midpoint": 1.375,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2018-03-22",
+      "upper": 1.75,
+      "lower": 1.5,
+      "midpoint": 1.625,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2018-06-14",
+      "upper": 2.0,
+      "lower": 1.75,
+      "midpoint": 1.875,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2018-09-27",
+      "upper": 2.25,
+      "lower": 2.0,
+      "midpoint": 2.125,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2018-12-20",
+      "upper": 2.5,
+      "lower": 2.25,
+      "midpoint": 2.375,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2019-08-01",
+      "upper": 2.25,
+      "lower": 2.0,
+      "midpoint": 2.125,
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2019-09-19",
+      "upper": 2.0,
+      "lower": 1.75,
+      "midpoint": 1.875,
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2019-10-31",
+      "upper": 1.75,
+      "lower": 1.5,
+      "midpoint": 1.625,
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2020-03-04",
+      "upper": 1.25,
+      "lower": 1.0,
+      "midpoint": 1.125,
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2020-03-16",
+      "upper": 0.25,
+      "lower": 0.0,
+      "midpoint": 0.125,
+      "delta_bps": -100,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2022-03-17",
+      "upper": 0.5,
+      "lower": 0.25,
+      "midpoint": 0.375,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2022-05-05",
+      "upper": 1.0,
+      "lower": 0.75,
+      "midpoint": 0.875,
+      "delta_bps": 50,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2022-06-16",
+      "upper": 1.75,
+      "lower": 1.5,
+      "midpoint": 1.625,
+      "delta_bps": 75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2022-07-28",
+      "upper": 2.5,
+      "lower": 2.25,
+      "midpoint": 2.375,
+      "delta_bps": 75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2022-09-22",
+      "upper": 3.25,
+      "lower": 3.0,
+      "midpoint": 3.125,
+      "delta_bps": 75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2022-11-03",
+      "upper": 4.0,
+      "lower": 3.75,
+      "midpoint": 3.875,
+      "delta_bps": 75,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2022-12-15",
+      "upper": 4.5,
+      "lower": 4.25,
+      "midpoint": 4.375,
+      "delta_bps": 50,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2023-02-02",
+      "upper": 4.75,
+      "lower": 4.5,
+      "midpoint": 4.625,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2023-03-23",
+      "upper": 5.0,
+      "lower": 4.75,
+      "midpoint": 4.875,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2023-05-04",
+      "upper": 5.25,
+      "lower": 5.0,
+      "midpoint": 5.125,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2023-07-27",
+      "upper": 5.5,
+      "lower": 5.25,
+      "midpoint": 5.375,
+      "delta_bps": 25,
+      "decision": "hike"
+    },
+    {
+      "effective_date": "2024-09-19",
+      "upper": 5.0,
+      "lower": 4.75,
+      "midpoint": 4.875,
+      "delta_bps": -50,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2024-11-08",
+      "upper": 4.75,
+      "lower": 4.5,
+      "midpoint": 4.625,
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2024-12-19",
+      "upper": 4.5,
+      "lower": 4.25,
+      "midpoint": 4.375,
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2025-09-18",
+      "upper": 4.25,
+      "lower": 4.0,
+      "midpoint": 4.125,
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2025-10-30",
+      "upper": 4.0,
+      "lower": 3.75,
+      "midpoint": 3.875,
+      "delta_bps": -25,
+      "decision": "cut"
+    },
+    {
+      "effective_date": "2025-12-11",
+      "upper": 3.75,
+      "lower": 3.5,
+      "midpoint": 3.625,
+      "delta_bps": -25,
+      "decision": "cut"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="基于美联储官方数据的 FOMC 利率与会议监控仪表盘">
+  <title>美联储利率监控</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav shell">
+      <a class="brand" href="#">FED<span>/</span>WATCH</a>
+      <div class="status"><i></i><span id="data-status">正在读取官方数据</span></div>
+    </nav>
+    <div class="hero-content shell">
+      <p class="eyebrow">Federal Open Market Committee</p>
+      <h1>看清每一次<br><em>利率转向</em></h1>
+      <p class="lede">跟踪联邦基金目标区间、实际有效利率、会议日历与官方文件。只陈列事实，推导项明确标注。</p>
+      <div class="hero-meta">
+        <span>数据：Federal Reserve · FRED</span>
+        <span id="version-time">数据版本 —</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="cards" aria-label="当前概览">
+      <article class="metric primary">
+        <span class="metric-label">当前目标区间</span>
+        <strong id="target-range">—</strong>
+        <small id="target-asof">等待数据</small>
+      </article>
+      <article class="metric">
+        <span class="metric-label">最近一次调整</span>
+        <strong id="latest-action">—</strong>
+        <small id="latest-action-date">等待数据</small>
+      </article>
+      <article class="metric">
+        <span class="metric-label">实际有效利率 EFFR</span>
+        <strong id="effr">—</strong>
+        <small id="effr-asof">等待数据</small>
+      </article>
+      <article class="metric next">
+        <span class="metric-label">下一次会议</span>
+        <strong id="next-meeting">—</strong>
+        <small id="countdown">等待数据</small>
+      </article>
+    </section>
+
+    <section class="panel chart-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">TARGET RANGE MIDPOINT</p>
+          <h2>目标利率变化路径</h2>
+        </div>
+        <div class="legend"><i></i>区间中点（推导）</div>
+      </div>
+      <div id="rate-chart" class="chart" role="img" aria-label="联邦基金目标区间中点历史图"></div>
+      <p class="method-note">说明：曲线使用目标区间上下限的中点。加息或降息基点数也是由中点变化推导，原始上下限始终保留。</p>
+    </section>
+
+    <section class="panel meetings-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">OFFICIAL CALENDAR</p>
+          <h2>FOMC 会议与文件</h2>
+        </div>
+        <a class="source-link" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noreferrer">官方日历 ↗</a>
+      </div>
+      <div id="meetings" class="meetings"></div>
+    </section>
+
+    <section class="source-grid">
+      <div>
+        <p class="eyebrow dark">SOURCES</p>
+        <h2>只使用官方来源</h2>
+      </div>
+      <div class="source-list">
+        <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noreferrer"><span>01</span>Federal Reserve FOMC Calendar<b>↗</b></a>
+        <a href="https://fred.stlouisfed.org/series/DFEDTARU" target="_blank" rel="noreferrer"><span>02</span>FRED Target Range Series<b>↗</b></a>
+        <a href="https://www.newyorkfed.org/markets/reference-rates/effr" target="_blank" rel="noreferrer"><span>03</span>New York Fed EFFR<b>↗</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <span>Fed Rate Monitor</span>
+      <span>非投资建议 · 自动化数据可能延迟，请以官方公告为准</span>
+    </div>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

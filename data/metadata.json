@@ -1,0 +1,6 @@
+{
+  "updated_at": "2026-08-19T03:41:58Z",
+  "calendar_source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+  "rates_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFF",
+  "methodology": "Rate decisions are inferred from changes in the midpoint of the official target range; original upper and lower bounds are retained."
+}

@@ -1,0 +1,990 @@
+{
+  "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+  "meetings": [
+    {
+      "id": "2021-01-27",
+      "year": 2021,
+      "month": 1,
+      "start_date": "2021-01-26",
+      "end_date": "2021-01-27",
+      "date_label": "26-27",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2021-02-17",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210127a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210127.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210127.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210127.htm"
+      }
+    },
+    {
+      "id": "2021-03-17",
+      "year": 2021,
+      "month": 3,
+      "start_date": "2021-03-16",
+      "end_date": "2021-03-17",
+      "date_label": "16-17",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2021-04-07",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210317a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210317.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20210317.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20210317.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210317.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210317.htm"
+      }
+    },
+    {
+      "id": "2021-04-28",
+      "year": 2021,
+      "month": 4,
+      "start_date": "2021-04-27",
+      "end_date": "2021-04-28",
+      "date_label": "27-28",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2021-05-19",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210428a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210428.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210428.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210428.htm"
+      }
+    },
+    {
+      "id": "2021-06-16",
+      "year": 2021,
+      "month": 6,
+      "start_date": "2021-06-15",
+      "end_date": "2021-06-16",
+      "date_label": "15-16",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2021-07-07",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210616a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210616.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20210616.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20210616.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210616.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210616.htm"
+      }
+    },
+    {
+      "id": "2021-07-28",
+      "year": 2021,
+      "month": 7,
+      "start_date": "2021-07-27",
+      "end_date": "2021-07-28",
+      "date_label": "27-28",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2021-08-18",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210728a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210728.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210728.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210728.htm"
+      }
+    },
+    {
+      "id": "2021-09-22",
+      "year": 2021,
+      "month": 9,
+      "start_date": "2021-09-21",
+      "end_date": "2021-09-22",
+      "date_label": "21-22",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2021-10-13",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20210922a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20210922.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20210922.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20210922.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20210922.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20210922.htm"
+      }
+    },
+    {
+      "id": "2021-11-03",
+      "year": 2021,
+      "month": 11,
+      "start_date": "2021-11-02",
+      "end_date": "2021-11-03",
+      "date_label": "2-3",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2021-11-24",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20211103a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20211103.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20211103.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20211103.htm"
+      }
+    },
+    {
+      "id": "2021-12-15",
+      "year": 2021,
+      "month": 12,
+      "start_date": "2021-12-14",
+      "end_date": "2021-12-15",
+      "date_label": "14-15",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2022-01-05",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20211215a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20211215.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20211215.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20211215.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20211215.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20211215.htm"
+      }
+    },
+    {
+      "id": "2022-01-26",
+      "year": 2022,
+      "month": 1,
+      "start_date": "2022-01-25",
+      "end_date": "2022-01-26",
+      "date_label": "25-26",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2022-02-16",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220126a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220126.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220126.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220126.htm"
+      }
+    },
+    {
+      "id": "2022-03-16",
+      "year": 2022,
+      "month": 3,
+      "start_date": "2022-03-15",
+      "end_date": "2022-03-16",
+      "date_label": "15-16",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2022-04-06",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220316a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220316.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20220316.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtable20220316.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220316.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220316.htm"
+      }
+    },
+    {
+      "id": "2022-05-04",
+      "year": 2022,
+      "month": 5,
+      "start_date": "2022-05-03",
+      "end_date": "2022-05-04",
+      "date_label": "3-4",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2022-05-25",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220504a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220504.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220504.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220504.htm"
+      }
+    },
+    {
+      "id": "2022-06-15",
+      "year": 2022,
+      "month": 6,
+      "start_date": "2022-06-14",
+      "end_date": "2022-06-15",
+      "date_label": "14-15",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2022-07-06",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220615a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220615.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20220615.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20220615.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220615.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220615.htm"
+      }
+    },
+    {
+      "id": "2022-07-27",
+      "year": 2022,
+      "month": 7,
+      "start_date": "2022-07-26",
+      "end_date": "2022-07-27",
+      "date_label": "26-27",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2022-08-17",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220727a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220727.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220727.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220727.htm"
+      }
+    },
+    {
+      "id": "2022-09-21",
+      "year": 2022,
+      "month": 9,
+      "start_date": "2022-09-20",
+      "end_date": "2022-09-21",
+      "date_label": "20-21",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2022-10-12",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20220921a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20220921.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20220921.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20220921.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20220921.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20220921.htm"
+      }
+    },
+    {
+      "id": "2022-11-02",
+      "year": 2022,
+      "month": 11,
+      "start_date": "2022-11-01",
+      "end_date": "2022-11-02",
+      "date_label": "1-2",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2022-11-23",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20221102a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20221102.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20221102.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20221102.htm"
+      }
+    },
+    {
+      "id": "2022-12-14",
+      "year": 2022,
+      "month": 12,
+      "start_date": "2022-12-13",
+      "end_date": "2022-12-14",
+      "date_label": "13-14",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2023-01-04",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20221214a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20221214.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20221214.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20221214.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20221214.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20221214.htm"
+      }
+    },
+    {
+      "id": "2023-03-22",
+      "year": 2023,
+      "month": 3,
+      "start_date": "2023-03-21",
+      "end_date": "2023-03-22",
+      "date_label": "21-22",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2023-04-12",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230322a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230322.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20230322.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230322.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230322.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230322.htm"
+      }
+    },
+    {
+      "id": "2023-05-03",
+      "year": 2023,
+      "month": 5,
+      "start_date": "2023-05-02",
+      "end_date": "2023-05-03",
+      "date_label": "2-3",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2023-05-24",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230503a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230503.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230503.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230503.htm"
+      }
+    },
+    {
+      "id": "2023-06-14",
+      "year": 2023,
+      "month": 6,
+      "start_date": "2023-06-13",
+      "end_date": "2023-06-14",
+      "date_label": "13-14",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2023-07-05",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230614a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230614.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20230614.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230614.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230614.htm"
+      }
+    },
+    {
+      "id": "2023-07-26",
+      "year": 2023,
+      "month": 7,
+      "start_date": "2023-07-25",
+      "end_date": "2023-07-26",
+      "date_label": "25-26",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2023-08-16",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230726a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230726.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230726.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230726.htm"
+      }
+    },
+    {
+      "id": "2023-09-20",
+      "year": 2023,
+      "month": 9,
+      "start_date": "2023-09-19",
+      "end_date": "2023-09-20",
+      "date_label": "19-20",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2023-10-11",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20230920a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20230920.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20230920.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230920.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20230920.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20230920.htm"
+      }
+    },
+    {
+      "id": "2023-12-13",
+      "year": 2023,
+      "month": 12,
+      "start_date": "2023-12-12",
+      "end_date": "2023-12-13",
+      "date_label": "12-13",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2024-01-03",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20231213a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20231213.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20231213.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20231213.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20231213.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20231213.htm"
+      }
+    },
+    {
+      "id": "2024-01-31",
+      "year": 2024,
+      "month": 1,
+      "start_date": "2024-01-30",
+      "end_date": "2024-01-31",
+      "date_label": "30-31",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2024-02-21",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240131a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20240131.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240131.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240131.htm"
+      }
+    },
+    {
+      "id": "2024-03-20",
+      "year": 2024,
+      "month": 3,
+      "start_date": "2024-03-19",
+      "end_date": "2024-03-20",
+      "date_label": "19-20",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2024-04-10",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240320a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20240320.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20240320.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20240320.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240320.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240320.htm"
+      }
+    },
+    {
+      "id": "2024-06-12",
+      "year": 2024,
+      "month": 6,
+      "start_date": "2024-06-11",
+      "end_date": "2024-06-12",
+      "date_label": "11-12",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2024-07-03",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240612a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20240612.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20240612.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20240612.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240612.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240612.htm"
+      }
+    },
+    {
+      "id": "2024-07-31",
+      "year": 2024,
+      "month": 7,
+      "start_date": "2024-07-30",
+      "end_date": "2024-07-31",
+      "date_label": "30-31",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2024-08-21",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240731a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20240731.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240731.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240731.htm"
+      }
+    },
+    {
+      "id": "2024-09-18",
+      "year": 2024,
+      "month": 9,
+      "start_date": "2024-09-17",
+      "end_date": "2024-09-18",
+      "date_label": "17-18",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2024-10-09",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20240918a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20240918.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20240918.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20240918.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20240918.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20240918.htm"
+      }
+    },
+    {
+      "id": "2024-11-07",
+      "year": 2024,
+      "month": 11,
+      "start_date": "2024-11-06",
+      "end_date": "2024-11-07",
+      "date_label": "6-7",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2024-11-26",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20241107a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20241107.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20241107.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20241107.htm"
+      }
+    },
+    {
+      "id": "2024-12-18",
+      "year": 2024,
+      "month": 12,
+      "start_date": "2024-12-17",
+      "end_date": "2024-12-18",
+      "date_label": "17-18",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-01-08",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20241218a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20241218.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20241218.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20241218.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20241218.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20241218.htm"
+      }
+    },
+    {
+      "id": "2025-01-29",
+      "year": 2025,
+      "month": 1,
+      "start_date": "2025-01-28",
+      "end_date": "2025-01-29",
+      "date_label": "28-29",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-02-19",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250129a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250129.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250129.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250129.htm"
+      }
+    },
+    {
+      "id": "2025-03-19",
+      "year": 2025,
+      "month": 3,
+      "start_date": "2025-03-18",
+      "end_date": "2025-03-19",
+      "date_label": "18-19",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-04-09",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250319a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250319.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20250319.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20250319.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250319.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250319.htm"
+      }
+    },
+    {
+      "id": "2025-05-07",
+      "year": 2025,
+      "month": 5,
+      "start_date": "2025-05-06",
+      "end_date": "2025-05-07",
+      "date_label": "6-7",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-05-28",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250507a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250507.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250507.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250507.htm"
+      }
+    },
+    {
+      "id": "2025-06-18",
+      "year": 2025,
+      "month": 6,
+      "start_date": "2025-06-17",
+      "end_date": "2025-06-18",
+      "date_label": "17-18",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-07-09",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250618a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250618.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20250618.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20250618.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250618.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250618.htm"
+      }
+    },
+    {
+      "id": "2025-07-30",
+      "year": 2025,
+      "month": 7,
+      "start_date": "2025-07-29",
+      "end_date": "2025-07-30",
+      "date_label": "29-30",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-08-20",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250730a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250730.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250730.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250730.htm"
+      }
+    },
+    {
+      "id": "2025-08-22",
+      "year": 2025,
+      "month": 8,
+      "start_date": "2025-08-22",
+      "end_date": "2025-08-22",
+      "date_label": "22 (notation vote)",
+      "has_sep": false,
+      "is_notation_vote": true,
+      "minutes_release_date": null,
+      "documents": {
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250822a.htm"
+      }
+    },
+    {
+      "id": "2025-09-17",
+      "year": 2025,
+      "month": 9,
+      "start_date": "2025-09-16",
+      "end_date": "2025-09-17",
+      "date_label": "16-17",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-10-08",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20250917a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20250917.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20250917.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20250917.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20250917.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20250917.htm"
+      }
+    },
+    {
+      "id": "2025-10-29",
+      "year": 2025,
+      "month": 10,
+      "start_date": "2025-10-28",
+      "end_date": "2025-10-29",
+      "date_label": "28-29",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-11-19",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20251029a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20251029.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20251029.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20251029.htm"
+      }
+    },
+    {
+      "id": "2025-12-10",
+      "year": 2025,
+      "month": 12,
+      "start_date": "2025-12-09",
+      "end_date": "2025-12-10",
+      "date_label": "9-10",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2025-12-30",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20251210a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20251210.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20251210.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20251210.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20251210.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20251210.htm"
+      }
+    },
+    {
+      "id": "2026-01-28",
+      "year": 2026,
+      "month": 1,
+      "start_date": "2026-01-27",
+      "end_date": "2026-01-28",
+      "date_label": "27-28",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2026-02-18",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260128a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a1.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260128.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260128.htm"
+      }
+    },
+    {
+      "id": "2026-03-18",
+      "year": 2026,
+      "month": 3,
+      "start_date": "2026-03-17",
+      "end_date": "2026-03-18",
+      "date_label": "17-18",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2026-04-08",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260318a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260318.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20260318.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260318.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260318.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260318.htm"
+      }
+    },
+    {
+      "id": "2026-04-29",
+      "year": 2026,
+      "month": 4,
+      "start_date": "2026-04-28",
+      "end_date": "2026-04-29",
+      "date_label": "28-29",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": "2026-05-20",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260429a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260429.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260429.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260429.htm"
+      }
+    },
+    {
+      "id": "2026-06-17",
+      "year": 2026,
+      "month": 6,
+      "start_date": "2026-06-16",
+      "end_date": "2026-06-17",
+      "date_label": "16-17",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": "2026-07-08",
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260617a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260617.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20260617.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260617.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260617.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260617.htm"
+      }
+    },
+    {
+      "id": "2026-07-29",
+      "year": 2026,
+      "month": 7,
+      "start_date": "2026-07-28",
+      "end_date": "2026-07-29",
+      "date_label": "28-29",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260729a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260729.htm"
+      }
+    },
+    {
+      "id": "2026-09-16",
+      "year": 2026,
+      "month": 9,
+      "start_date": "2026-09-15",
+      "end_date": "2026-09-16",
+      "date_label": "15-16",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2026-10-28",
+      "year": 2026,
+      "month": 10,
+      "start_date": "2026-10-27",
+      "end_date": "2026-10-28",
+      "date_label": "27-28",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2026-12-09",
+      "year": 2026,
+      "month": 12,
+      "start_date": "2026-12-08",
+      "end_date": "2026-12-09",
+      "date_label": "8-9",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2027-01-27",
+      "year": 2027,
+      "month": 1,
+      "start_date": "2027-01-26",
+      "end_date": "2027-01-27",
+      "date_label": "26-27",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2027-03-17",
+      "year": 2027,
+      "month": 3,
+      "start_date": "2027-03-16",
+      "end_date": "2027-03-17",
+      "date_label": "16-17",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2027-04-28",
+      "year": 2027,
+      "month": 4,
+      "start_date": "2027-04-27",
+      "end_date": "2027-04-28",
+      "date_label": "27-28",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2027-06-09",
+      "year": 2027,
+      "month": 6,
+      "start_date": "2027-06-08",
+      "end_date": "2027-06-09",
+      "date_label": "8-9",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2027-07-28",
+      "year": 2027,
+      "month": 7,
+      "start_date": "2027-07-27",
+      "end_date": "2027-07-28",
+      "date_label": "27-28",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2027-09-15",
+      "year": 2027,
+      "month": 9,
+      "start_date": "2027-09-14",
+      "end_date": "2027-09-15",
+      "date_label": "14-15",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2027-10-27",
+      "year": 2027,
+      "month": 10,
+      "start_date": "2027-10-26",
+      "end_date": "2027-10-27",
+      "date_label": "26-27",
+      "has_sep": false,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    },
+    {
+      "id": "2027-12-08",
+      "year": 2027,
+      "month": 12,
+      "start_date": "2027-12-07",
+      "end_date": "2027-12-08",
+      "date_label": "7-8",
+      "has_sep": true,
+      "is_notation_vote": false,
+      "minutes_release_date": null,
+      "documents": {}
+    }
+  ]
+}

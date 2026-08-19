@@ -1,0 +1,402 @@
+#!/usr/bin/env python3
+"""Fetch and normalize official FOMC calendar and federal-funds data."""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import io
+import json
+import re
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+from urllib.parse import urljoin
+
+import requests
+from bs4 import BeautifulSoup
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT / "data"
+RUNTIME_DIR = ROOT / "runtime"
+
+CALENDAR_URL = "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+RATES_CSV_URL = (
+    "https://fred.stlouisfed.org/graph/fredgraph.csv?"
+    "id=DFEDTARU,DFEDTARL,DFF"
+)
+USER_AGENT = "fed-rate-monitor/1.0 (+https://github.com/)"
+
+MONTHS = {
+    "january": 1,
+    "february": 2,
+    "march": 3,
+    "april": 4,
+    "may": 5,
+    "june": 6,
+    "july": 7,
+    "august": 8,
+    "september": 9,
+    "october": 10,
+    "november": 11,
+    "december": 12,
+}
+
+NOTIFY_DOCUMENTS = {
+    "statement_html": "政策声明",
+    "implementation_note": "实施说明",
+    "projections_html": "经济预测（SEP）",
+    "minutes_html": "会议纪要",
+}
+
+
+def utc_now() -> str:
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def fetch_text(url: str, timeout: int = 30) -> str:
+    """Fetch a URL with bounded retries and an explicit user agent."""
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            response = requests.get(
+                url,
+                headers={"User-Agent": USER_AGENT, "Accept": "text/html,text/csv,*/*"},
+                timeout=timeout,
+            )
+            response.raise_for_status()
+            response.encoding = response.apparent_encoding or "utf-8"
+            return response.text.lstrip("\ufeff")
+        except requests.RequestException as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(1 + attempt)
+    raise RuntimeError(f"Failed to fetch {url}: {last_error}")
+
+
+def _document_key(label: str, href: str) -> str | None:
+    label_lower = label.lower()
+    href_lower = href.lower()
+    suffix = "pdf" if href_lower.endswith(".pdf") else "html"
+
+    if "fomcminutes" in href_lower:
+        return f"minutes_{suffix}"
+    if "fomcprojtabl" in href_lower:
+        return f"projections_{suffix}"
+    if "fomcpresconf" in href_lower:
+        return "press_conference"
+    if "implementation note" in label_lower:
+        return "implementation_note"
+    if (
+        "/monetarypolicy/files/monetary" in href_lower
+        or "/newsevents/pressreleases/monetary" in href_lower
+    ):
+        return f"statement_{suffix}"
+    return None
+
+
+def parse_calendar_html(html_text: str) -> dict[str, Any]:
+    soup = BeautifulSoup(html_text, "html.parser")
+    meetings: list[dict[str, Any]] = []
+
+    for heading in soup.select(".panel-heading h4"):
+        match = re.search(r"(20\d{2})\s+FOMC Meetings", heading.get_text(" ", strip=True))
+        if not match:
+            continue
+        year = int(match.group(1))
+        panel = heading.find_parent("div", class_="panel")
+        if panel is None:
+            continue
+
+        for row in panel.select(".fomc-meeting"):
+            month_node = row.select_one(".fomc-meeting__month")
+            date_node = row.select_one(".fomc-meeting__date")
+            if month_node is None or date_node is None:
+                continue
+
+            month_text = month_node.get_text(" ", strip=True).lower()
+            month = MONTHS.get(month_text)
+            raw_dates = date_node.get_text(" ", strip=True)
+            days = [int(value) for value in re.findall(r"\d{1,2}", raw_dates)]
+            if month is None or not days:
+                continue
+
+            start_date = f"{year:04d}-{month:02d}-{days[0]:02d}"
+            end_date = f"{year:04d}-{month:02d}-{days[-1]:02d}"
+            documents: dict[str, str] = {}
+            for anchor in row.find_all("a", href=True):
+                label = anchor.get_text(" ", strip=True)
+                href = str(anchor["href"])
+                key = _document_key(label, href)
+                if key:
+                    documents.setdefault(key, urljoin(CALENDAR_URL, href))
+
+            row_text = row.get_text(" ", strip=True)
+            released = re.search(r"Released\s+([A-Za-z]+\s+\d{1,2},\s+20\d{2})", row_text)
+            minutes_release_date = None
+            if released:
+                try:
+                    minutes_release_date = datetime.strptime(
+                        released.group(1), "%B %d, %Y"
+                    ).date().isoformat()
+                except ValueError:
+                    minutes_release_date = None
+
+            meetings.append(
+                {
+                    "id": end_date,
+                    "year": year,
+                    "month": month,
+                    "start_date": start_date,
+                    "end_date": end_date,
+                    "date_label": raw_dates.replace("*", "").strip(),
+                    "has_sep": "*" in raw_dates,
+                    "is_notation_vote": "notation vote" in raw_dates.lower(),
+                    "minutes_release_date": minutes_release_date,
+                    "documents": documents,
+                }
+            )
+
+    if not meetings:
+        raise ValueError("No FOMC meetings found; calendar markup may have changed")
+
+    meetings.sort(key=lambda item: item["end_date"])
+    return {"source": CALENDAR_URL, "meetings": meetings}
+
+
+def _number(value: str | None) -> float | None:
+    if value is None or value.strip() in {"", "."}:
+        return None
+    return float(value)
+
+
+def _clean_bps(value: float) -> int | float:
+    rounded = round(value, 4)
+    return int(rounded) if rounded.is_integer() else rounded
+
+
+def parse_rates_csv(csv_text: str) -> dict[str, Any]:
+    reader = csv.DictReader(io.StringIO(csv_text.lstrip("\ufeff")))
+    rows = list(reader)
+    if not rows:
+        raise ValueError("FRED rates CSV is empty")
+
+    target_rows: list[tuple[str, float, float]] = []
+    effr_rows: list[tuple[str, float]] = []
+    for row in rows:
+        date = (row.get("observation_date") or "").strip()
+        upper = _number(row.get("DFEDTARU"))
+        lower = _number(row.get("DFEDTARL"))
+        effr = _number(row.get("DFF"))
+        if date and upper is not None and lower is not None:
+            target_rows.append((date, upper, lower))
+        if date and effr is not None:
+            effr_rows.append((date, effr))
+
+    if not target_rows:
+        raise ValueError("No target-range observations found in FRED CSV")
+    if not effr_rows:
+        raise ValueError("No effective-rate observations found in FRED CSV")
+
+    history: list[dict[str, Any]] = []
+    previous: tuple[float, float] | None = None
+    for date, upper, lower in target_rows:
+        current = (upper, lower)
+        if current == previous:
+            continue
+        midpoint = round((upper + lower) / 2, 4)
+        if previous is None:
+            delta_bps: int | float = 0
+            decision = "initial"
+        else:
+            previous_midpoint = (previous[0] + previous[1]) / 2
+            delta_bps = _clean_bps((midpoint - previous_midpoint) * 100)
+            decision = "hike" if delta_bps > 0 else "cut" if delta_bps < 0 else "range_change"
+        history.append(
+            {
+                "effective_date": date,
+                "upper": upper,
+                "lower": lower,
+                "midpoint": midpoint,
+                "delta_bps": delta_bps,
+                "decision": decision,
+            }
+        )
+        previous = current
+
+    latest_date, latest_upper, latest_lower = target_rows[-1]
+    effr_date, effr = effr_rows[-1]
+    latest_change = next((item for item in reversed(history) if item["decision"] != "initial"), None)
+    return {
+        "source": RATES_CSV_URL,
+        "series": {
+            "upper": "DFEDTARU",
+            "lower": "DFEDTARL",
+            "effective_rate": "DFF",
+        },
+        "current": {
+            "as_of": latest_date,
+            "upper": latest_upper,
+            "lower": latest_lower,
+            "midpoint": round((latest_upper + latest_lower) / 2, 4),
+        },
+        "effective_rate": {"as_of": effr_date, "value": effr},
+        "latest_change": latest_change,
+        "history": history,
+    }
+
+
+def load_json(path: Path) -> dict[str, Any] | None:
+    try:
+        with path.open(encoding="utf-8") as handle:
+            value = json.load(handle)
+            return value if isinstance(value, dict) else None
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+
+
+def build_change_event(
+    old_meetings: dict[str, Any] | None,
+    new_meetings: dict[str, Any],
+    old_rates: dict[str, Any] | None,
+    new_rates: dict[str, Any],
+) -> dict[str, Any]:
+    initialized = old_meetings is None or old_rates is None
+    changes: list[dict[str, str]] = []
+
+    if not initialized:
+        old_current = old_rates.get("current", {})
+        new_current = new_rates.get("current", {})
+        old_range = (old_current.get("lower"), old_current.get("upper"))
+        new_range = (new_current.get("lower"), new_current.get("upper"))
+        if old_range != new_range:
+            latest = new_rates.get("latest_change") or {}
+            delta = latest.get("delta_bps", 0)
+            action = "加息" if delta > 0 else "降息" if delta < 0 else "调整目标区间"
+            changes.append(
+                {
+                    "kind": "rate_change",
+                    "title": f"美联储{action} {abs(delta):g} 个基点",
+                    "detail": (
+                        f"目标区间由 {old_range[0]:g}%–{old_range[1]:g}% "
+                        f"变为 {new_range[0]:g}%–{new_range[1]:g}%"
+                    ),
+                    "url": CALENDAR_URL,
+                }
+            )
+
+        old_items = {item["id"]: item for item in old_meetings.get("meetings", [])}
+        new_items = {item["id"]: item for item in new_meetings.get("meetings", [])}
+        old_schedule = {(item["start_date"], item["end_date"]) for item in old_items.values()}
+        new_schedule = {(item["start_date"], item["end_date"]) for item in new_items.values()}
+        if old_schedule != new_schedule:
+            changes.append(
+                {
+                    "kind": "schedule_change",
+                    "title": "FOMC 会议日程发生变化",
+                    "detail": "官方会议日历新增、删除或调整了会议日期。",
+                    "url": CALENDAR_URL,
+                }
+            )
+
+        for meeting_id, new_item in new_items.items():
+            old_item = old_items.get(meeting_id)
+            if old_item is None:
+                continue
+            old_docs = old_item.get("documents", {})
+            for key, label in NOTIFY_DOCUMENTS.items():
+                new_url = new_item.get("documents", {}).get(key)
+                if new_url and not old_docs.get(key):
+                    changes.append(
+                        {
+                            "kind": "document_added",
+                            "title": f"FOMC 发布{label}",
+                            "detail": f"对应会议结束日期：{meeting_id}",
+                            "url": new_url,
+                        }
+                    )
+
+    return {
+        "checked_at": utc_now(),
+        "initialized": initialized,
+        "has_changes": bool(changes),
+        "changes": changes,
+    }
+
+
+def write_json(path: Path, value: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    with temporary.open("w", encoding="utf-8") as handle:
+        json.dump(value, handle, ensure_ascii=False, indent=2)
+        handle.write("\n")
+    temporary.replace(path)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--calendar-file", type=Path, help="Use a local calendar HTML fixture")
+    parser.add_argument("--rates-file", type=Path, help="Use a local rates CSV fixture")
+    args = parser.parse_args()
+
+    old_meetings = load_json(DATA_DIR / "meetings.json")
+    old_rates = load_json(DATA_DIR / "rates.json")
+
+    calendar_html = (
+        args.calendar_file.read_text(encoding="utf-8")
+        if args.calendar_file
+        else fetch_text(CALENDAR_URL)
+    )
+    rates_csv = (
+        args.rates_file.read_text(encoding="utf-8")
+        if args.rates_file
+        else fetch_text(RATES_CSV_URL)
+    )
+
+    meetings = parse_calendar_html(calendar_html)
+    rates = parse_rates_csv(rates_csv)
+    event = build_change_event(old_meetings, meetings, old_rates, rates)
+
+    data_changed = meetings != old_meetings or rates != old_rates
+    if meetings != old_meetings:
+        write_json(DATA_DIR / "meetings.json", meetings)
+    if rates != old_rates:
+        write_json(DATA_DIR / "rates.json", rates)
+    if data_changed:
+        write_json(
+            DATA_DIR / "metadata.json",
+            {
+                "updated_at": utc_now(),
+                "calendar_source": CALENDAR_URL,
+                "rates_source": RATES_CSV_URL,
+                "methodology": (
+                    "Rate decisions are inferred from changes in the midpoint of the "
+                    "official target range; original upper and lower bounds are retained."
+                ),
+            },
+        )
+    write_json(RUNTIME_DIR / "change.json", event)
+
+    print(
+        json.dumps(
+            {
+                "meetings": len(meetings["meetings"]),
+                "rate_changes": len(rates["history"]),
+                "data_changed": data_changed,
+                "notifications": len(event["changes"]),
+            },
+            ensure_ascii=False,
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except Exception as exc:  # Keep a concise, actionable Actions log.
+        print(f"update failed: {exc}", file=sys.stderr)
+        raise SystemExit(1)

@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+.venv/
+email_preview.html
+runtime/
+.DS_Store
