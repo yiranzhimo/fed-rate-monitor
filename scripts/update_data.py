@@ -10,6 +10,8 @@ import json
 import re
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from copy import deepcopy
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -30,9 +32,10 @@ RATES_CSV_URL = (
 )
 MACRO_CSV_URL = (
     "https://fred.stlouisfed.org/graph/fredgraph.csv?"
-    "id=UNRATE,PCEPI,PCEPILFE"
+    "id=UNRATE,PCEPI,PCEPILFE,PAYEMS"
 )
 USER_AGENT = "fed-rate-monitor/1.0 (+https://github.com/)"
+DETAIL_PARSER_VERSION = 1
 
 MONTHS = {
     "january": 1,
@@ -265,7 +268,7 @@ def parse_rates_csv(csv_text: str) -> dict[str, Any]:
 def parse_macro_csv(csv_text: str) -> dict[str, Any]:
     """Parse official employment and PCE price-index series from FRED."""
     reader = csv.DictReader(io.StringIO(csv_text.lstrip("\ufeff")))
-    expected = {"UNRATE", "PCEPI", "PCEPILFE"}
+    expected = {"UNRATE", "PCEPI", "PCEPILFE", "PAYEMS"}
     if not reader.fieldnames or not expected.issubset(reader.fieldnames):
         raise ValueError("FRED macro CSV is missing required series")
 
@@ -288,6 +291,7 @@ def parse_macro_csv(csv_text: str) -> dict[str, Any]:
             "unemployment_rate": "UNRATE",
             "pce_price_index": "PCEPI",
             "core_pce_price_index": "PCEPILFE",
+            "nonfarm_payrolls": "PAYEMS",
         },
         "observations": observations,
     }
@@ -327,6 +331,38 @@ def _year_over_year(
     }
 
 
+def _three_month_annualized(
+    observations: list[dict[str, Any]], cutoff: date
+) -> dict[str, Any] | None:
+    current = _latest_observation(observations, cutoff)
+    if current is None:
+        return None
+    previous_date = _month_offset(date.fromisoformat(current["date"]), -3).isoformat()
+    previous = next((item for item in observations if item["date"] == previous_date), None)
+    if previous is None or previous["value"] <= 0:
+        return None
+    return {
+        "period": current["date"][:7],
+        "value": round(((current["value"] / previous["value"]) ** 4 - 1) * 100, 1),
+    }
+
+
+def _three_month_payroll_average(
+    observations: list[dict[str, Any]], cutoff: date
+) -> dict[str, Any] | None:
+    eligible = [
+        item for item in observations if date.fromisoformat(item["date"]) <= cutoff
+    ]
+    if len(eligible) < 4:
+        return None
+    recent = eligible[-4:]
+    changes = [recent[index]["value"] - recent[index - 1]["value"] for index in range(1, 4)]
+    return {
+        "period": recent[-1]["date"][:7],
+        "value_thousands": round(sum(changes) / len(changes)),
+    }
+
+
 def _unemployment_cutoff(meeting_end: date) -> date:
     """Estimate the latest released reference month conservatively.
 
@@ -363,7 +399,17 @@ def attach_macro_snapshots(
         unemployment = _latest_observation(observations["UNRATE"], unemployment_cutoff)
         pce = _year_over_year(observations["PCEPI"], pce_cutoff)
         core_pce = _year_over_year(observations["PCEPILFE"], pce_cutoff)
-        if unemployment is None or pce is None or core_pce is None:
+        core_pce_3m = _three_month_annualized(observations["PCEPILFE"], pce_cutoff)
+        payrolls_3m = _three_month_payroll_average(
+            observations["PAYEMS"], unemployment_cutoff
+        )
+        if (
+            unemployment is None
+            or pce is None
+            or core_pce is None
+            or core_pce_3m is None
+            or payrolls_3m is None
+        ):
             continue
 
         snapshot = {
@@ -374,16 +420,288 @@ def attach_macro_snapshots(
             },
             "pce_yoy": {**pce, "series": "PCEPI"},
             "core_pce_yoy": {**core_pce, "series": "PCEPILFE"},
+            "core_pce_3m_annualized": {**core_pce_3m, "series": "PCEPILFE"},
+            "payrolls_3m_average": {**payrolls_3m, "series": "PAYEMS"},
             "method": "conservative_release_lag_current_vintage",
             "source": macro_data["source"],
         }
+        payroll_value = payrolls_3m["value_thousands"]
+        payroll_action = "月均新增" if payroll_value >= 0 else "月均减少"
+        snapshot["employment_summary"] = (
+            f"就业：失业率 {snapshot['unemployment']['value']:.1f}%"
+            f"（{snapshot['unemployment']['period']}）；非农近3个月"
+            f"{payroll_action} {abs(payroll_value) / 10:.1f}万。"
+        )
+        snapshot["inflation_summary"] = (
+            f"通胀：PCE 同比 {pce['value']:.1f}%、核心 PCE 同比 "
+            f"{core_pce['value']:.1f}%；核心 PCE 近3个月年化 "
+            f"{core_pce_3m['value']:.1f}%（{pce['period']}）。"
+        )
         snapshot["summary"] = (
-            f"会议前宏观数据：失业率 {snapshot['unemployment']['value']:.1f}%"
-            f"（{snapshot['unemployment']['period']}）；PCE 通胀 {pce['value']:.1f}%、"
-            f"核心 PCE 通胀 {core_pce['value']:.1f}%（同比，{pce['period']}）。"
+            f"{snapshot['employment_summary']} {snapshot['inflation_summary']}"
         )
         outcome["macro_snapshot"] = snapshot
 
+    return meetings_data
+
+
+def _voter_count(names_text: str) -> int:
+    parts = [part.strip() for part in names_text.split(";") if part.strip()]
+    return len(parts)
+
+
+def _dissent_names(clause: str) -> list[str]:
+    groups = re.findall(r"(?:^|;\s+and\s+)([^;]+?),\s+who\b", clause)
+    if not groups:
+        groups = [re.split(r"[.;]", clause, maxsplit=1)[0]]
+    names: list[str] = []
+    for group in groups:
+        for name in re.split(r",\s*(?:and\s+)?|\s+and\s+", group.strip()):
+            cleaned = name.strip(" ,.;")
+            if cleaned:
+                names.append(cleaned)
+    return names
+
+
+def _dissent_preference(clause: str) -> str | None:
+    lower = clause.lower()
+    if lower.count("preferred") != 1 or len(re.findall(r",\s+who\b", lower)) != 1:
+        return None
+    if "preferred no change" in lower or "preferred to maintain" in lower:
+        return "主张维持利率不变"
+    direction = "降息" if "preferred to lower" in lower else "加息" if "preferred to raise" in lower else None
+    if direction is None:
+        return None
+    fraction = re.search(r"by\s+(1/[24])\s+percentage point", lower)
+    if fraction:
+        basis_points = 50 if fraction.group(1) == "1/2" else 25
+        return f"主张{direction}{basis_points}个基点"
+    return f"主张{direction}"
+
+
+def parse_statement_vote(html_text: str) -> dict[str, Any] | None:
+    """Extract the recorded policy vote from an official FOMC statement."""
+    soup = BeautifulSoup(html_text, "html.parser")
+    paragraphs = [
+        re.sub(r"\s+", " ", node.get_text(" ", strip=True))
+        for node in soup.find_all("p")
+    ]
+    paragraph = next((text for text in paragraphs if "Voting for" in text), None)
+
+    support_count: int | None = None
+    against_clause = ""
+    if paragraph:
+        support = re.search(
+            r"Voting for (?:the monetary policy action|this action) (?:were|was) "
+            r"(.*?)(?=\.\s+Voting against|\.\s+Absent|\.$|$)",
+            paragraph,
+        )
+        if support:
+            support_count = _voter_count(support.group(1))
+        against = re.search(
+            r"Voting against (?:the monetary policy action|this action|the action) "
+            r"(?:were|was) (.*?)(?=\.\s+Absent|\.$|$)",
+            paragraph,
+        )
+        against_clause = against.group(1).strip() if against else ""
+    else:
+        vote_text = next(
+            (text for text in paragraphs if "statement for release by a" in text),
+            "",
+        )
+        count_match = re.search(
+            r"statement for release by a\s+(\d+)\s*[–—-]\s*(\d+)\s+vote",
+            vote_text,
+        )
+        if count_match:
+            support_count = int(count_match.group(1))
+            stated_against_count = int(count_match.group(2))
+        else:
+            stated_against_count = 0
+        against_text = next(
+            (text for text in paragraphs if text.startswith("Voting against")),
+            "",
+        )
+        against = re.search(
+            r"Voting against (?:the monetary policy action|this action|the action) "
+            r"(?:were|was) (.*?)(?=\.$|$)",
+            against_text,
+        )
+        against_clause = against.group(1).strip() if against else ""
+
+    if support_count is None:
+        return None
+    against_names = _dissent_names(against_clause) if against_clause else []
+    against_count = len(against_names) if against_names else stated_against_count if not paragraph else 0
+    if against_count:
+        names_text = "、".join(against_names)
+        preference = _dissent_preference(against_clause)
+        detail = f"（{preference}）" if preference else ""
+        summary = f"表决 {support_count}–{against_count}；异议：{names_text}{detail}。"
+    else:
+        preference = None
+        summary = f"表决 {support_count}–0，一致通过。"
+
+    return {
+        "support_count": support_count,
+        "against_count": against_count,
+        "against_names": against_names,
+        "preference": preference,
+        "summary": summary,
+    }
+
+
+def parse_sep_html(html_text: str) -> dict[str, Any] | None:
+    """Extract published median federal-funds-rate projections from a SEP table."""
+    soup = BeautifulSoup(html_text, "html.parser")
+    table = next(
+        (
+            node
+            for node in soup.find_all("table")
+            if "Federal funds rate" in node.get_text(" ", strip=True)
+        ),
+        None,
+    )
+    if table is None:
+        return None
+
+    rows = table.find_all("tr")
+    rate_row_index = next(
+        (
+            index
+            for index, row in enumerate(rows)
+            if row.get_text(" ", strip=True).startswith("Federal funds rate")
+        ),
+        None,
+    )
+    if rate_row_index is None:
+        return None
+
+    header_values: list[str] = []
+    for row in rows[:rate_row_index]:
+        values = [cell.get_text(" ", strip=True) for cell in row.find_all(["th", "td"])]
+        if values and any(re.fullmatch(r"20\d{2}|Longer run", value) for value in values):
+            header_values = values
+            break
+    if not header_values:
+        return None
+
+    first_header = header_values[0]
+    repeated_at = next(
+        (index for index, value in enumerate(header_values[1:], 1) if value == first_header),
+        len(header_values),
+    )
+    horizons = header_values[:repeated_at]
+    rate_cells = [
+        cell.get_text(" ", strip=True)
+        for cell in rows[rate_row_index].find_all(["th", "td"])
+    ][1:]
+    if len(rate_cells) < len(horizons):
+        return None
+
+    medians: dict[str, float] = {}
+    for horizon, raw_value in zip(horizons, rate_cells):
+        try:
+            medians["longer_run" if horizon == "Longer run" else horizon] = float(raw_value)
+        except ValueError:
+            return None
+    return {"medians": medians}
+
+
+def add_sep_comparisons(meetings_data: dict[str, Any]) -> dict[str, Any]:
+    previous_sep: dict[str, Any] | None = None
+    for meeting in meetings_data.get("meetings", []):
+        outcome = meeting.get("outcome", {})
+        sep = outcome.get("sep")
+        if not sep:
+            continue
+        medians = sep.get("medians", {})
+        changes: dict[str, float] = {}
+        if previous_sep:
+            previous_medians = previous_sep.get("medians", {})
+            changes = {
+                horizon: round(value - previous_medians[horizon], 1)
+                for horizon, value in medians.items()
+                if horizon in previous_medians
+            }
+        sep["changes"] = changes
+
+        preferred_horizon = str(meeting["year"] + 1)
+        if preferred_horizon not in medians:
+            preferred_horizon = str(meeting["year"])
+        if preferred_horizon in medians:
+            value = medians[preferred_horizon]
+            delta = changes.get(preferred_horizon)
+            if delta is None:
+                comparison = ""
+            elif delta > 0:
+                comparison = f"，较上次上调 {delta:.1f} 个百分点"
+            elif delta < 0:
+                comparison = f"，较上次下调 {abs(delta):.1f} 个百分点"
+            else:
+                comparison = "，与上次相同"
+            sep["summary"] = (
+                f"SEP：{preferred_horizon}年末政策利率中位数 {value:.1f}%"
+                f"{comparison}。"
+            )
+            sep["display_horizon"] = preferred_horizon
+        previous_sep = sep
+    return meetings_data
+
+
+def attach_official_meeting_details(
+    meetings_data: dict[str, Any], old_meetings: dict[str, Any] | None
+) -> dict[str, Any]:
+    """Attach cached or freshly parsed votes and SEP policy-rate medians."""
+    old_items = {
+        item["id"]: item for item in (old_meetings or {}).get("meetings", [])
+    }
+    tasks: list[tuple[dict[str, Any], str, str]] = []
+    for meeting in meetings_data.get("meetings", []):
+        outcome = meeting.get("outcome")
+        if not outcome:
+            continue
+        old_outcome = old_items.get(meeting["id"], {}).get("outcome", {})
+        documents = meeting.get("documents", {})
+        for key, document_key in (("vote", "statement_html"), ("sep", "projections_html")):
+            source = documents.get(document_key)
+            if not source:
+                continue
+            cached = old_outcome.get(key)
+            if (
+                cached
+                and cached.get("source") == source
+                and cached.get("parser_version") == DETAIL_PARSER_VERSION
+            ):
+                outcome[key] = deepcopy(cached)
+            else:
+                tasks.append((meeting, key, source))
+
+    if tasks:
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            futures = {
+                executor.submit(fetch_text, source): (meeting, key, source)
+                for meeting, key, source in tasks
+            }
+            for future in as_completed(futures):
+                meeting, key, source = futures[future]
+                try:
+                    parsed = (
+                        parse_statement_vote(future.result())
+                        if key == "vote"
+                        else parse_sep_html(future.result())
+                    )
+                    if parsed:
+                        parsed["source"] = source
+                        parsed["parser_version"] = DETAIL_PARSER_VERSION
+                        meeting["outcome"][key] = parsed
+                except Exception as exc:
+                    print(
+                        f"warning: could not parse {key} for {meeting['id']}: {exc}",
+                        file=sys.stderr,
+                    )
+
+    add_sep_comparisons(meetings_data)
     return meetings_data
 
 
@@ -600,6 +918,7 @@ def main() -> int:
     macro = parse_macro_csv(macro_csv)
     attach_meeting_outcomes(meetings, rates)
     attach_macro_snapshots(meetings, macro)
+    attach_official_meeting_details(meetings, old_meetings)
     event = build_change_event(old_meetings, meetings, old_rates, rates)
 
     data_changed = meetings != old_meetings or rates != old_rates
@@ -620,7 +939,8 @@ def main() -> int:
                     "From that date onward it uses the midpoint of the official target "
                     "range while retaining the original upper and lower bounds. Meeting "
                     "macro snapshots use conservative publication lags and current revised "
-                    "FRED values; they are not ALFRED point-in-time vintages."
+                    "FRED values; they are not ALFRED point-in-time vintages. Vote counts "
+                    "and SEP policy-rate medians are parsed from official meeting files."
                 ),
             },
         )

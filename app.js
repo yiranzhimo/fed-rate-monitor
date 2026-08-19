@@ -161,12 +161,31 @@ function renderMeetings(meetings) {
         outcome.className = `meeting-outcome ${meeting.outcome.action}`;
         outcome.textContent = meeting.outcome.summary;
         title.appendChild(outcome);
+        if (meeting.outcome.vote) {
+          const vote = document.createElement('p');
+          vote.className = 'meeting-detail meeting-vote';
+          vote.textContent = meeting.outcome.vote.summary;
+          title.appendChild(vote);
+        }
+        if (meeting.outcome.sep) {
+          const sep = document.createElement('p');
+          sep.className = 'meeting-detail meeting-sep';
+          sep.textContent = meeting.outcome.sep.summary;
+          sep.title = '政策利率中位数来自美联储 SEP 表格；变化值由相邻两次 SEP 中位数计算。';
+          title.appendChild(sep);
+        }
         if (meeting.outcome.macro_snapshot) {
-          const macro = document.createElement('p');
-          macro.className = 'meeting-macro';
-          macro.textContent = meeting.outcome.macro_snapshot.summary;
-          macro.title = '月份按保守发布滞后选取；历史数值采用 FRED 当前版本，可能包含会后修订。';
-          title.appendChild(macro);
+          const snapshot = meeting.outcome.macro_snapshot;
+          const summaries = snapshot.employment_summary && snapshot.inflation_summary
+            ? [snapshot.employment_summary, snapshot.inflation_summary]
+            : [snapshot.summary];
+          for (const summary of summaries) {
+            const macro = document.createElement('p');
+            macro.className = 'meeting-macro';
+            macro.textContent = summary;
+            macro.title = '月份按保守发布滞后选取；历史数值采用 FRED 当前版本，可能包含会后修订。';
+            title.appendChild(macro);
+          }
         }
       }
       const docs = document.createElement('div');

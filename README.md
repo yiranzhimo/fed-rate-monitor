@@ -9,10 +9,12 @@
 - 实际有效联邦基金利率：FRED `DFF`（原始来源为纽约联储）
 - FOMC 会议日期与官方文件：Federal Reserve FOMC Calendar
 - 已结束会议摘要：依据目标利率序列确定加息、降息或维持，并标记是否发布 SEP
-- 会议时点宏观摘要：FRED `UNRATE` 失业率，以及由 `PCEPI`、`PCEPILFE` 推导的 PCE 通胀与核心 PCE 通胀同比
+- 会议时点就业摘要：FRED `UNRATE` 失业率，以及 `PAYEMS` 非农就业近 3 个月平均变化
+- 会议时点通胀摘要：由 `PCEPI`、`PCEPILFE` 推导的 PCE 同比、核心 PCE 同比与近 3 个月年化
+- 官方会议细节：从政策声明提取表决与异议；从 SEP 表格提取政策利率中位数，并计算相较上次的变化
 - 加息、降息及基点数是目标区间中点变化的**推导结果**，并非额外的官方序列
 
-宏观摘要为避免选中尚未发布的月份，采用保守发布滞后：失业率在次月第一个星期五后取前 1 个月，否则取前 2 个月；PCE 取前 2 个月。FRED 的免密 CSV 提供当前修订值而非 ALFRED 历史快照，因此历史数值可能包含会后修订；网页会明确标注这一限制。
+宏观摘要为避免选中尚未发布的月份，采用保守发布滞后：失业率和非农就业在次月第一个星期五后取前 1 个月，否则取前 2 个月；PCE 取前 2 个月。FRED 的免密 CSV 提供当前修订值而非 ALFRED 历史快照，因此历史数值可能包含会后修订；网页会明确标注这一限制。
 
 项目不包含市场预测或 CME FedWatch 概率。网页自动化数据可能延迟，不构成投资建议。
 
@@ -103,3 +105,4 @@ python scripts/send_notification.py --dry-run
 - [FRED UNRATE（原始来源 BLS）](https://fred.stlouisfed.org/series/UNRATE)
 - [FRED PCEPI（原始来源 BEA）](https://fred.stlouisfed.org/series/PCEPI)
 - [FRED PCEPILFE（原始来源 BEA）](https://fred.stlouisfed.org/series/PCEPILFE)
+- [FRED PAYEMS（原始来源 BLS）](https://fred.stlouisfed.org/series/PAYEMS)
