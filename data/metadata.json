@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T20:49:43Z",
+  "updated_at": "2026-08-21T13:14:36Z",
   "calendar_source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
   "rates_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
   "macro_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
