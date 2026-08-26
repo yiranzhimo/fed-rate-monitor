@@ -3401,7 +3401,7 @@
           },
           "core_pce_3m_annualized": {
             "period": "2026-04",
-            "value": 3.8,
+            "value": 3.9,
             "series": "PCEPILFE"
           },
           "payrolls_3m_average": {
@@ -3412,8 +3412,8 @@
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
           "employment_summary": "就业：失业率 4.3%（2026-05）；非农近3个月月均新增 14.2万。",
-          "inflation_summary": "通胀：PCE 同比 3.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.8%（2026-04）。",
-          "summary": "就业：失业率 4.3%（2026-05）；非农近3个月月均新增 14.2万。 通胀：PCE 同比 3.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.8%（2026-04）。"
+          "inflation_summary": "通胀：PCE 同比 3.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.9%（2026-04）。",
+          "summary": "就业：失业率 4.3%（2026-05）；非农近3个月月均新增 14.2万。 通胀：PCE 同比 3.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.9%（2026-04）。"
         },
         "vote": {
           "support_count": 12,
@@ -3485,12 +3485,12 @@
           },
           "core_pce_yoy": {
             "period": "2026-05",
-            "value": 3.4,
+            "value": 3.5,
             "series": "PCEPILFE"
           },
           "core_pce_3m_annualized": {
             "period": "2026-05",
-            "value": 3.6,
+            "value": 3.7,
             "series": "PCEPILFE"
           },
           "payrolls_3m_average": {
@@ -3501,8 +3501,8 @@
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
           "employment_summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 7.7万。",
-          "inflation_summary": "通胀：PCE 同比 4.1%、核心 PCE 同比 3.4%；核心 PCE 近3个月年化 3.6%（2026-05）。",
-          "summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 7.7万。 通胀：PCE 同比 4.1%、核心 PCE 同比 3.4%；核心 PCE 近3个月年化 3.6%（2026-05）。"
+          "inflation_summary": "通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。",
+          "summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 7.7万。 通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。"
         },
         "vote": {
           "support_count": 9,
