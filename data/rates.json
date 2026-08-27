@@ -7,14 +7,14 @@
     "effective_rate": "DFF"
   },
   "current": {
-    "as_of": "2026-08-26",
+    "as_of": "2026-08-27",
     "upper": 3.75,
     "lower": 3.5,
     "midpoint": 3.625,
     "regime": "target_range"
   },
   "effective_rate": {
-    "as_of": "2026-08-25",
+    "as_of": "2026-08-26",
     "value": 3.63
   },
   "latest_change": {
