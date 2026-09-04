@@ -3495,14 +3495,14 @@
           },
           "payrolls_3m_average": {
             "period": "2026-06",
-            "value_thousands": 77,
+            "value_thousands": 81,
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
           "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
-          "employment_summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 7.7万。",
+          "employment_summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 8.1万。",
           "inflation_summary": "通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。",
-          "summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 7.7万。 通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。"
+          "summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 8.1万。 通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。"
         },
         "vote": {
           "support_count": 9,
