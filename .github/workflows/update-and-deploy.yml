@@ -46,6 +46,8 @@ jobs:
         run: python -m pytest -q
 
       - name: Refresh official data
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python scripts/update_data.py
 
       - name: Send change notification

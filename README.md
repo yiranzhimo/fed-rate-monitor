@@ -15,7 +15,7 @@
 - 官方会议细节：从政策声明提取表决与异议；从 SEP 表格提取政策利率中位数，并计算相较上次的变化
 - 加息、降息及基点数是目标区间中点变化的**推导结果**，并非额外的官方序列
 
-宏观摘要为避免选中尚未发布的月份，采用保守发布滞后：失业率和非农就业在次月第一个星期五后取前 1 个月，否则取前 2 个月；PCE 取前 2 个月。FRED 的免密 CSV 提供当前修订值而非 ALFRED 历史快照，因此历史数值可能包含会后修订；网页会明确标注这一限制。
+宏观摘要为避免选中尚未发布的月份，采用保守发布滞后：失业率和非农就业在次月第一个星期五后取前 1 个月，否则取前 2 个月；PCE 取前 2 个月。FRED API 提供当前修订值而非 ALFRED 历史快照，因此历史数值可能包含会后修订；网页会明确标注这一限制。
 
 项目不包含市场预测或 CME FedWatch 概率。网页自动化数据可能延迟，不构成投资建议。
 
@@ -26,6 +26,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python -m pytest -q
+read -s FRED_API_KEY && export FRED_API_KEY
 python scripts/update_data.py
 python3 -m http.server 8000
 ```
@@ -35,7 +36,8 @@ python3 -m http.server 8000
 ## 部署到 GitHub Pages
 
 1. 在 GitHub 创建仓库，例如 `fed-rate-monitor`，并推送本目录到 `main`。
-2. 工作流会尝试自动启用 GitHub Pages；如果仓库策略禁止自动启用，再进入 **Settings → Pages**，在 **Build and deployment → Source** 选择 **GitHub Actions**。
+2. 在 **Settings → Secrets and variables → Actions** 添加仓库 Secret `FRED_API_KEY`。
+3. 工作流会尝试自动启用 GitHub Pages；如果仓库策略禁止自动启用，再进入 **Settings → Pages**，在 **Build and deployment → Source** 选择 **GitHub Actions**。
 4. 在 **Actions** 页手动运行一次 `Update policy data and deploy`。
 5. 可选：在 **Settings → Actions → General** 确认 Workflow permissions 允许读写；工作流本身已声明 `contents: write`。
 
@@ -56,6 +58,7 @@ python3 -m http.server 8000
 
 | 名称 | 示例 | 说明 |
 |---|---|---|
+| `FRED_API_KEY` | `32位小写字母和数字` | FRED 正式 API Key，更新数据时必需 |
 | `SMTP_HOST` | `smtp.qq.com` | SMTP 服务器 |
 | `SMTP_PORT` | `465` | 可省略，默认 `465`；其他端口使用 STARTTLS |
 | `SMTP_USERNAME` | `you@qq.com` | SMTP 登录名 |

@@ -7,6 +7,7 @@ import argparse
 import csv
 import io
 import json
+import os
 import re
 import sys
 import time
@@ -26,14 +27,9 @@ DATA_DIR = ROOT / "data"
 RUNTIME_DIR = ROOT / "runtime"
 
 CALENDAR_URL = "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-RATES_CSV_URL = (
-    "https://fred.stlouisfed.org/graph/fredgraph.csv?"
-    "id=DFEDTARU,DFEDTARL,DFEDTAR,DFF"
-)
-MACRO_CSV_URL = (
-    "https://fred.stlouisfed.org/graph/fredgraph.csv?"
-    "id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE"
-)
+FRED_API_URL = "https://api.stlouisfed.org/fred/series/observations"
+RATE_SERIES = ("DFEDTARU", "DFEDTARL", "DFEDTAR", "DFF")
+MACRO_SERIES = ("UNRATE", "PAYEMS", "CPIAUCSL", "CPILFESL", "PCEPI", "PCEPILFE")
 EMPLOYMENT_URL = "https://www.bls.gov/news.release/empsit.htm"
 CPI_URL = "https://www.bls.gov/news.release/cpi.htm"
 PCE_URL = "https://www.bea.gov/data/personal-consumption-expenditures-price-index"
@@ -85,6 +81,75 @@ def fetch_text(url: str, timeout: int = 30) -> str:
             if attempt < 2:
                 time.sleep(1 + attempt)
     raise RuntimeError(f"Failed to fetch {url}: {last_error}")
+
+
+def _combine_fred_observations(
+    results: dict[str, list[dict[str, str]]], series_ids: tuple[str, ...]
+) -> str:
+    """Convert individual API responses into the wide CSV consumed by parsers."""
+    rows_by_date: dict[str, dict[str, str]] = {}
+    for series_id in series_ids:
+        observations = results.get(series_id)
+        if not observations:
+            raise ValueError(f"FRED API returned no observations for {series_id}")
+        for observation in observations:
+            observation_date = str(observation.get("date", "")).strip()
+            value = str(observation.get("value", "")).strip()
+            if observation_date:
+                rows_by_date.setdefault(observation_date, {})[series_id] = value
+
+    output = io.StringIO()
+    writer = csv.DictWriter(output, fieldnames=["observation_date", *series_ids])
+    writer.writeheader()
+    for observation_date in sorted(rows_by_date):
+        writer.writerow(
+            {"observation_date": observation_date, **rows_by_date[observation_date]}
+        )
+    return output.getvalue()
+
+
+def fetch_fred_csv(series_ids: tuple[str, ...], api_key: str) -> str:
+    """Fetch FRED series through the documented API without exposing the key."""
+    def fetch_series(series_id: str) -> list[dict[str, str]]:
+        for attempt in range(3):
+            try:
+                response = requests.get(
+                    FRED_API_URL,
+                    params={
+                        "series_id": series_id,
+                        "api_key": api_key,
+                        "file_type": "json",
+                        "observation_start": "1982-01-01",
+                    },
+                    headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
+                    timeout=30,
+                )
+                response.raise_for_status()
+                payload = response.json()
+                observations = payload.get("observations")
+                if not isinstance(observations, list) or not observations:
+                    raise ValueError("missing observations")
+                return observations
+            except (requests.RequestException, ValueError, json.JSONDecodeError) as exc:
+                if attempt < 2:
+                    time.sleep(1 + attempt)
+                    continue
+                # Do not include the request URL or exception text: both may contain the key.
+                raise RuntimeError(
+                    f"Failed to fetch FRED series {series_id} ({type(exc).__name__})"
+                ) from None
+        raise AssertionError("unreachable")
+
+    results: dict[str, list[dict[str, str]]] = {}
+    with ThreadPoolExecutor(max_workers=min(6, len(series_ids))) as executor:
+        futures = {
+            executor.submit(fetch_series, series_id): series_id
+            for series_id in series_ids
+        }
+        for future in as_completed(futures):
+            series_id = futures[future]
+            results[series_id] = future.result()
+    return _combine_fred_observations(results, series_ids)
 
 
 def _document_key(label: str, href: str) -> str | None:
@@ -248,7 +313,7 @@ def parse_rates_csv(csv_text: str) -> dict[str, Any]:
     effr_date, effr = effr_rows[-1]
     latest_change = next((item for item in reversed(history) if item["decision"] != "initial"), None)
     return {
-        "source": RATES_CSV_URL,
+        "source": FRED_API_URL,
         "series": {
             "single_target": "DFEDTAR",
             "upper": "DFEDTARU",
@@ -291,7 +356,7 @@ def parse_macro_csv(csv_text: str) -> dict[str, Any]:
         raise ValueError("FRED macro CSV contains an empty required series")
 
     return {
-        "source": MACRO_CSV_URL,
+        "source": FRED_API_URL,
         "series": {
             "unemployment_rate": "UNRATE",
             "nonfarm_payrolls": "PAYEMS",
@@ -1096,20 +1161,28 @@ def main() -> int:
     old_rates = load_json(DATA_DIR / "rates.json")
     old_macro = load_json(DATA_DIR / "macro.json")
 
+    needs_fred = args.rates_file is None or args.macro_file is None
+    fred_api_key = os.environ.get("FRED_API_KEY", "").strip()
+    if needs_fred and not re.fullmatch(r"[a-z0-9]{32}", fred_api_key):
+        raise ValueError(
+            "FRED_API_KEY must be configured as a 32-character lowercase API key"
+        )
+
     calendar_html = (
         args.calendar_file.read_text(encoding="utf-8")
         if args.calendar_file
         else fetch_text(CALENDAR_URL)
     )
+    remote_series = (
+        (() if args.rates_file else RATE_SERIES)
+        + (() if args.macro_file else MACRO_SERIES)
+    )
+    fred_csv = fetch_fred_csv(remote_series, fred_api_key) if remote_series else ""
     rates_csv = (
-        args.rates_file.read_text(encoding="utf-8")
-        if args.rates_file
-        else fetch_text(RATES_CSV_URL)
+        args.rates_file.read_text(encoding="utf-8") if args.rates_file else fred_csv
     )
     macro_csv = (
-        args.macro_file.read_text(encoding="utf-8")
-        if args.macro_file
-        else fetch_text(MACRO_CSV_URL)
+        args.macro_file.read_text(encoding="utf-8") if args.macro_file else fred_csv
     )
 
     meetings = parse_calendar_html(calendar_html)
@@ -1140,8 +1213,8 @@ def main() -> int:
             {
                 "updated_at": utc_now(),
                 "calendar_source": CALENDAR_URL,
-                "rates_source": RATES_CSV_URL,
-                "macro_source": MACRO_CSV_URL,
+                "rates_source": FRED_API_URL,
+                "macro_source": FRED_API_URL,
                 "methodology": (
                     "Before 2008-12-16 the path uses the official single target rate. "
                     "From that date onward it uses the midpoint of the official target "

@@ -1,4 +1,6 @@
 from copy import deepcopy
+import csv
+import io
 from pathlib import Path
 
 from scripts.update_data import (
@@ -7,6 +9,7 @@ from scripts.update_data import (
     attach_meeting_outcomes,
     build_change_event,
     build_macro_dashboard,
+    fetch_fred_csv,
     parse_calendar_html,
     parse_macro_csv,
     parse_rates_csv,
@@ -16,6 +19,41 @@ from scripts.update_data import (
 
 
 FIXTURES = Path(__file__).parent / "fixtures"
+
+
+def test_fred_api_series_are_merged_without_exposing_key(monkeypatch):
+    api_key = "a" * 32
+
+    class Response:
+        def __init__(self, series_id):
+            self.series_id = series_id
+
+        def raise_for_status(self):
+            return None
+
+        def json(self):
+            return {
+                "observations": [
+                    {"date": "2025-01-01", "value": "4.0"},
+                    {"date": "2025-02-01", "value": "4.1"},
+                ]
+            }
+
+    def fake_get(url, *, params, headers, timeout):
+        assert params["api_key"] == api_key
+        assert params["file_type"] == "json"
+        return Response(params["series_id"])
+
+    monkeypatch.setattr("scripts.update_data.requests.get", fake_get)
+    csv_text = fetch_fred_csv(("UNRATE", "PAYEMS"), api_key)
+    rows = list(csv.DictReader(io.StringIO(csv_text)))
+
+    assert rows[-1] == {
+        "observation_date": "2025-02-01",
+        "UNRATE": "4.1",
+        "PAYEMS": "4.1",
+    }
+    assert api_key not in csv_text
 
 
 def test_parse_calendar_extracts_dates_and_documents():

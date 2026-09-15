@@ -133,6 +133,8 @@ h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(28px,
 .source-list b { font-weight: 400; }
 footer { background: #082d2c; color: #9bb7b3; padding: 32px 0; font-size: 12px; }
 .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+.fred-notice { max-width: 520px; }
+.fred-notice a { color: var(--mint); }
 .loading, .error-message { color: var(--muted); padding: 24px 0; }
 
 @media (max-width: 900px) {
