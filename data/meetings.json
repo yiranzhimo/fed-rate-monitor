@@ -28,7 +28,7 @@
         "effective_date": "2021-01-27",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210127a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2020-12",
@@ -56,7 +56,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 6.7%（2020-12）；非农近3个月月均新增 25.9万。",
           "inflation_summary": "通胀：PCE 同比 1.2%、核心 PCE 同比 1.5%；核心 PCE 近3个月年化 1.4%（2020-11）。",
           "summary": "就业：失业率 6.7%（2020-12）；非农近3个月月均新增 25.9万。 通胀：PCE 同比 1.2%、核心 PCE 同比 1.5%；核心 PCE 近3个月年化 1.4%（2020-11）。"
@@ -101,7 +101,7 @@
         "effective_date": "2021-03-17",
         "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210317a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2021-02",
@@ -129,7 +129,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 6.2%（2021-02）；非农近3个月月均新增 21.6万。",
           "inflation_summary": "通胀：PCE 同比 1.6%、核心 PCE 同比 1.7%；核心 PCE 近3个月年化 3.0%（2021-01）。",
           "summary": "就业：失业率 6.2%（2021-02）；非农近3个月月均新增 21.6万。 通胀：PCE 同比 1.6%、核心 PCE 同比 1.7%；核心 PCE 近3个月年化 3.0%（2021-01）。"
@@ -185,7 +185,7 @@
         "effective_date": "2021-04-28",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210428a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2021-03",
@@ -213,7 +213,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 6.1%（2021-03）；非农近3个月月均新增 56.1万。",
           "inflation_summary": "通胀：PCE 同比 1.8%、核心 PCE 同比 1.7%；核心 PCE 近3个月年化 3.4%（2021-02）。",
           "summary": "就业：失业率 6.1%（2021-03）；非农近3个月月均新增 56.1万。 通胀：PCE 同比 1.8%、核心 PCE 同比 1.7%；核心 PCE 近3个月年化 3.4%（2021-02）。"
@@ -258,7 +258,7 @@
         "effective_date": "2021-06-16",
         "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210616a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2021-05",
@@ -286,7 +286,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 5.8%（2021-05）；非农近3个月月均新增 56.2万。",
           "inflation_summary": "通胀：PCE 同比 3.6%、核心 PCE 同比 3.1%；核心 PCE 近3个月年化 4.9%（2021-04）。",
           "summary": "就业：失业率 5.8%（2021-05）；非农近3个月月均新增 56.2万。 通胀：PCE 同比 3.6%、核心 PCE 同比 3.1%；核心 PCE 近3个月年化 4.9%（2021-04）。"
@@ -347,7 +347,7 @@
         "effective_date": "2021-07-28",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210728a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2021-06",
@@ -375,7 +375,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 5.9%（2021-06）；非农近3个月月均新增 52.9万。",
           "inflation_summary": "通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 6.1%（2021-05）。",
           "summary": "就业：失业率 5.9%（2021-06）；非农近3个月月均新增 52.9万。 通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 6.1%（2021-05）。"
@@ -420,7 +420,7 @@
         "effective_date": "2021-09-22",
         "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2021-08",
@@ -448,7 +448,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 5.1%（2021-08）；非农近3个月月均新增 75.0万。",
           "inflation_summary": "通胀：PCE 同比 4.5%、核心 PCE 同比 3.9%；核心 PCE 近3个月年化 5.7%（2021-07）。",
           "summary": "就业：失业率 5.1%（2021-08）；非农近3个月月均新增 75.0万。 通胀：PCE 同比 4.5%、核心 PCE 同比 3.9%；核心 PCE 近3个月年化 5.7%（2021-07）。"
@@ -510,7 +510,7 @@
         "effective_date": "2021-11-03",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2021-09",
@@ -538,7 +538,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.7%（2021-09）；非农近3个月月均新增 65.0万。",
           "inflation_summary": "通胀：PCE 同比 4.7%、核心 PCE 同比 4.0%；核心 PCE 近3个月年化 3.9%（2021-09）。",
           "summary": "就业：失业率 4.7%（2021-09）；非农近3个月月均新增 65.0万。 通胀：PCE 同比 4.7%、核心 PCE 同比 4.0%；核心 PCE 近3个月年化 3.9%（2021-09）。"
@@ -583,7 +583,7 @@
         "effective_date": "2021-12-15",
         "summary": "维持目标区间 0.00%–0.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2021-11",
@@ -611,7 +611,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.1%（2021-11）；非农近3个月月均新增 63.9万。",
           "inflation_summary": "通胀：PCE 同比 5.3%、核心 PCE 同比 4.4%；核心 PCE 近3个月年化 4.2%（2021-10）。",
           "summary": "就业：失业率 4.1%（2021-11）；非农近3个月月均新增 63.9万。 通胀：PCE 同比 5.3%、核心 PCE 同比 4.4%；核心 PCE 近3个月年化 4.2%（2021-10）。"
@@ -674,7 +674,7 @@
         "effective_date": "2022-01-26",
         "summary": "维持目标区间 0.00%–0.25% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220126a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2021-12",
@@ -702,7 +702,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.9%（2021-12）；非农近3个月月均新增 68.2万。",
           "inflation_summary": "通胀：PCE 同比 5.9%、核心 PCE 同比 4.9%；核心 PCE 近3个月年化 5.1%（2021-11）。",
           "summary": "就业：失业率 3.9%（2021-12）；非农近3个月月均新增 68.2万。 通胀：PCE 同比 5.9%、核心 PCE 同比 4.9%；核心 PCE 近3个月年化 5.1%（2021-11）。"
@@ -747,7 +747,7 @@
         "effective_date": "2022-03-17",
         "summary": "加息 25 个基点，目标区间调整至 0.25%–0.50%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2022-02",
@@ -775,7 +775,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.9%（2022-02）；非农近3个月月均新增 53.2万。",
           "inflation_summary": "通胀：PCE 同比 6.3%、核心 PCE 同比 5.4%；核心 PCE 近3个月年化 6.7%（2022-01）。",
           "summary": "就业：失业率 3.9%（2022-02）；非农近3个月月均新增 53.2万。 通胀：PCE 同比 6.3%、核心 PCE 同比 5.4%；核心 PCE 近3个月年化 6.7%（2022-01）。"
@@ -838,7 +838,7 @@
         "effective_date": "2022-05-05",
         "summary": "加息 50 个基点，目标区间调整至 0.75%–1.00%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220504a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2022-03",
@@ -866,7 +866,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.7%（2022-03）；非农近3个月月均新增 50.0万。",
           "inflation_summary": "通胀：PCE 同比 6.9%、核心 PCE 同比 5.6%；核心 PCE 近3个月年化 5.5%（2022-03）。",
           "summary": "就业：失业率 3.7%（2022-03）；非农近3个月月均新增 50.0万。 通胀：PCE 同比 6.9%、核心 PCE 同比 5.6%；核心 PCE 近3个月年化 5.5%（2022-03）。"
@@ -911,7 +911,7 @@
         "effective_date": "2022-06-16",
         "summary": "加息 75 个基点，目标区间调整至 1.50%–1.75%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2022-05",
@@ -939,7 +939,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.6%（2022-05）；非农近3个月月均新增 36.6万。",
           "inflation_summary": "通胀：PCE 同比 6.7%、核心 PCE 同比 5.3%；核心 PCE 近3个月年化 4.8%（2022-04）。",
           "summary": "就业：失业率 3.6%（2022-05）；非农近3个月月均新增 36.6万。 通胀：PCE 同比 6.7%、核心 PCE 同比 5.3%；核心 PCE 近3个月年化 4.8%（2022-04）。"
@@ -1002,7 +1002,7 @@
         "effective_date": "2022-07-28",
         "summary": "加息 75 个基点，目标区间调整至 2.25%–2.50%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220727a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2022-06",
@@ -1030,7 +1030,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.6%（2022-06）；非农近3个月月均新增 34.8万。",
           "inflation_summary": "通胀：PCE 同比 6.8%、核心 PCE 同比 5.2%；核心 PCE 近3个月年化 4.5%（2022-05）。",
           "summary": "就业：失业率 3.6%（2022-06）；非农近3个月月均新增 34.8万。 通胀：PCE 同比 6.8%、核心 PCE 同比 5.2%；核心 PCE 近3个月年化 4.5%（2022-05）。"
@@ -1075,7 +1075,7 @@
         "effective_date": "2022-09-22",
         "summary": "加息 75 个基点，目标区间调整至 3.00%–3.25%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220921a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2022-08",
@@ -1103,7 +1103,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.6%（2022-08）；非农近3个月月均新增 47.9万。",
           "inflation_summary": "通胀：PCE 同比 6.8%、核心 PCE 同比 5.1%；核心 PCE 近3个月年化 4.7%（2022-07）。",
           "summary": "就业：失业率 3.6%（2022-08）；非农近3个月月均新增 47.9万。 通胀：PCE 同比 6.8%、核心 PCE 同比 5.1%；核心 PCE 近3个月年化 4.7%（2022-07）。"
@@ -1165,7 +1165,7 @@
         "effective_date": "2022-11-03",
         "summary": "加息 75 个基点，目标区间调整至 3.75%–4.00%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221102a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2022-09",
@@ -1193,7 +1193,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.5%（2022-09）；非农近3个月月均新增 40.8万。",
           "inflation_summary": "通胀：PCE 同比 6.7%、核心 PCE 同比 5.6%；核心 PCE 近3个月年化 5.0%（2022-09）。",
           "summary": "就业：失业率 3.5%（2022-09）；非农近3个月月均新增 40.8万。 通胀：PCE 同比 6.7%、核心 PCE 同比 5.6%；核心 PCE 近3个月年化 5.0%（2022-09）。"
@@ -1238,7 +1238,7 @@
         "effective_date": "2022-12-15",
         "summary": "加息 50 个基点，目标区间调整至 4.25%–4.50%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20221214a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2022-11",
@@ -1266,7 +1266,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.6%（2022-11）；非农近3个月月均新增 29.3万。",
           "inflation_summary": "通胀：PCE 同比 6.5%、核心 PCE 同比 5.5%；核心 PCE 近3个月年化 5.6%（2022-10）。",
           "summary": "就业：失业率 3.6%（2022-11）；非农近3个月月均新增 29.3万。 通胀：PCE 同比 6.5%、核心 PCE 同比 5.5%；核心 PCE 近3个月年化 5.6%（2022-10）。"
@@ -1331,7 +1331,7 @@
         "effective_date": "2023-03-23",
         "summary": "加息 25 个基点，目标区间调整至 4.75%–5.00%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2023-02",
@@ -1359,7 +1359,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.6%（2023-02）；非农近3个月月均新增 27.5万。",
           "inflation_summary": "通胀：PCE 同比 5.5%、核心 PCE 同比 4.9%；核心 PCE 近3个月年化 4.6%（2023-01）。",
           "summary": "就业：失业率 3.6%（2023-02）；非农近3个月月均新增 27.5万。 通胀：PCE 同比 5.5%、核心 PCE 同比 4.9%；核心 PCE 近3个月年化 4.6%（2023-01）。"
@@ -1420,7 +1420,7 @@
         "effective_date": "2023-05-04",
         "summary": "加息 25 个基点，目标区间调整至 5.00%–5.25%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2023-03",
@@ -1448,7 +1448,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.5%（2023-03）；非农近3个月月均新增 26.4万。",
           "inflation_summary": "通胀：PCE 同比 4.4%、核心 PCE 同比 4.8%；核心 PCE 近3个月年化 4.7%（2023-03）。",
           "summary": "就业：失业率 3.5%（2023-03）；非农近3个月月均新增 26.4万。 通胀：PCE 同比 4.4%、核心 PCE 同比 4.8%；核心 PCE 近3个月年化 4.7%（2023-03）。"
@@ -1493,7 +1493,7 @@
         "effective_date": "2023-06-14",
         "summary": "维持目标区间 5.00%–5.25% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2023-05",
@@ -1521,7 +1521,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.6%（2023-05）；非农近3个月月均新增 19.6万。",
           "inflation_summary": "通胀：PCE 同比 4.5%、核心 PCE 同比 4.8%；核心 PCE 近3个月年化 4.2%（2023-04）。",
           "summary": "就业：失业率 3.6%（2023-05）；非农近3个月月均新增 19.6万。 通胀：PCE 同比 4.5%、核心 PCE 同比 4.8%；核心 PCE 近3个月年化 4.2%（2023-04）。"
@@ -1582,7 +1582,7 @@
         "effective_date": "2023-07-27",
         "summary": "加息 25 个基点，目标区间调整至 5.25%–5.50%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2023-06",
@@ -1610,7 +1610,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.6%（2023-06）；非农近3个月月均新增 24.9万。",
           "inflation_summary": "通胀：PCE 同比 4.0%、核心 PCE 同比 4.7%；核心 PCE 近3个月年化 4.0%（2023-05）。",
           "summary": "就业：失业率 3.6%（2023-06）；非农近3个月月均新增 24.9万。 通胀：PCE 同比 4.0%、核心 PCE 同比 4.7%；核心 PCE 近3个月年化 4.0%（2023-05）。"
@@ -1655,7 +1655,7 @@
         "effective_date": "2023-09-20",
         "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2023-08",
@@ -1683,7 +1683,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.7%（2023-08）；非农近3个月月均新增 20.2万。",
           "inflation_summary": "通胀：PCE 同比 3.4%、核心 PCE 同比 4.3%；核心 PCE 近3个月年化 2.8%（2023-07）。",
           "summary": "就业：失业率 3.7%（2023-08）；非农近3个月月均新增 20.2万。 通胀：PCE 同比 3.4%、核心 PCE 同比 4.3%；核心 PCE 近3个月年化 2.8%（2023-07）。"
@@ -1747,7 +1747,7 @@
         "effective_date": "2023-12-13",
         "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2023-11",
@@ -1775,7 +1775,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.7%（2023-11）；非农近3个月月均新增 14.7万。",
           "inflation_summary": "通胀：PCE 同比 3.0%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 2.3%（2023-10）。",
           "summary": "就业：失业率 3.7%（2023-11）；非农近3个月月均新增 14.7万。 通胀：PCE 同比 3.0%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 2.3%（2023-10）。"
@@ -1838,7 +1838,7 @@
         "effective_date": "2024-01-31",
         "summary": "维持目标区间 5.25%–5.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2023-12",
@@ -1866,7 +1866,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.8%（2023-12）；非农近3个月月均新增 14.7万。",
           "inflation_summary": "通胀：PCE 同比 2.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 2.3%（2023-11）。",
           "summary": "就业：失业率 3.8%（2023-12）；非农近3个月月均新增 14.7万。 通胀：PCE 同比 2.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 2.3%（2023-11）。"
@@ -1911,7 +1911,7 @@
         "effective_date": "2024-03-20",
         "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2024-02",
@@ -1939,7 +1939,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.9%（2024-02）；非农近3个月月均新增 17.8万。",
           "inflation_summary": "通胀：PCE 同比 2.7%、核心 PCE 同比 3.2%；核心 PCE 近3个月年化 3.3%（2024-01）。",
           "summary": "就业：失业率 3.9%（2024-02）；非农近3个月月均新增 17.8万。 通胀：PCE 同比 2.7%、核心 PCE 同比 3.2%；核心 PCE 近3个月年化 3.3%（2024-01）。"
@@ -2002,7 +2002,7 @@
         "effective_date": "2024-06-12",
         "summary": "维持目标区间 5.25%–5.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2024-05",
@@ -2030,7 +2030,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 3.9%（2024-05）；非农近3个月月均新增 12.3万。",
           "inflation_summary": "通胀：PCE 同比 2.8%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 3.6%（2024-04）。",
           "summary": "就业：失业率 3.9%（2024-05）；非农近3个月月均新增 12.3万。 通胀：PCE 同比 2.8%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 3.6%（2024-04）。"
@@ -2091,7 +2091,7 @@
         "effective_date": "2024-07-31",
         "summary": "维持目标区间 5.25%–5.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2024-06",
@@ -2119,7 +2119,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.1%（2024-06）；非农近3个月月均新增 7.6万。",
           "inflation_summary": "通胀：PCE 同比 2.7%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.8%（2024-05）。",
           "summary": "就业：失业率 4.1%（2024-06）；非农近3个月月均新增 7.6万。 通胀：PCE 同比 2.7%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.8%（2024-05）。"
@@ -2164,7 +2164,7 @@
         "effective_date": "2024-09-19",
         "summary": "降息 50 个基点，目标区间调整至 4.75%–5.00%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2024-08",
@@ -2192,7 +2192,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.2%（2024-08）；非农近3个月月均新增 5.0万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.0%（2024-07）。",
           "summary": "就业：失业率 4.2%（2024-08）；非农近3个月月均新增 5.0万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.0%（2024-07）。"
@@ -2256,7 +2256,7 @@
         "effective_date": "2024-11-08",
         "summary": "降息 25 个基点，目标区间调整至 4.50%–4.75%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2024-10",
@@ -2284,7 +2284,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.1%（2024-10）；非农近3个月月均新增 6.6万。",
           "inflation_summary": "通胀：PCE 同比 2.3%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.6%（2024-09）。",
           "summary": "就业：失业率 4.1%（2024-10）；非农近3个月月均新增 6.6万。 通胀：PCE 同比 2.3%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.6%（2024-09）。"
@@ -2329,7 +2329,7 @@
         "effective_date": "2024-12-19",
         "summary": "降息 25 个基点，目标区间调整至 4.25%–4.50%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2024-11",
@@ -2357,7 +2357,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.2%（2024-11）；非农近3个月月均新增 10.7万。",
           "inflation_summary": "通胀：PCE 同比 2.5%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 3.0%（2024-10）。",
           "summary": "就业：失业率 4.2%（2024-11）；非农近3个月月均新增 10.7万。 通胀：PCE 同比 2.5%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 3.0%（2024-10）。"
@@ -2422,7 +2422,7 @@
         "effective_date": "2025-01-29",
         "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2024-12",
@@ -2450,7 +2450,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.1%（2024-12）；非农近3个月月均新增 13.5万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.7%（2024-11）。",
           "summary": "就业：失业率 4.1%（2024-12）；非农近3个月月均新增 13.5万。 通胀：PCE 同比 2.6%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.7%（2024-11）。"
@@ -2495,7 +2495,7 @@
         "effective_date": "2025-03-19",
         "summary": "维持目标区间 4.25%–4.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2025-02",
@@ -2523,7 +2523,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.2%（2025-02）；非农近3个月月均新增 7.7万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.5%（2025-01）。",
           "summary": "就业：失业率 4.2%（2025-02）；非农近3个月月均新增 7.7万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.5%（2025-01）。"
@@ -2586,7 +2586,7 @@
         "effective_date": "2025-05-07",
         "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2025-04",
@@ -2614,7 +2614,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.2%（2025-04）；非农近3个月月均新增 7.2万。",
           "inflation_summary": "通胀：PCE 同比 2.4%、核心 PCE 同比 2.7%；核心 PCE 近3个月年化 3.5%（2025-03）。",
           "summary": "就业：失业率 4.2%（2025-04）；非农近3个月月均新增 7.2万。 通胀：PCE 同比 2.4%、核心 PCE 同比 2.7%；核心 PCE 近3个月年化 3.5%（2025-03）。"
@@ -2659,7 +2659,7 @@
         "effective_date": "2025-06-18",
         "summary": "维持目标区间 4.25%–4.50% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2025-05",
@@ -2687,7 +2687,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.3%（2025-05）；非农近3个月月均新增 6.3万。",
           "inflation_summary": "通胀：PCE 同比 2.3%、核心 PCE 同比 2.6%；核心 PCE 近3个月年化 3.0%（2025-04）。",
           "summary": "就业：失业率 4.3%（2025-05）；非农近3个月月均新增 6.3万。 通胀：PCE 同比 2.3%、核心 PCE 同比 2.6%；核心 PCE 近3个月年化 3.0%（2025-04）。"
@@ -2748,7 +2748,7 @@
         "effective_date": "2025-07-30",
         "summary": "维持目标区间 4.25%–4.50% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2025-06",
@@ -2776,7 +2776,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.1%（2025-06）；非农近3个月月均新增 3.4万。",
           "inflation_summary": "通胀：PCE 同比 2.5%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.1%（2025-05）。",
           "summary": "就业：失业率 4.1%（2025-06）；非农近3个月月均新增 3.4万。 通胀：PCE 同比 2.5%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.1%（2025-05）。"
@@ -2840,7 +2840,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.3%（2025-07）；非农近3个月月均新增 1.9万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.8%（2025-06）。",
           "summary": "就业：失业率 4.3%（2025-07）；非农近3个月月均新增 1.9万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.8%（2025-06）。"
@@ -2876,7 +2876,7 @@
         "effective_date": "2025-09-18",
         "summary": "降息 25 个基点，目标区间调整至 4.00%–4.25%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2025-08",
@@ -2904,7 +2904,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.3%（2025-08）；非农近3个月月均减少 0.9万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.9%；核心 PCE 近3个月年化 3.0%（2025-07）。",
           "summary": "就业：失业率 4.3%（2025-08）；非农近3个月月均减少 0.9万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.9%；核心 PCE 近3个月年化 3.0%（2025-07）。"
@@ -2968,7 +2968,7 @@
         "effective_date": "2025-10-30",
         "summary": "降息 25 个基点，目标区间调整至 3.75%–4.00%；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2025-09",
@@ -2996,7 +2996,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.4%（2025-09）；非农近3个月月均新增 2.3万。",
           "inflation_summary": "通胀：PCE 同比 2.7%、核心 PCE 同比 2.9%；核心 PCE 近3个月年化 3.0%（2025-08）。",
           "summary": "就业：失业率 4.4%（2025-09）；非农近3个月月均新增 2.3万。 通胀：PCE 同比 2.7%、核心 PCE 同比 2.9%；核心 PCE 近3个月年化 3.0%（2025-08）。"
@@ -3043,7 +3043,7 @@
         "effective_date": "2025-12-11",
         "summary": "降息 25 个基点，目标区间调整至 3.50%–3.75%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2025-11",
@@ -3071,7 +3071,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.5%（2025-11）；非农近3个月月均减少 0.8万。",
           "inflation_summary": "通胀：PCE 同比 2.7%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.6%（2025-10）。",
           "summary": "就业：失业率 4.5%（2025-11）；非农近3个月月均减少 0.8万。 通胀：PCE 同比 2.7%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.6%（2025-10）。"
@@ -3137,7 +3137,7 @@
         "effective_date": "2026-01-28",
         "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260128a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2025-12",
@@ -3165,7 +3165,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.4%（2025-12）；非农近3个月月均减少 3.9万。",
           "inflation_summary": "通胀：PCE 同比 2.8%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.4%（2025-11）。",
           "summary": "就业：失业率 4.4%（2025-12）；非农近3个月月均减少 3.9万。 通胀：PCE 同比 2.8%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.4%（2025-11）。"
@@ -3213,7 +3213,7 @@
         "effective_date": "2026-03-18",
         "summary": "维持目标区间 3.50%–3.75% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2026-02",
@@ -3241,7 +3241,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.4%（2026-02）；非农近3个月月均减少 0.4万。",
           "inflation_summary": "通胀：PCE 同比 2.9%、核心 PCE 同比 3.1%；核心 PCE 近3个月年化 3.9%（2026-01）。",
           "summary": "就业：失业率 4.4%（2026-02）；非农近3个月月均减少 0.4万。 通胀：PCE 同比 2.9%、核心 PCE 同比 3.1%；核心 PCE 近3个月年化 3.9%（2026-01）。"
@@ -3304,7 +3304,7 @@
         "effective_date": "2026-04-29",
         "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2026-03",
@@ -3332,7 +3332,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.3%（2026-03）；非农近3个月月均新增 7.3万。",
           "inflation_summary": "通胀：PCE 同比 2.9%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 4.8%（2026-02）。",
           "summary": "就业：失业率 4.3%（2026-03）；非农近3个月月均新增 7.3万。 通胀：PCE 同比 2.9%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 4.8%（2026-02）。"
@@ -3382,7 +3382,7 @@
         "effective_date": "2026-06-17",
         "summary": "维持目标区间 3.50%–3.75% 不变；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2026-05",
@@ -3410,7 +3410,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.3%（2026-05）；非农近3个月月均新增 14.2万。",
           "inflation_summary": "通胀：PCE 同比 3.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.9%（2026-04）。",
           "summary": "就业：失业率 4.3%（2026-05）；非农近3个月月均新增 14.2万。 通胀：PCE 同比 3.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.9%（2026-04）。"
@@ -3471,7 +3471,7 @@
         "effective_date": "2026-07-29",
         "summary": "维持目标区间 3.50%–3.75% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm",
-        "rate_source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2026-06",
@@ -3499,7 +3499,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 8.1万。",
           "inflation_summary": "通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。",
           "summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 8.1万。 通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。"

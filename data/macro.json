@@ -1,5 +1,5 @@
 {
-  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+  "source": "https://api.stlouisfed.org/fred/series/observations",
   "original_sources": {
     "employment": "https://www.bls.gov/news.release/empsit.htm",
     "cpi": "https://www.bls.gov/news.release/cpi.htm",

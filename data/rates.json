@@ -1,5 +1,5 @@
 {
-  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU,DFEDTARL,DFEDTAR,DFF",
+  "source": "https://api.stlouisfed.org/fred/series/observations",
   "series": {
     "single_target": "DFEDTAR",
     "upper": "DFEDTARU",
