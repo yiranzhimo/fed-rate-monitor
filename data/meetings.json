@@ -56,7 +56,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 6.7%（2020-12）；非农近3个月月均新增 25.9万。",
           "inflation_summary": "通胀：PCE 同比 1.2%、核心 PCE 同比 1.5%；核心 PCE 近3个月年化 1.4%（2020-11）。",
           "summary": "就业：失业率 6.7%（2020-12）；非农近3个月月均新增 25.9万。 通胀：PCE 同比 1.2%、核心 PCE 同比 1.5%；核心 PCE 近3个月年化 1.4%（2020-11）。"
@@ -129,7 +129,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 6.2%（2021-02）；非农近3个月月均新增 21.6万。",
           "inflation_summary": "通胀：PCE 同比 1.6%、核心 PCE 同比 1.7%；核心 PCE 近3个月年化 3.0%（2021-01）。",
           "summary": "就业：失业率 6.2%（2021-02）；非农近3个月月均新增 21.6万。 通胀：PCE 同比 1.6%、核心 PCE 同比 1.7%；核心 PCE 近3个月年化 3.0%（2021-01）。"
@@ -213,7 +213,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 6.1%（2021-03）；非农近3个月月均新增 56.1万。",
           "inflation_summary": "通胀：PCE 同比 1.8%、核心 PCE 同比 1.7%；核心 PCE 近3个月年化 3.4%（2021-02）。",
           "summary": "就业：失业率 6.1%（2021-03）；非农近3个月月均新增 56.1万。 通胀：PCE 同比 1.8%、核心 PCE 同比 1.7%；核心 PCE 近3个月年化 3.4%（2021-02）。"
@@ -286,7 +286,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 5.8%（2021-05）；非农近3个月月均新增 56.2万。",
           "inflation_summary": "通胀：PCE 同比 3.6%、核心 PCE 同比 3.1%；核心 PCE 近3个月年化 4.9%（2021-04）。",
           "summary": "就业：失业率 5.8%（2021-05）；非农近3个月月均新增 56.2万。 通胀：PCE 同比 3.6%、核心 PCE 同比 3.1%；核心 PCE 近3个月年化 4.9%（2021-04）。"
@@ -375,7 +375,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 5.9%（2021-06）；非农近3个月月均新增 52.9万。",
           "inflation_summary": "通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 6.1%（2021-05）。",
           "summary": "就业：失业率 5.9%（2021-06）；非农近3个月月均新增 52.9万。 通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 6.1%（2021-05）。"
@@ -448,7 +448,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 5.1%（2021-08）；非农近3个月月均新增 75.0万。",
           "inflation_summary": "通胀：PCE 同比 4.5%、核心 PCE 同比 3.9%；核心 PCE 近3个月年化 5.7%（2021-07）。",
           "summary": "就业：失业率 5.1%（2021-08）；非农近3个月月均新增 75.0万。 通胀：PCE 同比 4.5%、核心 PCE 同比 3.9%；核心 PCE 近3个月年化 5.7%（2021-07）。"
@@ -538,7 +538,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.7%（2021-09）；非农近3个月月均新增 65.0万。",
           "inflation_summary": "通胀：PCE 同比 4.7%、核心 PCE 同比 4.0%；核心 PCE 近3个月年化 3.9%（2021-09）。",
           "summary": "就业：失业率 4.7%（2021-09）；非农近3个月月均新增 65.0万。 通胀：PCE 同比 4.7%、核心 PCE 同比 4.0%；核心 PCE 近3个月年化 3.9%（2021-09）。"
@@ -611,7 +611,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.1%（2021-11）；非农近3个月月均新增 63.9万。",
           "inflation_summary": "通胀：PCE 同比 5.3%、核心 PCE 同比 4.4%；核心 PCE 近3个月年化 4.2%（2021-10）。",
           "summary": "就业：失业率 4.1%（2021-11）；非农近3个月月均新增 63.9万。 通胀：PCE 同比 5.3%、核心 PCE 同比 4.4%；核心 PCE 近3个月年化 4.2%（2021-10）。"
@@ -702,7 +702,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.9%（2021-12）；非农近3个月月均新增 68.2万。",
           "inflation_summary": "通胀：PCE 同比 5.9%、核心 PCE 同比 4.9%；核心 PCE 近3个月年化 5.1%（2021-11）。",
           "summary": "就业：失业率 3.9%（2021-12）；非农近3个月月均新增 68.2万。 通胀：PCE 同比 5.9%、核心 PCE 同比 4.9%；核心 PCE 近3个月年化 5.1%（2021-11）。"
@@ -775,7 +775,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.9%（2022-02）；非农近3个月月均新增 53.2万。",
           "inflation_summary": "通胀：PCE 同比 6.3%、核心 PCE 同比 5.4%；核心 PCE 近3个月年化 6.7%（2022-01）。",
           "summary": "就业：失业率 3.9%（2022-02）；非农近3个月月均新增 53.2万。 通胀：PCE 同比 6.3%、核心 PCE 同比 5.4%；核心 PCE 近3个月年化 6.7%（2022-01）。"
@@ -866,7 +866,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.7%（2022-03）；非农近3个月月均新增 50.0万。",
           "inflation_summary": "通胀：PCE 同比 6.9%、核心 PCE 同比 5.6%；核心 PCE 近3个月年化 5.5%（2022-03）。",
           "summary": "就业：失业率 3.7%（2022-03）；非农近3个月月均新增 50.0万。 通胀：PCE 同比 6.9%、核心 PCE 同比 5.6%；核心 PCE 近3个月年化 5.5%（2022-03）。"
@@ -939,7 +939,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.6%（2022-05）；非农近3个月月均新增 36.6万。",
           "inflation_summary": "通胀：PCE 同比 6.7%、核心 PCE 同比 5.3%；核心 PCE 近3个月年化 4.8%（2022-04）。",
           "summary": "就业：失业率 3.6%（2022-05）；非农近3个月月均新增 36.6万。 通胀：PCE 同比 6.7%、核心 PCE 同比 5.3%；核心 PCE 近3个月年化 4.8%（2022-04）。"
@@ -1030,7 +1030,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.6%（2022-06）；非农近3个月月均新增 34.8万。",
           "inflation_summary": "通胀：PCE 同比 6.8%、核心 PCE 同比 5.2%；核心 PCE 近3个月年化 4.5%（2022-05）。",
           "summary": "就业：失业率 3.6%（2022-06）；非农近3个月月均新增 34.8万。 通胀：PCE 同比 6.8%、核心 PCE 同比 5.2%；核心 PCE 近3个月年化 4.5%（2022-05）。"
@@ -1103,7 +1103,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.6%（2022-08）；非农近3个月月均新增 47.9万。",
           "inflation_summary": "通胀：PCE 同比 6.8%、核心 PCE 同比 5.1%；核心 PCE 近3个月年化 4.7%（2022-07）。",
           "summary": "就业：失业率 3.6%（2022-08）；非农近3个月月均新增 47.9万。 通胀：PCE 同比 6.8%、核心 PCE 同比 5.1%；核心 PCE 近3个月年化 4.7%（2022-07）。"
@@ -1193,7 +1193,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.5%（2022-09）；非农近3个月月均新增 40.8万。",
           "inflation_summary": "通胀：PCE 同比 6.7%、核心 PCE 同比 5.6%；核心 PCE 近3个月年化 5.0%（2022-09）。",
           "summary": "就业：失业率 3.5%（2022-09）；非农近3个月月均新增 40.8万。 通胀：PCE 同比 6.7%、核心 PCE 同比 5.6%；核心 PCE 近3个月年化 5.0%（2022-09）。"
@@ -1266,7 +1266,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.6%（2022-11）；非农近3个月月均新增 29.3万。",
           "inflation_summary": "通胀：PCE 同比 6.5%、核心 PCE 同比 5.5%；核心 PCE 近3个月年化 5.6%（2022-10）。",
           "summary": "就业：失业率 3.6%（2022-11）；非农近3个月月均新增 29.3万。 通胀：PCE 同比 6.5%、核心 PCE 同比 5.5%；核心 PCE 近3个月年化 5.6%（2022-10）。"
@@ -1359,7 +1359,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.6%（2023-02）；非农近3个月月均新增 27.5万。",
           "inflation_summary": "通胀：PCE 同比 5.5%、核心 PCE 同比 4.9%；核心 PCE 近3个月年化 4.6%（2023-01）。",
           "summary": "就业：失业率 3.6%（2023-02）；非农近3个月月均新增 27.5万。 通胀：PCE 同比 5.5%、核心 PCE 同比 4.9%；核心 PCE 近3个月年化 4.6%（2023-01）。"
@@ -1448,7 +1448,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.5%（2023-03）；非农近3个月月均新增 26.4万。",
           "inflation_summary": "通胀：PCE 同比 4.4%、核心 PCE 同比 4.8%；核心 PCE 近3个月年化 4.7%（2023-03）。",
           "summary": "就业：失业率 3.5%（2023-03）；非农近3个月月均新增 26.4万。 通胀：PCE 同比 4.4%、核心 PCE 同比 4.8%；核心 PCE 近3个月年化 4.7%（2023-03）。"
@@ -1521,7 +1521,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.6%（2023-05）；非农近3个月月均新增 19.6万。",
           "inflation_summary": "通胀：PCE 同比 4.5%、核心 PCE 同比 4.8%；核心 PCE 近3个月年化 4.2%（2023-04）。",
           "summary": "就业：失业率 3.6%（2023-05）；非农近3个月月均新增 19.6万。 通胀：PCE 同比 4.5%、核心 PCE 同比 4.8%；核心 PCE 近3个月年化 4.2%（2023-04）。"
@@ -1610,7 +1610,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.6%（2023-06）；非农近3个月月均新增 24.9万。",
           "inflation_summary": "通胀：PCE 同比 4.0%、核心 PCE 同比 4.7%；核心 PCE 近3个月年化 4.0%（2023-05）。",
           "summary": "就业：失业率 3.6%（2023-06）；非农近3个月月均新增 24.9万。 通胀：PCE 同比 4.0%、核心 PCE 同比 4.7%；核心 PCE 近3个月年化 4.0%（2023-05）。"
@@ -1683,7 +1683,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.7%（2023-08）；非农近3个月月均新增 20.2万。",
           "inflation_summary": "通胀：PCE 同比 3.4%、核心 PCE 同比 4.3%；核心 PCE 近3个月年化 2.8%（2023-07）。",
           "summary": "就业：失业率 3.7%（2023-08）；非农近3个月月均新增 20.2万。 通胀：PCE 同比 3.4%、核心 PCE 同比 4.3%；核心 PCE 近3个月年化 2.8%（2023-07）。"
@@ -1775,7 +1775,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.7%（2023-11）；非农近3个月月均新增 14.7万。",
           "inflation_summary": "通胀：PCE 同比 3.0%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 2.3%（2023-10）。",
           "summary": "就业：失业率 3.7%（2023-11）；非农近3个月月均新增 14.7万。 通胀：PCE 同比 3.0%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 2.3%（2023-10）。"
@@ -1866,7 +1866,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.8%（2023-12）；非农近3个月月均新增 14.7万。",
           "inflation_summary": "通胀：PCE 同比 2.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 2.3%（2023-11）。",
           "summary": "就业：失业率 3.8%（2023-12）；非农近3个月月均新增 14.7万。 通胀：PCE 同比 2.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 2.3%（2023-11）。"
@@ -1939,7 +1939,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.9%（2024-02）；非农近3个月月均新增 17.8万。",
           "inflation_summary": "通胀：PCE 同比 2.7%、核心 PCE 同比 3.2%；核心 PCE 近3个月年化 3.3%（2024-01）。",
           "summary": "就业：失业率 3.9%（2024-02）；非农近3个月月均新增 17.8万。 通胀：PCE 同比 2.7%、核心 PCE 同比 3.2%；核心 PCE 近3个月年化 3.3%（2024-01）。"
@@ -2030,7 +2030,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 3.9%（2024-05）；非农近3个月月均新增 12.3万。",
           "inflation_summary": "通胀：PCE 同比 2.8%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 3.6%（2024-04）。",
           "summary": "就业：失业率 3.9%（2024-05）；非农近3个月月均新增 12.3万。 通胀：PCE 同比 2.8%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 3.6%（2024-04）。"
@@ -2119,7 +2119,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.1%（2024-06）；非农近3个月月均新增 7.6万。",
           "inflation_summary": "通胀：PCE 同比 2.7%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.8%（2024-05）。",
           "summary": "就业：失业率 4.1%（2024-06）；非农近3个月月均新增 7.6万。 通胀：PCE 同比 2.7%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.8%（2024-05）。"
@@ -2192,7 +2192,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.2%（2024-08）；非农近3个月月均新增 5.0万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.0%（2024-07）。",
           "summary": "就业：失业率 4.2%（2024-08）；非农近3个月月均新增 5.0万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.0%（2024-07）。"
@@ -2284,7 +2284,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.1%（2024-10）；非农近3个月月均新增 6.6万。",
           "inflation_summary": "通胀：PCE 同比 2.3%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.6%（2024-09）。",
           "summary": "就业：失业率 4.1%（2024-10）；非农近3个月月均新增 6.6万。 通胀：PCE 同比 2.3%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.6%（2024-09）。"
@@ -2357,7 +2357,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.2%（2024-11）；非农近3个月月均新增 10.7万。",
           "inflation_summary": "通胀：PCE 同比 2.5%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 3.0%（2024-10）。",
           "summary": "就业：失业率 4.2%（2024-11）；非农近3个月月均新增 10.7万。 通胀：PCE 同比 2.5%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 3.0%（2024-10）。"
@@ -2450,7 +2450,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.1%（2024-12）；非农近3个月月均新增 13.5万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.7%（2024-11）。",
           "summary": "就业：失业率 4.1%（2024-12）；非农近3个月月均新增 13.5万。 通胀：PCE 同比 2.6%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.7%（2024-11）。"
@@ -2523,7 +2523,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.2%（2025-02）；非农近3个月月均新增 7.7万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.5%（2025-01）。",
           "summary": "就业：失业率 4.2%（2025-02）；非农近3个月月均新增 7.7万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.5%（2025-01）。"
@@ -2614,7 +2614,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.2%（2025-04）；非农近3个月月均新增 7.2万。",
           "inflation_summary": "通胀：PCE 同比 2.4%、核心 PCE 同比 2.7%；核心 PCE 近3个月年化 3.5%（2025-03）。",
           "summary": "就业：失业率 4.2%（2025-04）；非农近3个月月均新增 7.2万。 通胀：PCE 同比 2.4%、核心 PCE 同比 2.7%；核心 PCE 近3个月年化 3.5%（2025-03）。"
@@ -2687,7 +2687,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.3%（2025-05）；非农近3个月月均新增 6.3万。",
           "inflation_summary": "通胀：PCE 同比 2.3%、核心 PCE 同比 2.6%；核心 PCE 近3个月年化 3.0%（2025-04）。",
           "summary": "就业：失业率 4.3%（2025-05）；非农近3个月月均新增 6.3万。 通胀：PCE 同比 2.3%、核心 PCE 同比 2.6%；核心 PCE 近3个月年化 3.0%（2025-04）。"
@@ -2776,7 +2776,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.1%（2025-06）；非农近3个月月均新增 3.4万。",
           "inflation_summary": "通胀：PCE 同比 2.5%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.1%（2025-05）。",
           "summary": "就业：失业率 4.1%（2025-06）；非农近3个月月均新增 3.4万。 通胀：PCE 同比 2.5%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.1%（2025-05）。"
@@ -2840,7 +2840,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.3%（2025-07）；非农近3个月月均新增 1.9万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.8%（2025-06）。",
           "summary": "就业：失业率 4.3%（2025-07）；非农近3个月月均新增 1.9万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.8%（2025-06）。"
@@ -2904,7 +2904,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.3%（2025-08）；非农近3个月月均减少 0.9万。",
           "inflation_summary": "通胀：PCE 同比 2.6%、核心 PCE 同比 2.9%；核心 PCE 近3个月年化 3.0%（2025-07）。",
           "summary": "就业：失业率 4.3%（2025-08）；非农近3个月月均减少 0.9万。 通胀：PCE 同比 2.6%、核心 PCE 同比 2.9%；核心 PCE 近3个月年化 3.0%（2025-07）。"
@@ -2996,7 +2996,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.4%（2025-09）；非农近3个月月均新增 2.3万。",
           "inflation_summary": "通胀：PCE 同比 2.7%、核心 PCE 同比 2.9%；核心 PCE 近3个月年化 3.0%（2025-08）。",
           "summary": "就业：失业率 4.4%（2025-09）；非农近3个月月均新增 2.3万。 通胀：PCE 同比 2.7%、核心 PCE 同比 2.9%；核心 PCE 近3个月年化 3.0%（2025-08）。"
@@ -3071,7 +3071,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.5%（2025-11）；非农近3个月月均减少 0.8万。",
           "inflation_summary": "通胀：PCE 同比 2.7%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.6%（2025-10）。",
           "summary": "就业：失业率 4.5%（2025-11）；非农近3个月月均减少 0.8万。 通胀：PCE 同比 2.7%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.6%（2025-10）。"
@@ -3165,7 +3165,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.4%（2025-12）；非农近3个月月均减少 3.9万。",
           "inflation_summary": "通胀：PCE 同比 2.8%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.4%（2025-11）。",
           "summary": "就业：失业率 4.4%（2025-12）；非农近3个月月均减少 3.9万。 通胀：PCE 同比 2.8%、核心 PCE 同比 2.8%；核心 PCE 近3个月年化 2.4%（2025-11）。"
@@ -3241,7 +3241,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.4%（2026-02）；非农近3个月月均减少 0.4万。",
           "inflation_summary": "通胀：PCE 同比 2.9%、核心 PCE 同比 3.1%；核心 PCE 近3个月年化 3.9%（2026-01）。",
           "summary": "就业：失业率 4.4%（2026-02）；非农近3个月月均减少 0.4万。 通胀：PCE 同比 2.9%、核心 PCE 同比 3.1%；核心 PCE 近3个月年化 3.9%（2026-01）。"
@@ -3332,7 +3332,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.3%（2026-03）；非农近3个月月均新增 7.3万。",
           "inflation_summary": "通胀：PCE 同比 2.9%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 4.8%（2026-02）。",
           "summary": "就业：失业率 4.3%（2026-03）；非农近3个月月均新增 7.3万。 通胀：PCE 同比 2.9%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 4.8%（2026-02）。"
@@ -3410,7 +3410,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.3%（2026-05）；非农近3个月月均新增 14.2万。",
           "inflation_summary": "通胀：PCE 同比 3.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.9%（2026-04）。",
           "summary": "就业：失业率 4.3%（2026-05）；非农近3个月月均新增 14.2万。 通胀：PCE 同比 3.8%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.9%（2026-04）。"
@@ -3499,7 +3499,7 @@
             "series": "PAYEMS"
           },
           "method": "conservative_release_lag_current_vintage",
-          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PCEPI,PCEPILFE,PAYEMS",
+          "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
           "employment_summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 8.1万。",
           "inflation_summary": "通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。",
           "summary": "就业：失业率 4.2%（2026-06）；非农近3个月月均新增 8.1万。 通胀：PCE 同比 4.1%、核心 PCE 同比 3.5%；核心 PCE 近3个月年化 3.7%（2026-05）。"

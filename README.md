@@ -1,6 +1,6 @@
-# Fed Rate Monitor
+# Fed Policy Monitor
 
-一个部署在 GitHub Pages 的美联储利率与 FOMC 会议监控仪表盘。GitHub Actions 每小时检查官方数据；只有检测到目标区间、会议日程或关键会议文件发生变化时才发送邮件。
+一个部署在 GitHub Pages 的美联储政策环境监控仪表盘，覆盖利率、FOMC 会议、美国就业和通胀。GitHub Actions 每小时检查官方数据；只有检测到新一期宏观数据、目标区间、会议日程或关键会议文件发生变化时才发送邮件。
 
 ## 数据范围
 
@@ -9,8 +9,9 @@
 - 实际有效联邦基金利率：FRED `DFF`（原始来源为纽约联储）
 - FOMC 会议日期与官方文件：Federal Reserve FOMC Calendar
 - 已结束会议摘要：依据目标利率序列确定加息、降息或维持，并标记是否发布 SEP
-- 会议时点就业摘要：FRED `UNRATE` 失业率，以及 `PAYEMS` 非农就业近 3 个月平均变化
-- 会议时点通胀摘要：由 `PCEPI`、`PCEPILFE` 推导的 PCE 同比、核心 PCE 同比与近 3 个月年化
+- 最新就业概览与近 5 年趋势：FRED `UNRATE` 失业率，以及 `PAYEMS` 非农就业月度变化和近 3 个月平均变化
+- 最新通胀概览与近 5 年趋势：由 `CPIAUCSL`、`CPILFESL`、`PCEPI`、`PCEPILFE` 推导的 CPI、核心 CPI、PCE 和核心 PCE 同比及环比
+- 会议时点就业与通胀摘要：按保守发布滞后选择当时已经发布的 `UNRATE`、`PAYEMS`、`PCEPI` 和 `PCEPILFE`
 - 官方会议细节：从政策声明提取表决与异议；从 SEP 表格提取政策利率中位数，并计算相较上次的变化
 - 加息、降息及基点数是目标区间中点变化的**推导结果**，并非额外的官方序列
 
@@ -29,13 +30,13 @@ python scripts/update_data.py
 python3 -m http.server 8000
 ```
 
-打开 `http://localhost:8000`。抓取失败不会覆盖现有数据；脚本只有在完整取得并验证两类数据后才更新文件。
+打开 `http://localhost:8000`。抓取失败不会覆盖现有数据；脚本只有在完整取得并验证会议、利率和宏观数据后才更新文件。
 
 ## 部署到 GitHub Pages
 
 1. 在 GitHub 创建仓库，例如 `fed-rate-monitor`，并推送本目录到 `main`。
 2. 工作流会尝试自动启用 GitHub Pages；如果仓库策略禁止自动启用，再进入 **Settings → Pages**，在 **Build and deployment → Source** 选择 **GitHub Actions**。
-4. 在 **Actions** 页手动运行一次 `Update FOMC data and deploy`。
+4. 在 **Actions** 页手动运行一次 `Update policy data and deploy`。
 5. 可选：在 **Settings → Actions → General** 确认 Workflow permissions 允许读写；工作流本身已声明 `contents: write`。
 
 定时任务在每小时第 17 分钟运行。GitHub Actions 的 cron 可能延迟，因此它用于监控和通知，不适合作为交易级实时信号。
@@ -74,7 +75,11 @@ python3 -m http.server 8000
 
 - 联邦基金目标区间变化；
 - 官方 FOMC 会议日期增删或调整；
-- 新增政策声明、实施说明、SEP 或会议纪要。
+- 新增政策声明、实施说明、SEP 或会议纪要；
+- 新一期美国就业报告数据进入 FRED；
+- 新一期 CPI 或 PCE 数据进入 FRED。
+
+宏观通知依据最新参考月份是否推进，不会因为旧月份被修订而重复发信。当前版本不接入市场一致预期，因此只展示实际值、前值变化及推导指标，不评价“高于或低于预期”。
 
 本地预览邮件可先准备一个包含变化事件的 `runtime/change.json`，然后运行：
 
@@ -88,7 +93,7 @@ python scripts/send_notification.py --dry-run
 
 ```text
 ├── index.html / styles.css / app.js   # 静态仪表盘
-├── data/                              # 可审计的规范化数据
+├── data/                              # 可审计的规范化利率、会议与宏观数据
 ├── scripts/update_data.py             # 抓取、校验、变更检测
 ├── scripts/send_notification.py       # SMTP 邮件
 ├── tests/                              # 解析与变更检测测试
@@ -106,3 +111,5 @@ python scripts/send_notification.py --dry-run
 - [FRED PCEPI（原始来源 BEA）](https://fred.stlouisfed.org/series/PCEPI)
 - [FRED PCEPILFE（原始来源 BEA）](https://fred.stlouisfed.org/series/PCEPILFE)
 - [FRED PAYEMS（原始来源 BLS）](https://fred.stlouisfed.org/series/PAYEMS)
+- [FRED CPIAUCSL（原始来源 BLS）](https://fred.stlouisfed.org/series/CPIAUCSL)
+- [FRED CPILFESL（原始来源 BLS）](https://fred.stlouisfed.org/series/CPILFESL)

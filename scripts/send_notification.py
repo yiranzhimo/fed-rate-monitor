@@ -29,7 +29,7 @@ def recipients_from(value: str) -> list[str]:
 
 def build_bodies(event: dict[str, Any], site_url: str) -> tuple[str, str]:
     changes = event.get("changes", [])
-    plain_lines = ["美联储利率监控检测到以下变化：", ""]
+    plain_lines = ["美联储政策环境监控检测到以下变化：", ""]
     html_items: list[str] = []
     for item in changes:
         title = str(item.get("title", "FOMC 更新"))
@@ -53,8 +53,8 @@ def build_bodies(event: dict[str, Any], site_url: str) -> tuple[str, str]:
 <body style="margin:0;background:#f4f1e8;font-family:Arial,'PingFang SC',sans-serif;color:#102a2a">
   <div style="max-width:640px;margin:0 auto;padding:28px 18px">
     <div style="background:#0d3937;color:white;padding:24px;border-radius:16px 16px 0 0">
-      <div style="font-size:12px;letter-spacing:.12em;color:#9ed2c8">FED RATE MONITOR</div>
-      <h1 style="font-size:24px;margin:8px 0 0">FOMC 数据更新</h1>
+      <div style="font-size:12px;letter-spacing:.12em;color:#9ed2c8">FED POLICY MONITOR</div>
+      <h1 style="font-size:24px;margin:8px 0 0">政策环境数据更新</h1>
     </div>
     <div style="background:white;padding:24px;border-radius:0 0 16px 16px">
       <ul style="padding-left:20px;margin:0">{''.join(html_items)}</ul>

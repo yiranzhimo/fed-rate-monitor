@@ -6,6 +6,7 @@ from scripts.update_data import (
     attach_macro_snapshots,
     attach_meeting_outcomes,
     build_change_event,
+    build_macro_dashboard,
     parse_calendar_html,
     parse_macro_csv,
     parse_rates_csv,
@@ -180,6 +181,63 @@ def test_macro_snapshot_uses_first_friday_employment_release_boundary():
         for item in meetings["meetings"]
     ]
     assert periods == ["2024-09", "2024-10"]
+
+
+def test_macro_dashboard_builds_current_indicators_and_histories():
+    periods = [
+        "2024-01", "2024-02", "2024-03", "2024-04", "2024-05",
+        "2024-06", "2024-07", "2024-08", "2024-09", "2024-10",
+        "2024-11", "2024-12", "2025-01", "2025-02", "2025-03",
+    ]
+    rows = ["observation_date,UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE"]
+    for index, period in enumerate(periods):
+        rows.append(
+            f"{period}-01,{4 + index / 100:.2f},{150000 + index * 100},"
+            f"{100 * 1.002 ** index:.4f},{100 * 1.003 ** index:.4f},"
+            f"{100 * 1.0015 ** index:.4f},{100 * 1.0025 ** index:.4f}"
+        )
+    dashboard = build_macro_dashboard(parse_macro_csv("\n".join(rows)))
+
+    assert dashboard["employment"] == {
+        "period": "2025-03",
+        "unemployment_rate": 4.1,
+        "unemployment_change_pp": 0.0,
+        "payroll_change_thousands": 100,
+        "payroll_3m_average_thousands": 100,
+    }
+    assert dashboard["inflation"]["cpi"]["yoy"] == 2.4
+    assert dashboard["inflation"]["core_cpi"]["mom"] == 0.3
+    assert dashboard["history"]["employment"][-1]["period"] == "2025-03"
+    assert dashboard["history"]["inflation"][-1]["period"] == "2025-03"
+
+
+def test_new_macro_reference_periods_notify_once():
+    meetings = parse_calendar_html((FIXTURES / "calendar.html").read_text())
+    rates = parse_rates_csv((FIXTURES / "rates.csv").read_text())
+    new_macro = {
+        "employment": {
+            "period": "2025-03",
+            "unemployment_rate": 4.2,
+            "payroll_change_thousands": 120,
+        },
+        "inflation": {
+            "cpi": {"period": "2025-03", "yoy": 2.5, "mom": 0.2},
+            "core_cpi": {"period": "2025-03", "yoy": 2.8, "mom": 0.3},
+            "pce": {"period": "2025-02", "yoy": 2.3, "mom": 0.2},
+            "core_pce": {"period": "2025-02", "yoy": 2.6, "mom": 0.3},
+        },
+    }
+    old_macro = deepcopy(new_macro)
+    old_macro["employment"]["period"] = "2025-02"
+    old_macro["inflation"]["cpi"]["period"] = "2025-02"
+    old_macro["inflation"]["pce"]["period"] = "2025-01"
+
+    event = build_change_event(
+        meetings, meetings, rates, rates, old_macro, new_macro
+    )
+    assert {item["kind"] for item in event["changes"]} == {
+        "employment_release", "cpi_release", "pce_release"
+    }
 
 
 def test_statement_vote_extracts_dissent_and_preference():

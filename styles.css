@@ -65,6 +65,37 @@ main { margin-top: -54px; position: relative; z-index: 2; }
 .panel { margin-top: 28px; padding: 42px; background: var(--white); border-radius: 18px; box-shadow: var(--shadow); }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
 h2 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: clamp(28px, 3vw, 40px); font-weight: 500; letter-spacing: -.025em; }
+.data-scope { color: var(--muted); font-size: 12px; }
+.macro-cards { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.macro-metric { min-height: 142px; padding: 23px 25px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+.macro-metric:nth-child(3n) { border-right: 0; }
+.macro-metric:nth-last-child(-n+3) { border-bottom: 0; }
+.macro-metric::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: #497b76; }
+.macro-metric.cpi-accent::before { background: var(--orange); }
+.macro-metric.pce-accent::before { background: #6379a5; }
+.macro-metric span { color: var(--muted); font-size: 11px; font-weight: 720; letter-spacing: .08em; }
+.macro-metric strong { font-family: Georgia, serif; font-size: 34px; font-weight: 500; line-height: 1; }
+.macro-metric small { color: var(--muted); font-size: 11px; }
+.macro-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+.mini-chart-panel { min-width: 0; padding: 22px; border: 1px solid var(--line); border-radius: 14px; }
+.mini-chart-heading { min-height: 46px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.mini-chart-heading h3 { margin: 0; font-family: Georgia, "Songti SC", serif; font-size: 20px; font-weight: 500; }
+.chart-legend { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 14px; color: var(--muted); font-size: 10px; }
+.chart-legend span::before { content: ""; display: inline-block; width: 14px; height: 3px; margin-right: 5px; vertical-align: middle; background: #497b76; }
+.chart-legend .legend-payroll::before { height: 8px; background: var(--mint); }
+.chart-legend .legend-cpi::before { background: var(--orange); }
+.chart-legend .legend-core-cpi::before { background: #9e5434; }
+.chart-legend .legend-pce::before { background: #497b76; }
+.chart-legend .legend-core-pce::before { background: #6379a5; }
+.macro-chart { min-height: 245px; }
+.macro-chart .payroll-bar { fill: var(--mint); opacity: .72; }
+.macro-chart .payroll-bar.negative { fill: #d9a48d; }
+.macro-chart .unemployment-line { fill: none; stroke: #326c66; stroke-width: 2.5; stroke-linejoin: round; }
+.macro-chart .zero-line { stroke: #aeb7b4; stroke-width: 1; }
+.macro-chart .cpi-line { fill: none; stroke: var(--orange); stroke-width: 2.4; }
+.macro-chart .core-cpi-line { fill: none; stroke: #9e5434; stroke-width: 2; stroke-dasharray: 6 4; }
+.macro-chart .pce-line { fill: none; stroke: #497b76; stroke-width: 2.4; }
+.macro-chart .core-pce-line { fill: none; stroke: #6379a5; stroke-width: 2; stroke-dasharray: 6 4; }
 .legend { color: var(--muted); font-size: 12px; }
 .legend i { display: inline-block; width: 24px; height: 3px; margin-right: 8px; vertical-align: middle; background: var(--orange); }
 .chart { min-height: 360px; width: 100%; overflow: hidden; }
@@ -110,9 +141,10 @@ footer { background: #082d2c; color: #9bb7b3; padding: 32px 0; font-size: 12px; 
   .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .meeting-row { grid-template-columns: 125px 1fr; }
   .docs { grid-column: 2; justify-content: flex-start; }
+  .macro-charts { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  .shell { width: min(100% - 24px, 1180px); }
+  .shell { width: min(calc(100% - 24px), 1180px); }
   .hero { min-height: 600px; }
   .hero-content { padding-top: 62px; }
   .hero-meta { flex-direction: column; gap: 6px; }
@@ -127,4 +159,12 @@ footer { background: #082d2c; color: #9bb7b3; padding: 32px 0; font-size: 12px; 
   .docs { grid-column: 1; }
   .source-grid { grid-template-columns: 1fr; gap: 30px; margin: 64px 0; }
   .footer-inner { flex-direction: column; }
+  .macro-cards { grid-template-columns: 1fr 1fr; }
+  .macro-metric:nth-child(3n) { border-right: 1px solid var(--line); }
+  .macro-metric:nth-child(2n) { border-right: 0; }
+  .macro-metric:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
+  .macro-metric:nth-last-child(-n+2) { border-bottom: 0; }
+  .macro-metric { min-height: 130px; padding: 19px; }
+  .mini-chart-heading { flex-direction: column; }
+  .chart-legend { justify-content: flex-start; }
 }

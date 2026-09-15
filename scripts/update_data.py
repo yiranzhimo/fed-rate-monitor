@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch and normalize official FOMC calendar and federal-funds data."""
+"""Fetch and normalize official FOMC, federal-funds, and US macro data."""
 
 from __future__ import annotations
 
@@ -32,8 +32,11 @@ RATES_CSV_URL = (
 )
 MACRO_CSV_URL = (
     "https://fred.stlouisfed.org/graph/fredgraph.csv?"
-    "id=UNRATE,PCEPI,PCEPILFE,PAYEMS"
+    "id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE"
 )
+EMPLOYMENT_URL = "https://www.bls.gov/news.release/empsit.htm"
+CPI_URL = "https://www.bls.gov/news.release/cpi.htm"
+PCE_URL = "https://www.bea.gov/data/personal-consumption-expenditures-price-index"
 USER_AGENT = "fed-rate-monitor/1.0 (+https://github.com/)"
 DETAIL_PARSER_VERSION = 1
 
@@ -266,32 +269,36 @@ def parse_rates_csv(csv_text: str) -> dict[str, Any]:
 
 
 def parse_macro_csv(csv_text: str) -> dict[str, Any]:
-    """Parse official employment and PCE price-index series from FRED."""
+    """Parse official employment, CPI, and PCE series distributed by FRED."""
     reader = csv.DictReader(io.StringIO(csv_text.lstrip("\ufeff")))
-    expected = {"UNRATE", "PCEPI", "PCEPILFE", "PAYEMS"}
-    if not reader.fieldnames or not expected.issubset(reader.fieldnames):
+    required = {"UNRATE", "PAYEMS", "PCEPI", "PCEPILFE"}
+    dashboard_series = {"CPIAUCSL", "CPILFESL"}
+    if not reader.fieldnames or not required.issubset(reader.fieldnames):
         raise ValueError("FRED macro CSV is missing required series")
+    available = required | (dashboard_series & set(reader.fieldnames))
 
-    observations: dict[str, list[dict[str, Any]]] = {series: [] for series in expected}
+    observations: dict[str, list[dict[str, Any]]] = {series: [] for series in available}
     for row in reader:
         observation_date = (row.get("observation_date") or "").strip()
         if not observation_date:
             continue
-        for series in expected:
+        for series in available:
             value = _number(row.get(series))
             if value is not None:
                 observations[series].append({"date": observation_date, "value": value})
 
-    if any(not observations[series] for series in expected):
+    if any(not observations[series] for series in available):
         raise ValueError("FRED macro CSV contains an empty required series")
 
     return {
         "source": MACRO_CSV_URL,
         "series": {
             "unemployment_rate": "UNRATE",
+            "nonfarm_payrolls": "PAYEMS",
+            "cpi_price_index": "CPIAUCSL",
+            "core_cpi_price_index": "CPILFESL",
             "pce_price_index": "PCEPI",
             "core_pce_price_index": "PCEPILFE",
-            "nonfarm_payrolls": "PAYEMS",
         },
         "observations": observations,
     }
@@ -331,6 +338,22 @@ def _year_over_year(
     }
 
 
+def _month_over_month(
+    observations: list[dict[str, Any]], cutoff: date
+) -> dict[str, Any] | None:
+    current = _latest_observation(observations, cutoff)
+    if current is None:
+        return None
+    previous_date = _month_offset(date.fromisoformat(current["date"]), -1).isoformat()
+    previous = next((item for item in observations if item["date"] == previous_date), None)
+    if previous is None or previous["value"] == 0:
+        return None
+    return {
+        "period": current["date"][:7],
+        "value": round((current["value"] / previous["value"] - 1) * 100, 1),
+    }
+
+
 def _three_month_annualized(
     observations: list[dict[str, Any]], cutoff: date
 ) -> dict[str, Any] | None:
@@ -360,6 +383,134 @@ def _three_month_payroll_average(
     return {
         "period": recent[-1]["date"][:7],
         "value_thousands": round(sum(changes) / len(changes)),
+    }
+
+
+def _payroll_change(
+    observations: list[dict[str, Any]], cutoff: date
+) -> dict[str, Any] | None:
+    current = _latest_observation(observations, cutoff)
+    if current is None:
+        return None
+    previous_date = _month_offset(date.fromisoformat(current["date"]), -1).isoformat()
+    previous = next((item for item in observations if item["date"] == previous_date), None)
+    if previous is None:
+        return None
+    return {
+        "period": current["date"][:7],
+        "value_thousands": round(current["value"] - previous["value"]),
+    }
+
+
+def _latest_cutoff(observations: list[dict[str, Any]]) -> date:
+    return date.fromisoformat(observations[-1]["date"])
+
+
+def build_macro_dashboard(macro_data: dict[str, Any]) -> dict[str, Any]:
+    """Build compact latest indicators and five-year chart series for the site."""
+    observations = macro_data["observations"]
+    required = {"UNRATE", "PAYEMS", "CPIAUCSL", "CPILFESL", "PCEPI", "PCEPILFE"}
+    if not required.issubset(observations):
+        raise ValueError("FRED macro CSV is missing CPI dashboard series")
+
+    unemployment_rows = observations["UNRATE"]
+    payroll_rows = observations["PAYEMS"]
+    unemployment_current = unemployment_rows[-1]
+    unemployment_previous = unemployment_rows[-2]
+    payroll_cutoff = _latest_cutoff(payroll_rows)
+    payroll_change = _payroll_change(payroll_rows, payroll_cutoff)
+    payroll_average = _three_month_payroll_average(payroll_rows, payroll_cutoff)
+    if payroll_change is None or payroll_average is None:
+        raise ValueError("FRED payroll series lacks enough history")
+
+    inflation: dict[str, dict[str, Any]] = {}
+    inflation_series = {
+        "cpi": "CPIAUCSL",
+        "core_cpi": "CPILFESL",
+        "pce": "PCEPI",
+        "core_pce": "PCEPILFE",
+    }
+    for label, series in inflation_series.items():
+        cutoff = _latest_cutoff(observations[series])
+        yoy = _year_over_year(observations[series], cutoff)
+        mom = _month_over_month(observations[series], cutoff)
+        if yoy is None or mom is None:
+            raise ValueError(f"FRED {series} series lacks enough history")
+        inflation[label] = {
+            "series": series,
+            "period": yoy["period"],
+            "yoy": yoy["value"],
+            "mom": mom["value"],
+        }
+
+    five_year_start = _month_offset(_latest_cutoff(unemployment_rows), -59).isoformat()
+    unemployment_by_period = {
+        item["date"][:7]: item["value"]
+        for item in unemployment_rows
+        if item["date"] >= five_year_start
+    }
+    employment_history: list[dict[str, Any]] = []
+    for item in payroll_rows:
+        if item["date"] < five_year_start:
+            continue
+        change = _payroll_change(payroll_rows, date.fromisoformat(item["date"]))
+        period = item["date"][:7]
+        if change and period in unemployment_by_period:
+            employment_history.append(
+                {
+                    "period": period,
+                    "unemployment": unemployment_by_period[period],
+                    "payroll_change_thousands": change["value_thousands"],
+                }
+            )
+
+    inflation_periods = sorted(
+        {
+            item["date"][:7]
+            for series in inflation_series.values()
+            for item in observations[series]
+        }
+    )[-60:]
+    inflation_history: list[dict[str, Any]] = []
+    for period in inflation_periods:
+        row: dict[str, Any] = {"period": period}
+        for label, series in inflation_series.items():
+            value = _year_over_year(
+                observations[series], date.fromisoformat(f"{period}-01")
+            )
+            if value and value["period"] == period:
+                row[label] = value["value"]
+        if len(row) > 1:
+            inflation_history.append(row)
+
+    return {
+        "source": macro_data["source"],
+        "original_sources": {
+            "employment": EMPLOYMENT_URL,
+            "cpi": CPI_URL,
+            "pce": PCE_URL,
+        },
+        "series": macro_data["series"],
+        "employment": {
+            "period": unemployment_current["date"][:7],
+            "unemployment_rate": round(unemployment_current["value"], 1),
+            "unemployment_change_pp": round(
+                unemployment_current["value"] - unemployment_previous["value"], 1
+            ),
+            "payroll_change_thousands": payroll_change["value_thousands"],
+            "payroll_3m_average_thousands": payroll_average["value_thousands"],
+        },
+        "inflation": inflation,
+        "history": {
+            "employment": employment_history,
+            "inflation": inflation_history,
+        },
+        "notes": {
+            "vintage": (
+                "FRED 提供当前修订值而非历史发布时的实时版本；历史数据可能包含后续修订。"
+            ),
+            "units": "PAYEMS 变化值单位为千人；通胀值单位为百分比。",
+        },
     }
 
 
@@ -814,6 +965,8 @@ def build_change_event(
     new_meetings: dict[str, Any],
     old_rates: dict[str, Any] | None,
     new_rates: dict[str, Any],
+    old_macro: dict[str, Any] | None = None,
+    new_macro: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     initialized = old_meetings is None or old_rates is None
     changes: list[dict[str, str]] = []
@@ -870,6 +1023,51 @@ def build_change_event(
                         }
                     )
 
+        if old_macro is not None and new_macro is not None:
+            old_employment = old_macro.get("employment", {})
+            new_employment = new_macro.get("employment", {})
+            if (
+                new_employment.get("period")
+                and old_employment.get("period") != new_employment.get("period")
+            ):
+                payrolls = new_employment.get("payroll_change_thousands", 0)
+                payroll_action = "增加" if payrolls >= 0 else "减少"
+                changes.append(
+                    {
+                        "kind": "employment_release",
+                        "title": "美国就业数据更新",
+                        "detail": (
+                            f"{new_employment['period']}：失业率 "
+                            f"{new_employment['unemployment_rate']:.1f}%；非农就业"
+                            f"{payroll_action} {abs(payrolls) / 10:.1f}万"
+                        ),
+                        "url": EMPLOYMENT_URL,
+                    }
+                )
+
+            old_inflation = old_macro.get("inflation", {})
+            new_inflation = new_macro.get("inflation", {})
+            for key, title, kind, url in (
+                ("cpi", "美国 CPI 数据更新", "cpi_release", CPI_URL),
+                ("pce", "美国 PCE 数据更新", "pce_release", PCE_URL),
+            ):
+                current = new_inflation.get(key, {})
+                previous = old_inflation.get(key, {})
+                if current.get("period") and previous.get("period") != current.get("period"):
+                    core = new_inflation.get(f"core_{key}", {})
+                    changes.append(
+                        {
+                            "kind": kind,
+                            "title": title,
+                            "detail": (
+                                f"{current['period']}：同比 {current['yoy']:.1f}%、"
+                                f"环比 {current['mom']:.1f}%；核心同比 "
+                                f"{core['yoy']:.1f}%"
+                            ),
+                            "url": url,
+                        }
+                    )
+
     return {
         "checked_at": utc_now(),
         "initialized": initialized,
@@ -896,6 +1094,7 @@ def main() -> int:
 
     old_meetings = load_json(DATA_DIR / "meetings.json")
     old_rates = load_json(DATA_DIR / "rates.json")
+    old_macro = load_json(DATA_DIR / "macro.json")
 
     calendar_html = (
         args.calendar_file.read_text(encoding="utf-8")
@@ -916,16 +1115,25 @@ def main() -> int:
     meetings = parse_calendar_html(calendar_html)
     rates = parse_rates_csv(rates_csv)
     macro = parse_macro_csv(macro_csv)
+    macro_dashboard = build_macro_dashboard(macro)
     attach_meeting_outcomes(meetings, rates)
     attach_macro_snapshots(meetings, macro)
     attach_official_meeting_details(meetings, old_meetings)
-    event = build_change_event(old_meetings, meetings, old_rates, rates)
+    event = build_change_event(
+        old_meetings, meetings, old_rates, rates, old_macro, macro_dashboard
+    )
 
-    data_changed = meetings != old_meetings or rates != old_rates
+    data_changed = (
+        meetings != old_meetings
+        or rates != old_rates
+        or macro_dashboard != old_macro
+    )
     if meetings != old_meetings:
         write_json(DATA_DIR / "meetings.json", meetings)
     if rates != old_rates:
         write_json(DATA_DIR / "rates.json", rates)
+    if macro_dashboard != old_macro:
+        write_json(DATA_DIR / "macro.json", macro_dashboard)
     if data_changed:
         write_json(
             DATA_DIR / "metadata.json",
@@ -939,8 +1147,10 @@ def main() -> int:
                     "From that date onward it uses the midpoint of the official target "
                     "range while retaining the original upper and lower bounds. Meeting "
                     "macro snapshots use conservative publication lags and current revised "
-                    "FRED values; they are not ALFRED point-in-time vintages. Vote counts "
-                    "and SEP policy-rate medians are parsed from official meeting files."
+                    "FRED values; they are not ALFRED point-in-time vintages. The current "
+                    "macro dashboard includes BLS employment and CPI series plus BEA PCE "
+                    "series distributed by FRED. Vote counts and SEP policy-rate medians "
+                    "are parsed from official meeting files."
                 ),
             },
         )
@@ -951,6 +1161,7 @@ def main() -> int:
             {
                 "meetings": len(meetings["meetings"]),
                 "rate_changes": len(rates["history"]),
+                "macro_period": macro_dashboard["employment"]["period"],
                 "data_changed": data_changed,
                 "notifications": len(event["changes"]),
             },

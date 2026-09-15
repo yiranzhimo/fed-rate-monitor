@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="基于美联储官方数据的 FOMC 利率与会议监控仪表盘">
-  <title>美联储利率监控</title>
+  <meta name="description" content="基于官方数据的美联储利率、美国就业与通胀监控仪表盘">
+  <title>美联储政策环境监控</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,9 +16,9 @@
     <div class="hero-content shell">
       <p class="eyebrow">Federal Open Market Committee</p>
       <h1>看清每一次<br><em>利率转向</em></h1>
-      <p class="lede">跟踪联邦基金目标区间、实际有效利率、会议日历与官方文件。只陈列事实，推导项明确标注。</p>
+      <p class="lede">跟踪联邦基金目标区间、美国就业与通胀、会议日历及官方文件。只陈列事实，推导项明确标注。</p>
       <div class="hero-meta">
-        <span>数据：Federal Reserve · FRED</span>
+        <span>数据：Federal Reserve · BLS · BEA · FRED</span>
         <span id="version-time">数据版本 —</span>
       </div>
     </div>
@@ -46,6 +46,53 @@
         <strong id="next-meeting">—</strong>
         <small id="countdown">等待数据</small>
       </article>
+    </section>
+
+    <section class="panel macro-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">POLICY DRIVERS</p>
+          <h2>就业与通胀</h2>
+        </div>
+        <span class="data-scope">实际值 · 不含市场预期</span>
+      </div>
+      <div class="macro-cards" aria-label="最新就业与通胀数据">
+        <article class="macro-metric employment-accent">
+          <span>失业率</span><strong id="unemployment-rate">—</strong><small id="unemployment-detail">等待数据</small>
+        </article>
+        <article class="macro-metric employment-accent">
+          <span>非农就业</span><strong id="payroll-change">—</strong><small id="payroll-detail">等待数据</small>
+        </article>
+        <article class="macro-metric cpi-accent">
+          <span>CPI 同比</span><strong id="cpi-yoy">—</strong><small id="cpi-detail">等待数据</small>
+        </article>
+        <article class="macro-metric cpi-accent">
+          <span>核心 CPI 同比</span><strong id="core-cpi-yoy">—</strong><small id="core-cpi-detail">等待数据</small>
+        </article>
+        <article class="macro-metric pce-accent">
+          <span>PCE 同比</span><strong id="pce-yoy">—</strong><small id="pce-detail">等待数据</small>
+        </article>
+        <article class="macro-metric pce-accent">
+          <span>核心 PCE 同比</span><strong id="core-pce-yoy">—</strong><small id="core-pce-detail">等待数据</small>
+        </article>
+      </div>
+      <div class="macro-charts">
+        <article class="mini-chart-panel">
+          <div class="mini-chart-heading">
+            <h3>就业市场</h3>
+            <div class="chart-legend"><span class="legend-unemployment">失业率</span><span class="legend-payroll">非农月增</span></div>
+          </div>
+          <div id="employment-chart" class="chart macro-chart" role="img" aria-label="近五年失业率与非农就业月度变化"></div>
+        </article>
+        <article class="mini-chart-panel">
+          <div class="mini-chart-heading">
+            <h3>通胀同比</h3>
+            <div class="chart-legend inflation-legend"><span class="legend-cpi">CPI</span><span class="legend-core-cpi">核心 CPI</span><span class="legend-pce">PCE</span><span class="legend-core-pce">核心 PCE</span></div>
+          </div>
+          <div id="inflation-chart" class="chart macro-chart" role="img" aria-label="近五年 CPI 与 PCE 同比变化"></div>
+        </article>
+      </div>
+      <p class="method-note">就业与 CPI 原始来源为 BLS，PCE 原始来源为 BEA，数据经 FRED 分发。图表采用当前修订值，历史数据可能包含发布后的修订；非农变化及同比、环比为指数或水平值的推导结果。</p>
     </section>
 
     <section class="panel chart-panel">
@@ -86,13 +133,15 @@
         <a href="https://fred.stlouisfed.org/series/PCEPI" target="_blank" rel="noreferrer"><span>06</span>BEA PCE Price Index via FRED<b>↗</b></a>
         <a href="https://fred.stlouisfed.org/series/PCEPILFE" target="_blank" rel="noreferrer"><span>07</span>BEA Core PCE Price Index via FRED<b>↗</b></a>
         <a href="https://fred.stlouisfed.org/series/PAYEMS" target="_blank" rel="noreferrer"><span>08</span>BLS Nonfarm Payrolls via FRED<b>↗</b></a>
+        <a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noreferrer"><span>09</span>BLS CPI via FRED<b>↗</b></a>
+        <a href="https://fred.stlouisfed.org/series/CPILFESL" target="_blank" rel="noreferrer"><span>10</span>BLS Core CPI via FRED<b>↗</b></a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="shell footer-inner">
-      <span>Fed Rate Monitor</span>
+      <span>Fed Policy Monitor</span>
       <span>非投资建议 · 自动化数据可能延迟，请以官方公告为准</span>
     </div>
   </footer>

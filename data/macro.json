@@ -1,0 +1,770 @@
+{
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE,PAYEMS,CPIAUCSL,CPILFESL,PCEPI,PCEPILFE",
+  "original_sources": {
+    "employment": "https://www.bls.gov/news.release/empsit.htm",
+    "cpi": "https://www.bls.gov/news.release/cpi.htm",
+    "pce": "https://www.bea.gov/data/personal-consumption-expenditures-price-index"
+  },
+  "series": {
+    "unemployment_rate": "UNRATE",
+    "nonfarm_payrolls": "PAYEMS",
+    "cpi_price_index": "CPIAUCSL",
+    "core_cpi_price_index": "CPILFESL",
+    "pce_price_index": "PCEPI",
+    "core_pce_price_index": "PCEPILFE"
+  },
+  "employment": {
+    "period": "2026-08",
+    "unemployment_rate": 4.1,
+    "unemployment_change_pp": 0.0,
+    "payroll_change_thousands": 162,
+    "payroll_3m_average_thousands": 71
+  },
+  "inflation": {
+    "cpi": {
+      "series": "CPIAUCSL",
+      "period": "2026-08",
+      "yoy": 3.4,
+      "mom": 0.4
+    },
+    "core_cpi": {
+      "series": "CPILFESL",
+      "period": "2026-08",
+      "yoy": 2.4,
+      "mom": 0.3
+    },
+    "pce": {
+      "series": "PCEPI",
+      "period": "2026-07",
+      "yoy": 3.7,
+      "mom": 0.2
+    },
+    "core_pce": {
+      "series": "PCEPILFE",
+      "period": "2026-07",
+      "yoy": 3.3,
+      "mom": 0.2
+    }
+  },
+  "history": {
+    "employment": [
+      {
+        "period": "2021-09",
+        "unemployment": 4.7,
+        "payroll_change_thousands": 457
+      },
+      {
+        "period": "2021-10",
+        "unemployment": 4.5,
+        "payroll_change_thousands": 801
+      },
+      {
+        "period": "2021-11",
+        "unemployment": 4.1,
+        "payroll_change_thousands": 658
+      },
+      {
+        "period": "2021-12",
+        "unemployment": 3.9,
+        "payroll_change_thousands": 586
+      },
+      {
+        "period": "2022-01",
+        "unemployment": 4.0,
+        "payroll_change_thousands": 190
+      },
+      {
+        "period": "2022-02",
+        "unemployment": 3.9,
+        "payroll_change_thousands": 819
+      },
+      {
+        "period": "2022-03",
+        "unemployment": 3.7,
+        "payroll_change_thousands": 490
+      },
+      {
+        "period": "2022-04",
+        "unemployment": 3.7,
+        "payroll_change_thousands": 308
+      },
+      {
+        "period": "2022-05",
+        "unemployment": 3.6,
+        "payroll_change_thousands": 301
+      },
+      {
+        "period": "2022-06",
+        "unemployment": 3.6,
+        "payroll_change_thousands": 434
+      },
+      {
+        "period": "2022-07",
+        "unemployment": 3.5,
+        "payroll_change_thousands": 714
+      },
+      {
+        "period": "2022-08",
+        "unemployment": 3.6,
+        "payroll_change_thousands": 290
+      },
+      {
+        "period": "2022-09",
+        "unemployment": 3.5,
+        "payroll_change_thousands": 220
+      },
+      {
+        "period": "2022-10",
+        "unemployment": 3.6,
+        "payroll_change_thousands": 357
+      },
+      {
+        "period": "2022-11",
+        "unemployment": 3.6,
+        "payroll_change_thousands": 303
+      },
+      {
+        "period": "2022-12",
+        "unemployment": 3.5,
+        "payroll_change_thousands": 100
+      },
+      {
+        "period": "2023-01",
+        "unemployment": 3.5,
+        "payroll_change_thousands": 434
+      },
+      {
+        "period": "2023-02",
+        "unemployment": 3.6,
+        "payroll_change_thousands": 290
+      },
+      {
+        "period": "2023-03",
+        "unemployment": 3.5,
+        "payroll_change_thousands": 68
+      },
+      {
+        "period": "2023-04",
+        "unemployment": 3.4,
+        "payroll_change_thousands": 241
+      },
+      {
+        "period": "2023-05",
+        "unemployment": 3.6,
+        "payroll_change_thousands": 280
+      },
+      {
+        "period": "2023-06",
+        "unemployment": 3.6,
+        "payroll_change_thousands": 225
+      },
+      {
+        "period": "2023-07",
+        "unemployment": 3.5,
+        "payroll_change_thousands": 163
+      },
+      {
+        "period": "2023-08",
+        "unemployment": 3.7,
+        "payroll_change_thousands": 218
+      },
+      {
+        "period": "2023-09",
+        "unemployment": 3.7,
+        "payroll_change_thousands": 156
+      },
+      {
+        "period": "2023-10",
+        "unemployment": 3.9,
+        "payroll_change_thousands": 159
+      },
+      {
+        "period": "2023-11",
+        "unemployment": 3.7,
+        "payroll_change_thousands": 127
+      },
+      {
+        "period": "2023-12",
+        "unemployment": 3.8,
+        "payroll_change_thousands": 154
+      },
+      {
+        "period": "2024-01",
+        "unemployment": 3.7,
+        "payroll_change_thousands": 175
+      },
+      {
+        "period": "2024-02",
+        "unemployment": 3.9,
+        "payroll_change_thousands": 206
+      },
+      {
+        "period": "2024-03",
+        "unemployment": 3.9,
+        "payroll_change_thousands": 228
+      },
+      {
+        "period": "2024-04",
+        "unemployment": 3.9,
+        "payroll_change_thousands": 64
+      },
+      {
+        "period": "2024-05",
+        "unemployment": 3.9,
+        "payroll_change_thousands": 78
+      },
+      {
+        "period": "2024-06",
+        "unemployment": 4.1,
+        "payroll_change_thousands": 87
+      },
+      {
+        "period": "2024-07",
+        "unemployment": 4.2,
+        "payroll_change_thousands": 53
+      },
+      {
+        "period": "2024-08",
+        "unemployment": 4.2,
+        "payroll_change_thousands": 9
+      },
+      {
+        "period": "2024-09",
+        "unemployment": 4.1,
+        "payroll_change_thousands": 155
+      },
+      {
+        "period": "2024-10",
+        "unemployment": 4.1,
+        "payroll_change_thousands": 33
+      },
+      {
+        "period": "2024-11",
+        "unemployment": 4.2,
+        "payroll_change_thousands": 134
+      },
+      {
+        "period": "2024-12",
+        "unemployment": 4.1,
+        "payroll_change_thousands": 237
+      },
+      {
+        "period": "2025-01",
+        "unemployment": 4.0,
+        "payroll_change_thousands": -48
+      },
+      {
+        "period": "2025-02",
+        "unemployment": 4.2,
+        "payroll_change_thousands": 42
+      },
+      {
+        "period": "2025-03",
+        "unemployment": 4.2,
+        "payroll_change_thousands": 67
+      },
+      {
+        "period": "2025-04",
+        "unemployment": 4.2,
+        "payroll_change_thousands": 108
+      },
+      {
+        "period": "2025-05",
+        "unemployment": 4.3,
+        "payroll_change_thousands": 13
+      },
+      {
+        "period": "2025-06",
+        "unemployment": 4.1,
+        "payroll_change_thousands": -20
+      },
+      {
+        "period": "2025-07",
+        "unemployment": 4.3,
+        "payroll_change_thousands": 64
+      },
+      {
+        "period": "2025-08",
+        "unemployment": 4.3,
+        "payroll_change_thousands": -70
+      },
+      {
+        "period": "2025-09",
+        "unemployment": 4.4,
+        "payroll_change_thousands": 76
+      },
+      {
+        "period": "2025-11",
+        "unemployment": 4.5,
+        "payroll_change_thousands": 41
+      },
+      {
+        "period": "2025-12",
+        "unemployment": 4.4,
+        "payroll_change_thousands": -17
+      },
+      {
+        "period": "2026-01",
+        "unemployment": 4.3,
+        "payroll_change_thousands": 160
+      },
+      {
+        "period": "2026-02",
+        "unemployment": 4.4,
+        "payroll_change_thousands": -156
+      },
+      {
+        "period": "2026-03",
+        "unemployment": 4.3,
+        "payroll_change_thousands": 214
+      },
+      {
+        "period": "2026-04",
+        "unemployment": 4.3,
+        "payroll_change_thousands": 148
+      },
+      {
+        "period": "2026-05",
+        "unemployment": 4.3,
+        "payroll_change_thousands": 63
+      },
+      {
+        "period": "2026-06",
+        "unemployment": 4.2,
+        "payroll_change_thousands": 31
+      },
+      {
+        "period": "2026-07",
+        "unemployment": 4.1,
+        "payroll_change_thousands": 21
+      },
+      {
+        "period": "2026-08",
+        "unemployment": 4.1,
+        "payroll_change_thousands": 162
+      }
+    ],
+    "inflation": [
+      {
+        "period": "2021-09",
+        "cpi": 5.4,
+        "core_cpi": 4.0,
+        "pce": 4.7,
+        "core_pce": 4.0
+      },
+      {
+        "period": "2021-10",
+        "cpi": 6.2,
+        "core_cpi": 4.6,
+        "pce": 5.3,
+        "core_pce": 4.4
+      },
+      {
+        "period": "2021-11",
+        "cpi": 6.9,
+        "core_cpi": 5.0,
+        "pce": 5.9,
+        "core_pce": 4.9
+      },
+      {
+        "period": "2021-12",
+        "cpi": 7.2,
+        "core_cpi": 5.5,
+        "pce": 6.1,
+        "core_pce": 5.2
+      },
+      {
+        "period": "2022-01",
+        "cpi": 7.6,
+        "core_cpi": 6.1,
+        "pce": 6.3,
+        "core_pce": 5.4
+      },
+      {
+        "period": "2022-02",
+        "cpi": 7.9,
+        "core_cpi": 6.5,
+        "pce": 6.5,
+        "core_pce": 5.6
+      },
+      {
+        "period": "2022-03",
+        "cpi": 8.6,
+        "core_cpi": 6.5,
+        "pce": 6.9,
+        "core_pce": 5.6
+      },
+      {
+        "period": "2022-04",
+        "cpi": 8.2,
+        "core_cpi": 6.2,
+        "pce": 6.7,
+        "core_pce": 5.3
+      },
+      {
+        "period": "2022-05",
+        "cpi": 8.5,
+        "core_cpi": 6.0,
+        "pce": 6.8,
+        "core_pce": 5.2
+      },
+      {
+        "period": "2022-06",
+        "cpi": 9.0,
+        "core_cpi": 5.9,
+        "pce": 7.2,
+        "core_pce": 5.3
+      },
+      {
+        "period": "2022-07",
+        "cpi": 8.5,
+        "core_cpi": 5.9,
+        "pce": 6.8,
+        "core_pce": 5.1
+      },
+      {
+        "period": "2022-08",
+        "cpi": 8.2,
+        "core_cpi": 6.3,
+        "pce": 6.6,
+        "core_pce": 5.4
+      },
+      {
+        "period": "2022-09",
+        "cpi": 8.2,
+        "core_cpi": 6.6,
+        "pce": 6.7,
+        "core_pce": 5.6
+      },
+      {
+        "period": "2022-10",
+        "cpi": 7.8,
+        "core_cpi": 6.3,
+        "pce": 6.5,
+        "core_pce": 5.5
+      },
+      {
+        "period": "2022-11",
+        "cpi": 7.1,
+        "core_cpi": 6.0,
+        "pce": 6.0,
+        "core_pce": 5.2
+      },
+      {
+        "period": "2022-12",
+        "cpi": 6.4,
+        "core_cpi": 5.7,
+        "pce": 5.5,
+        "core_pce": 5.0
+      },
+      {
+        "period": "2023-01",
+        "cpi": 6.3,
+        "core_cpi": 5.5,
+        "pce": 5.5,
+        "core_pce": 4.9
+      },
+      {
+        "period": "2023-02",
+        "cpi": 6.0,
+        "core_cpi": 5.5,
+        "pce": 5.2,
+        "core_pce": 4.9
+      },
+      {
+        "period": "2023-03",
+        "cpi": 4.9,
+        "core_cpi": 5.6,
+        "pce": 4.4,
+        "core_pce": 4.8
+      },
+      {
+        "period": "2023-04",
+        "cpi": 5.0,
+        "core_cpi": 5.5,
+        "pce": 4.5,
+        "core_pce": 4.8
+      },
+      {
+        "period": "2023-05",
+        "cpi": 4.1,
+        "core_cpi": 5.3,
+        "pce": 4.0,
+        "core_pce": 4.7
+      },
+      {
+        "period": "2023-06",
+        "cpi": 3.1,
+        "core_cpi": 4.9,
+        "pce": 3.3,
+        "core_pce": 4.4
+      },
+      {
+        "period": "2023-07",
+        "cpi": 3.3,
+        "core_cpi": 4.7,
+        "pce": 3.4,
+        "core_pce": 4.3
+      },
+      {
+        "period": "2023-08",
+        "cpi": 3.7,
+        "core_cpi": 4.4,
+        "pce": 3.4,
+        "core_pce": 3.8
+      },
+      {
+        "period": "2023-09",
+        "cpi": 3.7,
+        "core_cpi": 4.1,
+        "pce": 3.4,
+        "core_pce": 3.7
+      },
+      {
+        "period": "2023-10",
+        "cpi": 3.3,
+        "core_cpi": 4.0,
+        "pce": 3.0,
+        "core_pce": 3.5
+      },
+      {
+        "period": "2023-11",
+        "cpi": 3.1,
+        "core_cpi": 4.0,
+        "pce": 2.8,
+        "core_pce": 3.3
+      },
+      {
+        "period": "2023-12",
+        "cpi": 3.3,
+        "core_cpi": 3.9,
+        "pce": 2.8,
+        "core_pce": 3.1
+      },
+      {
+        "period": "2024-01",
+        "cpi": 3.1,
+        "core_cpi": 3.9,
+        "pce": 2.7,
+        "core_pce": 3.2
+      },
+      {
+        "period": "2024-02",
+        "cpi": 3.2,
+        "core_cpi": 3.8,
+        "pce": 2.7,
+        "core_pce": 3.1
+      },
+      {
+        "period": "2024-03",
+        "cpi": 3.5,
+        "core_cpi": 3.8,
+        "pce": 2.9,
+        "core_pce": 3.1
+      },
+      {
+        "period": "2024-04",
+        "cpi": 3.4,
+        "core_cpi": 3.6,
+        "pce": 2.8,
+        "core_pce": 3.0
+      },
+      {
+        "period": "2024-05",
+        "cpi": 3.2,
+        "core_cpi": 3.4,
+        "pce": 2.7,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2024-06",
+        "cpi": 3.0,
+        "core_cpi": 3.3,
+        "pce": 2.5,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2024-07",
+        "cpi": 2.9,
+        "core_cpi": 3.2,
+        "pce": 2.6,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2024-08",
+        "cpi": 2.6,
+        "core_cpi": 3.3,
+        "pce": 2.4,
+        "core_pce": 2.9
+      },
+      {
+        "period": "2024-09",
+        "cpi": 2.4,
+        "core_cpi": 3.3,
+        "pce": 2.3,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2024-10",
+        "cpi": 2.6,
+        "core_cpi": 3.3,
+        "pce": 2.5,
+        "core_pce": 3.0
+      },
+      {
+        "period": "2024-11",
+        "cpi": 2.7,
+        "core_cpi": 3.3,
+        "pce": 2.6,
+        "core_pce": 3.0
+      },
+      {
+        "period": "2024-12",
+        "cpi": 2.9,
+        "core_cpi": 3.2,
+        "pce": 2.7,
+        "core_pce": 3.0
+      },
+      {
+        "period": "2025-01",
+        "cpi": 3.0,
+        "core_cpi": 3.3,
+        "pce": 2.6,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2025-02",
+        "cpi": 2.8,
+        "core_cpi": 3.1,
+        "pce": 2.7,
+        "core_pce": 3.0
+      },
+      {
+        "period": "2025-03",
+        "cpi": 2.4,
+        "core_cpi": 2.8,
+        "pce": 2.4,
+        "core_pce": 2.7
+      },
+      {
+        "period": "2025-04",
+        "cpi": 2.3,
+        "core_cpi": 2.8,
+        "pce": 2.3,
+        "core_pce": 2.6
+      },
+      {
+        "period": "2025-05",
+        "cpi": 2.4,
+        "core_cpi": 2.8,
+        "pce": 2.5,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2025-06",
+        "cpi": 2.7,
+        "core_cpi": 2.9,
+        "pce": 2.6,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2025-07",
+        "cpi": 2.7,
+        "core_cpi": 3.1,
+        "pce": 2.6,
+        "core_pce": 2.9
+      },
+      {
+        "period": "2025-08",
+        "cpi": 2.9,
+        "core_cpi": 3.1,
+        "pce": 2.7,
+        "core_pce": 2.9
+      },
+      {
+        "period": "2025-09",
+        "cpi": 3.0,
+        "core_cpi": 3.0,
+        "pce": 2.8,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2025-10",
+        "pce": 2.7,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2025-11",
+        "cpi": 2.7,
+        "core_cpi": 2.6,
+        "pce": 2.8,
+        "core_pce": 2.8
+      },
+      {
+        "period": "2025-12",
+        "cpi": 2.7,
+        "core_cpi": 2.6,
+        "pce": 2.9,
+        "core_pce": 3.0
+      },
+      {
+        "period": "2026-01",
+        "cpi": 2.4,
+        "core_cpi": 2.5,
+        "pce": 2.9,
+        "core_pce": 3.1
+      },
+      {
+        "period": "2026-02",
+        "cpi": 2.4,
+        "core_cpi": 2.5,
+        "pce": 2.9,
+        "core_pce": 3.0
+      },
+      {
+        "period": "2026-03",
+        "cpi": 3.3,
+        "core_cpi": 2.6,
+        "pce": 3.5,
+        "core_pce": 3.3
+      },
+      {
+        "period": "2026-04",
+        "cpi": 3.8,
+        "core_cpi": 2.7,
+        "pce": 3.8,
+        "core_pce": 3.3
+      },
+      {
+        "period": "2026-05",
+        "cpi": 4.2,
+        "core_cpi": 2.8,
+        "pce": 4.1,
+        "core_pce": 3.5
+      },
+      {
+        "period": "2026-06",
+        "cpi": 3.5,
+        "core_cpi": 2.6,
+        "pce": 3.7,
+        "core_pce": 3.3
+      },
+      {
+        "period": "2026-07",
+        "cpi": 3.3,
+        "core_cpi": 2.5,
+        "pce": 3.7,
+        "core_pce": 3.3
+      },
+      {
+        "period": "2026-08",
+        "cpi": 3.4,
+        "core_cpi": 2.4
+      }
+    ]
+  },
+  "notes": {
+    "vintage": "FRED 提供当前修订值而非历史发布时的实时版本；历史数据可能包含后续修订。",
+    "units": "PAYEMS 变化值单位为千人；通胀值单位为百分比。"
+  }
+}

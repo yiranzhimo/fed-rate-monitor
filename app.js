@@ -55,6 +55,125 @@ function renderMetrics(rates, meetings) {
   setInterval(updateCountdown, 60000);
 }
 
+function periodLabel(value) {
+  const [year, month] = value.split('-');
+  return `${year}年${Number(month)}月`;
+}
+
+function signed(value, digits = 1) {
+  const number = Number(value);
+  return `${number > 0 ? '+' : ''}${number.toFixed(digits)}`;
+}
+
+function payrollText(value) {
+  return `${Number(value) >= 0 ? '+' : '-'}${(Math.abs(Number(value)) / 10).toFixed(1)}万`;
+}
+
+function renderMacroMetrics(macro) {
+  const employment = macro.employment;
+  const inflation = macro.inflation;
+  $('#unemployment-rate').textContent = `${employment.unemployment_rate.toFixed(1)}%`;
+  $('#unemployment-detail').textContent = `${periodLabel(employment.period)} · 较前月 ${signed(employment.unemployment_change_pp)} 个百分点`;
+  $('#payroll-change').textContent = payrollText(employment.payroll_change_thousands);
+  $('#payroll-detail').textContent = `${periodLabel(employment.period)} · 近3月均值 ${payrollText(employment.payroll_3m_average_thousands)}`;
+
+  const indicators = [
+    ['cpi', '#cpi-yoy', '#cpi-detail'],
+    ['core_cpi', '#core-cpi-yoy', '#core-cpi-detail'],
+    ['pce', '#pce-yoy', '#pce-detail'],
+    ['core_pce', '#core-pce-yoy', '#core-pce-detail'],
+  ];
+  for (const [key, valueSelector, detailSelector] of indicators) {
+    const item = inflation[key];
+    $(valueSelector).textContent = `${item.yoy.toFixed(1)}%`;
+    $(detailSelector).textContent = `${periodLabel(item.period)} · 环比 ${signed(item.mom)}%`;
+  }
+}
+
+function chartYearLabels(rows, x, height) {
+  const labels = [];
+  const renderedYears = new Set();
+  rows.forEach((row, index) => {
+    const year = row.period.slice(0, 4);
+    if ((index === 0 || row.period.endsWith('-01') || index === rows.length - 1) && !renderedYears.has(year)) {
+      labels.push(`<text class="axis-label" x="${x(index).toFixed(1)}" y="${height - 7}" text-anchor="middle">${year}</text>`);
+      renderedYears.add(year);
+    }
+  });
+  return labels.join('');
+}
+
+function renderEmploymentChart(rows) {
+  const host = $('#employment-chart');
+  if (!rows.length) return;
+  const width = 540;
+  const height = 245;
+  const margin = { top: 12, right: 36, bottom: 28, left: 42 };
+  const plotWidth = width - margin.left - margin.right;
+  const plotHeight = height - margin.top - margin.bottom;
+  const x = (index) => margin.left + (index / Math.max(rows.length - 1, 1)) * plotWidth;
+  const payrolls = rows.map((row) => Number(row.payroll_change_thousands));
+  const payrollMax = Math.max(100, Math.ceil(Math.max(0, ...payrolls) / 100) * 100);
+  const payrollMin = Math.min(0, Math.floor(Math.min(0, ...payrolls) / 100) * 100);
+  const payrollRange = payrollMax - payrollMin || 1;
+  const payrollY = (value) => margin.top + ((payrollMax - value) / payrollRange) * plotHeight;
+  const unemployment = rows.map((row) => Number(row.unemployment));
+  const unemploymentMin = Math.max(0, Math.floor((Math.min(...unemployment) - .5) * 2) / 2);
+  const unemploymentMax = Math.ceil((Math.max(...unemployment) + .5) * 2) / 2;
+  const unemploymentY = (value) => margin.top + ((unemploymentMax - value) / (unemploymentMax - unemploymentMin || 1)) * plotHeight;
+  const barWidth = Math.max(2, (plotWidth / rows.length) * .62);
+  const zeroY = payrollY(0);
+  const bars = rows.map((row, index) => {
+    const valueY = payrollY(Number(row.payroll_change_thousands));
+    const y = Math.min(valueY, zeroY);
+    const barHeight = Math.max(1, Math.abs(zeroY - valueY));
+    const className = Number(row.payroll_change_thousands) < 0 ? 'payroll-bar negative' : 'payroll-bar';
+    return `<rect class="${className}" x="${(x(index) - barWidth / 2).toFixed(1)}" y="${y.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${barHeight.toFixed(1)}"/>`;
+  }).join('');
+  const line = rows.map((row, index) => `${index ? 'L' : 'M'} ${x(index).toFixed(1)} ${unemploymentY(Number(row.unemployment)).toFixed(1)}`).join(' ');
+  host.innerHTML = `<svg viewBox="0 0 ${width} ${height}" aria-hidden="true">
+    <line class="zero-line" x1="${margin.left}" y1="${zeroY.toFixed(1)}" x2="${width - margin.right}" y2="${zeroY.toFixed(1)}"/>
+    ${bars}<path class="unemployment-line" d="${line}"/>
+    <text class="axis-label" x="4" y="${margin.top + 5}">千人</text>
+    <text class="axis-label" x="${width - 3}" y="${margin.top + 5}" text-anchor="end">失业率 ${unemploymentMax.toFixed(1)}%</text>
+    ${chartYearLabels(rows, x, height)}
+  </svg>`;
+}
+
+function renderInflationChart(rows) {
+  const host = $('#inflation-chart');
+  if (!rows.length) return;
+  const width = 540;
+  const height = 245;
+  const margin = { top: 12, right: 18, bottom: 28, left: 35 };
+  const plotWidth = width - margin.left - margin.right;
+  const plotHeight = height - margin.top - margin.bottom;
+  const x = (index) => margin.left + (index / Math.max(rows.length - 1, 1)) * plotWidth;
+  const keys = ['cpi', 'core_cpi', 'pce', 'core_pce'];
+  const values = rows.flatMap((row) => keys.map((key) => Number(row[key])).filter(Number.isFinite));
+  const minValue = Math.min(0, Math.floor(Math.min(...values)));
+  const maxValue = Math.max(1, Math.ceil(Math.max(...values)));
+  const y = (value) => margin.top + ((maxValue - value) / (maxValue - minValue || 1)) * plotHeight;
+  const grid = [];
+  for (let value = minValue; value <= maxValue; value += 2) {
+    const position = y(value).toFixed(1);
+    grid.push(`<line class="grid" x1="${margin.left}" y1="${position}" x2="${width - margin.right}" y2="${position}"/>`);
+    grid.push(`<text class="axis-label" x="${margin.left - 7}" y="${Number(position) + 4}" text-anchor="end">${value}%</text>`);
+  }
+  const paths = keys.map((key) => {
+    let previousIndex = -2;
+    const path = rows.map((row, index) => {
+      const value = Number(row[key]);
+      if (!Number.isFinite(value)) return '';
+      const command = previousIndex === index - 1 ? 'L' : 'M';
+      previousIndex = index;
+      return `${command} ${x(index).toFixed(1)} ${y(value).toFixed(1)}`;
+    }).join(' ');
+    return `<path class="${key.replace('_', '-')}-line" d="${path}"/>`;
+  }).join('');
+  host.innerHTML = `<svg viewBox="0 0 ${width} ${height}" aria-hidden="true">${grid.join('')}${paths}${chartYearLabels(rows, x, height)}</svg>`;
+}
+
 function renderChart(history) {
   const host = $('#rate-chart');
   const width = 1060;
@@ -211,14 +330,17 @@ function renderMeetings(meetings) {
 
 async function init() {
   try {
-    const [ratesResponse, meetingsResponse, metadataResponse] = await Promise.all([
-      fetch('data/rates.json'), fetch('data/meetings.json'), fetch('data/metadata.json'),
+    const [ratesResponse, meetingsResponse, macroResponse, metadataResponse] = await Promise.all([
+      fetch('data/rates.json'), fetch('data/meetings.json'), fetch('data/macro.json'), fetch('data/metadata.json'),
     ]);
-    if (!ratesResponse.ok || !meetingsResponse.ok || !metadataResponse.ok) throw new Error('数据文件不可用');
-    const [rates, meetings, metadata] = await Promise.all([
-      ratesResponse.json(), meetingsResponse.json(), metadataResponse.json(),
+    if (!ratesResponse.ok || !meetingsResponse.ok || !macroResponse.ok || !metadataResponse.ok) throw new Error('数据文件不可用');
+    const [rates, meetings, macro, metadata] = await Promise.all([
+      ratesResponse.json(), meetingsResponse.json(), macroResponse.json(), metadataResponse.json(),
     ]);
     renderMetrics(rates, meetings);
+    renderMacroMetrics(macro);
+    renderEmploymentChart(macro.history.employment);
+    renderInflationChart(macro.history.inflation);
     renderChart(rates.history);
     renderMeetings(meetings);
     $('#version-time').textContent = `数据版本 ${metadata.updated_at.replace('T', ' ').replace('Z', ' UTC')}`;

@@ -1,4 +1,4 @@
-name: Update FOMC data and deploy
+name: Update policy data and deploy
 
 on:
   schedule:
