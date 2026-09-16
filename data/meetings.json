@@ -3529,7 +3529,80 @@
       "has_sep": true,
       "is_notation_vote": false,
       "minutes_release_date": null,
-      "documents": {}
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260916a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260916.htm",
+        "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20260916.pdf",
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm"
+      },
+      "outcome": {
+        "status": "pending_confirmation",
+        "action": "pending",
+        "summary": "政策声明已发布，目标利率结果等待官方序列确认。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2026-08",
+            "value": 4.1,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2026-07",
+            "value": 3.7,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2026-07",
+            "value": 3.3,
+            "series": "PCEPILFE"
+          },
+          "core_pce_3m_annualized": {
+            "period": "2026-07",
+            "value": 3.0,
+            "series": "PCEPILFE"
+          },
+          "payrolls_3m_average": {
+            "period": "2026-08",
+            "value_thousands": 71,
+            "series": "PAYEMS"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
+          "employment_summary": "就业：失业率 4.1%（2026-08）；非农近3个月月均新增 7.1万。",
+          "inflation_summary": "通胀：PCE 同比 3.7%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.0%（2026-07）。",
+          "summary": "就业：失业率 4.1%（2026-08）；非农近3个月月均新增 7.1万。 通胀：PCE 同比 3.7%、核心 PCE 同比 3.3%；核心 PCE 近3个月年化 3.0%（2026-07）。"
+        },
+        "vote": {
+          "support_count": 12,
+          "against_count": 0,
+          "against_names": [],
+          "preference": null,
+          "summary": "表决 12–0，一致通过。",
+          "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "parser_version": 1
+        },
+        "sep": {
+          "medians": {
+            "2026": 4.1,
+            "2027": 4.1,
+            "2028": 3.9,
+            "2029": 3.6,
+            "longer_run": 3.2
+          },
+          "source": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+          "parser_version": 1,
+          "changes": {
+            "2026": 0.3,
+            "2027": 0.5,
+            "2028": 0.5,
+            "longer_run": 0.1
+          },
+          "summary": "SEP：2027年末政策利率中位数 4.1%，较上次上调 0.5 个百分点。",
+          "display_horizon": "2027"
+        }
+      }
     },
     {
       "id": "2026-10-28",
