@@ -24,7 +24,7 @@ function decisionLabel(change) {
 function renderMetrics(rates, meetings) {
   const current = rates.current;
   $('#target-range').textContent = `${percent(current.lower)}–${percent(current.upper)}`;
-  $('#target-asof').textContent = `有效日期 ${dayFormat.format(parseDate(current.as_of))}`;
+  $('#target-asof').textContent = `数据截至 ${dayFormat.format(parseDate(current.as_of))}`;
   $('#latest-action').textContent = decisionLabel(rates.latest_change);
   $('#latest-action-date').textContent = rates.latest_change
     ? dayFormat.format(parseDate(rates.latest_change.effective_date))
