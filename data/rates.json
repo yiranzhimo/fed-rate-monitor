@@ -7,10 +7,10 @@
     "effective_rate": "DFF"
   },
   "current": {
-    "as_of": "2026-09-16",
-    "upper": 3.75,
-    "lower": 3.5,
-    "midpoint": 3.625,
+    "as_of": "2026-09-17",
+    "upper": 4.0,
+    "lower": 3.75,
+    "midpoint": 3.875,
     "regime": "target_range"
   },
   "effective_rate": {
@@ -18,13 +18,13 @@
     "value": 3.63
   },
   "latest_change": {
-    "effective_date": "2025-12-11",
-    "upper": 3.75,
-    "lower": 3.5,
-    "midpoint": 3.625,
+    "effective_date": "2026-09-17",
+    "upper": 4.0,
+    "lower": 3.75,
+    "midpoint": 3.875,
     "regime": "target_range",
-    "delta_bps": -25,
-    "decision": "cut"
+    "delta_bps": 25,
+    "decision": "hike"
   },
   "history": [
     {
@@ -1691,6 +1691,15 @@
       "regime": "target_range",
       "delta_bps": -25,
       "decision": "cut"
+    },
+    {
+      "effective_date": "2026-09-17",
+      "upper": 4.0,
+      "lower": 3.75,
+      "midpoint": 3.875,
+      "regime": "target_range",
+      "delta_bps": 25,
+      "decision": "hike"
     }
   ]
 }

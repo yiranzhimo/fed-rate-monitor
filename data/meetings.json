@@ -3538,10 +3538,15 @@
         "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm"
       },
       "outcome": {
-        "status": "pending_confirmation",
-        "action": "pending",
-        "summary": "政策声明已发布，目标利率结果等待官方序列确认。",
+        "status": "confirmed",
+        "action": "hike",
+        "delta_bps": 25,
+        "lower": 3.75,
+        "upper": 4.0,
+        "effective_date": "2026-09-17",
+        "summary": "加息 25 个基点，目标区间调整至 3.75%–4.00%；发布经济预测（SEP）。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2026-08",
