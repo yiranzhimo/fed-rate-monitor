@@ -14,11 +14,11 @@
     "core_pce_price_index": "PCEPILFE"
   },
   "employment": {
-    "period": "2026-08",
-    "unemployment_rate": 4.1,
-    "unemployment_change_pp": 0.0,
-    "payroll_change_thousands": 162,
-    "payroll_3m_average_thousands": 71
+    "period": "2026-09",
+    "unemployment_rate": 4.2,
+    "unemployment_change_pp": 0.1,
+    "payroll_change_thousands": 29,
+    "payroll_3m_average_thousands": 51
   },
   "inflation": {
     "cpi": {
@@ -48,11 +48,6 @@
   },
   "history": {
     "employment": [
-      {
-        "period": "2021-09",
-        "unemployment": 4.7,
-        "payroll_change_thousands": 457
-      },
       {
         "period": "2021-10",
         "unemployment": 4.5,
@@ -336,12 +331,17 @@
       {
         "period": "2026-07",
         "unemployment": 4.1,
-        "payroll_change_thousands": 21
+        "payroll_change_thousands": -10
       },
       {
         "period": "2026-08",
         "unemployment": 4.1,
-        "payroll_change_thousands": 162
+        "payroll_change_thousands": 133
+      },
+      {
+        "period": "2026-09",
+        "unemployment": 4.2,
+        "payroll_change_thousands": 29
       }
     ],
     "inflation": [
