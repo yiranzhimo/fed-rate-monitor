@@ -3528,14 +3528,16 @@
       "date_label": "15-16",
       "has_sep": true,
       "is_notation_vote": false,
-      "minutes_release_date": null,
+      "minutes_release_date": "2026-10-07",
       "documents": {
         "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20260916a1.pdf",
         "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
         "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm",
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260916.htm",
         "projections_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20260916.pdf",
-        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm"
+        "projections_html": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260916.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm"
       },
       "outcome": {
         "status": "confirmed",
