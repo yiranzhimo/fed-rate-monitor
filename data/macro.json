@@ -23,14 +23,14 @@
   "inflation": {
     "cpi": {
       "series": "CPIAUCSL",
-      "period": "2026-08",
-      "yoy": 3.4,
-      "mom": 0.4
+      "period": "2026-09",
+      "yoy": 3.7,
+      "mom": 0.6
     },
     "core_cpi": {
       "series": "CPILFESL",
-      "period": "2026-08",
-      "yoy": 2.4,
+      "period": "2026-09",
+      "yoy": 2.6,
       "mom": 0.3
     },
     "pce": {
@@ -345,13 +345,6 @@
       }
     ],
     "inflation": [
-      {
-        "period": "2021-09",
-        "cpi": 5.4,
-        "core_cpi": 4.0,
-        "pce": 4.7,
-        "core_pce": 3.9
-      },
       {
         "period": "2021-10",
         "cpi": 6.2,
@@ -762,6 +755,11 @@
         "core_cpi": 2.4,
         "pce": 3.4,
         "core_pce": 3.0
+      },
+      {
+        "period": "2026-09",
+        "cpi": 3.7,
+        "core_cpi": 2.6
       }
     ]
   },
