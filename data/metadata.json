@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T22:26:21Z",
+  "updated_at": "2026-10-20T13:37:27Z",
   "calendar_source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
   "rates_source": "https://api.stlouisfed.org/fred/series/observations",
   "macro_source": "https://api.stlouisfed.org/fred/series/observations",
