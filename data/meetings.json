@@ -3624,7 +3624,8 @@
       "documents": {
         "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf",
         "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
-        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm"
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm",
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20261028.htm"
       },
       "outcome": {
         "status": "pending_confirmation",
