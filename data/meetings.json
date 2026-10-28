@@ -3621,7 +3621,61 @@
       "has_sep": false,
       "is_notation_vote": false,
       "minutes_release_date": null,
-      "documents": {}
+      "documents": {
+        "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf",
+        "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+        "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm"
+      },
+      "outcome": {
+        "status": "pending_confirmation",
+        "action": "pending",
+        "summary": "政策声明已发布，目标利率结果等待官方序列确认。",
+        "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+        "macro_snapshot": {
+          "unemployment": {
+            "period": "2026-09",
+            "value": 4.2,
+            "series": "UNRATE"
+          },
+          "pce_yoy": {
+            "period": "2026-08",
+            "value": 3.4,
+            "series": "PCEPI"
+          },
+          "core_pce_yoy": {
+            "period": "2026-08",
+            "value": 3.0,
+            "series": "PCEPILFE"
+          },
+          "core_pce_3m_annualized": {
+            "period": "2026-08",
+            "value": 2.0,
+            "series": "PCEPILFE"
+          },
+          "payrolls_3m_average": {
+            "period": "2026-09",
+            "value_thousands": 51,
+            "series": "PAYEMS"
+          },
+          "method": "conservative_release_lag_current_vintage",
+          "source": "https://api.stlouisfed.org/fred/series/observations",
+          "employment_summary": "就业：失业率 4.2%（2026-09）；非农近3个月月均新增 5.1万。",
+          "inflation_summary": "通胀：PCE 同比 3.4%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.0%（2026-08）。",
+          "summary": "就业：失业率 4.2%（2026-09）；非农近3个月月均新增 5.1万。 通胀：PCE 同比 3.4%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.0%（2026-08）。"
+        },
+        "vote": {
+          "support_count": 10,
+          "against_count": 2,
+          "against_names": [
+            "Lisa D. Cook",
+            "Beth M. Hammack"
+          ],
+          "preference": "主张加息25个基点",
+          "summary": "表决 10–2；异议：Lisa D. Cook、Beth M. Hammack（主张加息25个基点）。",
+          "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+          "parser_version": 1
+        }
+      }
     },
     {
       "id": "2026-12-09",
