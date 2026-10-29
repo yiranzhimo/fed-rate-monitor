@@ -35,15 +35,15 @@
     },
     "pce": {
       "series": "PCEPI",
-      "period": "2026-08",
-      "yoy": 3.4,
-      "mom": 0.3
+      "period": "2026-09",
+      "yoy": 3.6,
+      "mom": 0.5
     },
     "core_pce": {
       "series": "PCEPILFE",
-      "period": "2026-08",
-      "yoy": 3.0,
-      "mom": 0.2
+      "period": "2026-09",
+      "yoy": 3.1,
+      "mom": 0.3
     }
   },
   "history": {
@@ -759,7 +759,9 @@
       {
         "period": "2026-09",
         "cpi": 3.7,
-        "core_cpi": 2.6
+        "core_cpi": 2.6,
+        "pce": 3.6,
+        "core_pce": 3.1
       }
     ]
   },

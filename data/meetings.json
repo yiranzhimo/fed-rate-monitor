@@ -3650,7 +3650,7 @@
           },
           "core_pce_3m_annualized": {
             "period": "2026-08",
-            "value": 2.0,
+            "value": 2.2,
             "series": "PCEPILFE"
           },
           "payrolls_3m_average": {
@@ -3661,8 +3661,8 @@
           "method": "conservative_release_lag_current_vintage",
           "source": "https://api.stlouisfed.org/fred/series/observations",
           "employment_summary": "就业：失业率 4.2%（2026-09）；非农近3个月月均新增 5.1万。",
-          "inflation_summary": "通胀：PCE 同比 3.4%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.0%（2026-08）。",
-          "summary": "就业：失业率 4.2%（2026-09）；非农近3个月月均新增 5.1万。 通胀：PCE 同比 3.4%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.0%（2026-08）。"
+          "inflation_summary": "通胀：PCE 同比 3.4%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.2%（2026-08）。",
+          "summary": "就业：失业率 4.2%（2026-09）；非农近3个月月均新增 5.1万。 通胀：PCE 同比 3.4%、核心 PCE 同比 3.0%；核心 PCE 近3个月年化 2.2%（2026-08）。"
         },
         "vote": {
           "support_count": 10,
