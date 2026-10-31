@@ -3628,10 +3628,15 @@
         "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20261028.htm"
       },
       "outcome": {
-        "status": "pending_confirmation",
-        "action": "pending",
-        "summary": "政策声明已发布，目标利率结果等待官方序列确认。",
+        "status": "confirmed",
+        "action": "hold",
+        "delta_bps": 0,
+        "lower": 3.75,
+        "upper": 4.0,
+        "effective_date": "2026-10-28",
+        "summary": "维持目标区间 3.75%–4.00% 不变；未发布 SEP。",
         "statement_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+        "rate_source": "https://api.stlouisfed.org/fred/series/observations",
         "macro_snapshot": {
           "unemployment": {
             "period": "2026-09",
