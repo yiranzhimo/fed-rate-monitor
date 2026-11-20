@@ -85,8 +85,12 @@ function renderMacroMetrics(macro) {
   ];
   for (const [key, valueSelector, detailSelector] of indicators) {
     const item = inflation[key];
-    $(valueSelector).textContent = `${item.yoy.toFixed(1)}%`;
-    $(detailSelector).textContent = `${periodLabel(item.period)} · 环比 ${signed(item.mom)}%`;
+    $(valueSelector).textContent = Number.isFinite(item.yoy) ? `${item.yoy.toFixed(1)}%` : '暂无数据';
+    const mom = Number.isFinite(item.mom) ? `${signed(item.mom)}%` : '暂无数据';
+    const missing = Object.entries(item.missing_comparison_periods || {}).map(([metric, period]) =>
+      `${metric === 'yoy' ? '同比' : '环比'}缺少${periodLabel(period)}可用比较数据`
+    );
+    $(detailSelector).textContent = [`${periodLabel(item.period)} · 环比 ${mom}`, ...missing].join(' · ');
   }
 }
 

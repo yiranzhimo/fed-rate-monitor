@@ -499,14 +499,24 @@ def build_macro_dashboard(macro_data: dict[str, Any]) -> dict[str, Any]:
         cutoff = _latest_cutoff(observations[series])
         yoy = _year_over_year(observations[series], cutoff)
         mom = _month_over_month(observations[series], cutoff)
-        if yoy is None or mom is None:
-            raise ValueError(f"FRED {series} series lacks enough history")
         inflation[label] = {
             "series": series,
-            "period": yoy["period"],
-            "yoy": yoy["value"],
-            "mom": mom["value"],
+            "period": cutoff.isoformat()[:7],
+            "yoy": yoy["value"] if yoy else None,
+            "mom": mom["value"] if mom else None,
         }
+        missing_comparisons = {
+            metric: _month_offset(cutoff, offset).isoformat()[:7]
+            for metric, value, offset in (("yoy", yoy, -12), ("mom", mom, -1))
+            if value is None
+        }
+        if missing_comparisons:
+            inflation[label]["missing_comparison_periods"] = missing_comparisons
+            print(
+                f"Warning: FRED {series} {cutoff:%Y-%m} unavailable comparisons: "
+                + ", ".join(f"{metric} needs {period}" for metric, period in missing_comparisons.items()),
+                file=sys.stderr,
+            )
 
     five_year_start = _month_offset(_latest_cutoff(unemployment_rows), -59).isoformat()
     unemployment_by_period = {
@@ -1025,6 +1035,10 @@ def load_json(path: Path) -> dict[str, Any] | None:
         return None
 
 
+def _inflation_percent(value: float | None) -> str:
+    return "暂无数据（缺少可用比较数据）" if value is None else f"{value:.1f}%"
+
+
 def build_change_event(
     old_meetings: dict[str, Any] | None,
     new_meetings: dict[str, Any],
@@ -1125,9 +1139,9 @@ def build_change_event(
                             "kind": kind,
                             "title": title,
                             "detail": (
-                                f"{current['period']}：同比 {current['yoy']:.1f}%、"
-                                f"环比 {current['mom']:.1f}%；核心同比 "
-                                f"{core['yoy']:.1f}%"
+                                f"{current['period']}：同比 {_inflation_percent(current.get('yoy'))}、"
+                                f"环比 {_inflation_percent(current.get('mom'))}；核心同比 "
+                                f"{_inflation_percent(core.get('yoy'))}"
                             ),
                             "url": url,
                         }

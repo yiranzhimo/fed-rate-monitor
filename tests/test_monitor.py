@@ -3,6 +3,9 @@ import csv
 import io
 from pathlib import Path
 
+import pytest
+
+from scripts.send_notification import build_bodies
 from scripts.update_data import (
     add_sep_comparisons,
     attach_macro_snapshots,
@@ -221,7 +224,8 @@ def test_macro_snapshot_uses_first_friday_employment_release_boundary():
     assert periods == ["2024-09", "2024-10"]
 
 
-def test_macro_dashboard_builds_current_indicators_and_histories():
+@pytest.fixture
+def dashboard_macro_csv():
     periods = [
         "2024-01", "2024-02", "2024-03", "2024-04", "2024-05",
         "2024-06", "2024-07", "2024-08", "2024-09", "2024-10",
@@ -234,7 +238,11 @@ def test_macro_dashboard_builds_current_indicators_and_histories():
             f"{100 * 1.002 ** index:.4f},{100 * 1.003 ** index:.4f},"
             f"{100 * 1.0015 ** index:.4f},{100 * 1.0025 ** index:.4f}"
         )
-    dashboard = build_macro_dashboard(parse_macro_csv("\n".join(rows)))
+    return "\n".join(rows)
+
+
+def test_macro_dashboard_builds_current_indicators_and_histories(dashboard_macro_csv):
+    dashboard = build_macro_dashboard(parse_macro_csv(dashboard_macro_csv))
 
     assert dashboard["employment"] == {
         "period": "2025-03",
@@ -247,6 +255,81 @@ def test_macro_dashboard_builds_current_indicators_and_histories():
     assert dashboard["inflation"]["core_cpi"]["mom"] == 0.3
     assert dashboard["history"]["employment"][-1]["period"] == "2025-03"
     assert dashboard["history"]["inflation"][-1]["period"] == "2025-03"
+
+
+@pytest.mark.parametrize("series,label", [
+    ("CPIAUCSL", "cpi"), ("CPILFESL", "core_cpi"),
+    ("PCEPI", "pce"), ("PCEPILFE", "core_pce"),
+])
+@pytest.mark.parametrize("missing_metrics", [("yoy",), ("mom",), ("yoy", "mom")])
+def test_inflation_missing_comparison_months_do_not_block_updates(
+    dashboard_macro_csv, series, label, missing_metrics, capsys
+):
+    comparisons = {"yoy": "2024-03", "mom": "2025-02"}
+    reader = csv.DictReader(io.StringIO(dashboard_macro_csv))
+    rows = list(reader)
+    for row in rows:
+        if row["observation_date"][:7] in {comparisons[key] for key in missing_metrics}:
+            row[series] = "."
+    output = io.StringIO()
+    writer = csv.DictWriter(output, fieldnames=reader.fieldnames)
+    writer.writeheader()
+    writer.writerows(rows)
+
+    baseline = build_macro_dashboard(parse_macro_csv(dashboard_macro_csv))
+    dashboard = build_macro_dashboard(parse_macro_csv(output.getvalue()))
+    current = dashboard["inflation"][label]
+    assert current["period"] == "2025-03"
+    assert current["missing_comparison_periods"] == {
+        key: comparisons[key] for key in missing_metrics
+    }
+    for metric in ("yoy", "mom"):
+        assert current[metric] == (
+            None if metric in missing_metrics else baseline["inflation"][label][metric]
+        )
+    assert dashboard["employment"] == baseline["employment"]
+    for other in dashboard["inflation"]:
+        if other != label:
+            assert dashboard["inflation"][other] == baseline["inflation"][other]
+    if "yoy" in missing_metrics:
+        assert label not in dashboard["history"]["inflation"][-1]
+    warning = capsys.readouterr().err
+    assert series in warning
+    assert all(comparisons[key] in warning for key in missing_metrics)
+
+
+def test_missing_cpi_yoy_can_be_rendered_in_notification(dashboard_macro_csv):
+    macro = parse_macro_csv(dashboard_macro_csv)
+    old_macro = build_macro_dashboard(macro)
+    old_macro["inflation"]["cpi"]["period"] = "2025-02"
+    for series in ("CPIAUCSL", "CPILFESL"):
+        macro["observations"][series] = [
+            row for row in macro["observations"][series] if row["date"] != "2024-03-01"
+        ]
+    new_macro = build_macro_dashboard(macro)
+    meetings = parse_calendar_html((FIXTURES / "calendar.html").read_text())
+    rates = parse_rates_csv((FIXTURES / "rates.csv").read_text())
+    event = build_change_event(meetings, meetings, rates, rates, old_macro, new_macro)
+    assert len(event["changes"]) == 1
+    assert event["changes"][0]["kind"] == "cpi_release"
+    plain, html = build_bodies(event, "")
+    for body in (plain, html):
+        assert "同比 暂无数据" in body
+        assert "环比 0.2%" in body
+        assert "核心同比 暂无数据" in body
+    assert not build_change_event(
+        meetings, meetings, rates, rates, new_macro, new_macro
+    )["has_changes"]
+
+
+def test_empty_cpi_series_still_rejects_update(dashboard_macro_csv):
+    reader = csv.DictReader(io.StringIO(dashboard_macro_csv))
+    output = io.StringIO()
+    writer = csv.DictWriter(output, fieldnames=reader.fieldnames)
+    writer.writeheader()
+    writer.writerows({**row, "CPIAUCSL": "."} for row in reader)
+    with pytest.raises(ValueError, match="empty required series"):
+        parse_macro_csv(output.getvalue())
 
 
 def test_new_macro_reference_periods_notify_once():
