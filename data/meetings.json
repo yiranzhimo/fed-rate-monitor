@@ -3620,12 +3620,14 @@
       "date_label": "27-28",
       "has_sep": false,
       "is_notation_vote": false,
-      "minutes_release_date": null,
+      "minutes_release_date": "2026-11-18",
       "documents": {
         "statement_pdf": "https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf",
         "statement_html": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
         "implementation_note": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a1.htm",
-        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20261028.htm"
+        "press_conference": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20261028.htm",
+        "minutes_pdf": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20261028.pdf",
+        "minutes_html": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm"
       },
       "outcome": {
         "status": "confirmed",
@@ -3714,7 +3716,7 @@
       "start_date": "2027-03-16",
       "end_date": "2027-03-17",
       "date_label": "16-17",
-      "has_sep": true,
+      "has_sep": false,
       "is_notation_vote": false,
       "minutes_release_date": null,
       "documents": {}
@@ -3738,7 +3740,7 @@
       "start_date": "2027-06-08",
       "end_date": "2027-06-09",
       "date_label": "8-9",
-      "has_sep": true,
+      "has_sep": false,
       "is_notation_vote": false,
       "minutes_release_date": null,
       "documents": {}
@@ -3762,7 +3764,7 @@
       "start_date": "2027-09-14",
       "end_date": "2027-09-15",
       "date_label": "14-15",
-      "has_sep": true,
+      "has_sep": false,
       "is_notation_vote": false,
       "minutes_release_date": null,
       "documents": {}
@@ -3780,13 +3782,13 @@
       "documents": {}
     },
     {
-      "id": "2027-12-08",
+      "id": "2027-11-17",
       "year": 2027,
-      "month": 12,
-      "start_date": "2027-12-07",
-      "end_date": "2027-12-08",
-      "date_label": "7-8",
-      "has_sep": true,
+      "month": 11,
+      "start_date": "2027-11-16",
+      "end_date": "2027-11-17",
+      "date_label": "16-17",
+      "has_sep": false,
       "is_notation_vote": false,
       "minutes_release_date": null,
       "documents": {}
