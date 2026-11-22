@@ -45,6 +45,8 @@ python3 -m http.server 8000
 
 定时任务在每小时第 17 分钟运行。GitHub Actions 的 cron 可能延迟，因此它用于监控和通知，不适合作为交易级实时信号。
 
+每次成功完成数据检查后都会部署 Pages，即使数据没有变化，也能补发上次已经提交但未成功部署的数据。部署首次失败时等待 15 秒重试一次；重试仍失败则工作流保持失败状态。手动恢复时，在 **Actions** 运行一次新的 `Update policy data and deploy`，以重新生成部署产物。
+
 ## 邮件通知
 
 工作流使用通用 SMTP。进入 **Settings → Secrets and variables → Actions**，配置：

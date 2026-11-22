@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -63,13 +63,10 @@ jobs:
         run: python scripts/send_notification.py
 
       - name: Commit changed datasets
-        id: dataset
         run: |
           if git diff --quiet -- data; then
             echo "No dataset changes"
-            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data
@@ -78,18 +75,27 @@ jobs:
           fi
 
       - name: Configure Pages
-        if: steps.dataset.outputs.changed == 'true' || github.event_name != 'schedule'
+        # Publish on every run so a failed deployment is retried even when
+        # the previous run already committed all dataset changes.
         uses: actions/configure-pages@v5
         with:
           enablement: true
 
       - name: Upload Pages artifact
-        if: steps.dataset.outputs.changed == 'true' || github.event_name != 'schedule'
         uses: actions/upload-pages-artifact@v4
         with:
           path: .
 
       - name: Deploy to GitHub Pages
-        if: steps.dataset.outputs.changed == 'true' || github.event_name != 'schedule'
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before retrying Pages deployment
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 15
+
+      - name: Retry GitHub Pages deployment
+        if: steps.deployment.outcome == 'failure'
+        id: deployment_retry
         uses: actions/deploy-pages@v4
